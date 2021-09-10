@@ -3,10 +3,15 @@ import DateFormat from '../utils/format'
 
 /**
  * @name 本地化存储
+ * 
  * @params key 存储的名称，必须英文，自动携带系统名称的前缀
  * @params data 存储的数据
  * @params type 类型，local、session两种参数
  * @params desc 存储信息的描述文字
+ * 
+ * @method set() 设置缓存
+ * @method remove() 移除缓存
+ * @method get() 获取缓存
  */
 
 export default class Storage {

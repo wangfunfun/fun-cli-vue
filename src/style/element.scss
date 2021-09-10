@@ -4,7 +4,7 @@
  * @file 全局
  */
 
- // layout
+// layout
 .el-menu {
   border: none !important;
 }
@@ -42,4 +42,21 @@
 .el-input__inner {
   border-radius: 12px;
   overflow: hidden;
+}
+
+// message box
+.el-message-box__content {
+  padding: 30px 0;
+}
+
+.el-message-box--center {
+  padding-bottom: 20px;
+}
+
+.el-message-box{
+  border-radius: 20px;
+}
+
+.el-message{
+  border-radius: 10px;
 }

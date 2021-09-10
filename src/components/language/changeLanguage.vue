@@ -79,8 +79,6 @@ export default defineComponent({
 :deep(.el-dropdown-menu__item) {
   transition: all 0.2s ease-out;
   &:hover {
-    background-color: #675ef9;
-    color: #fff;
     transition: all 0.2s ease-in;
   }
 }

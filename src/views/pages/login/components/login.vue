@@ -57,7 +57,7 @@ import { defineComponent, reactive, toRefs, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { useI18n } from 'vue-i18n'
-import Storage from '@/utils/storage'
+import Storage from '../../../../utils/storage'
 
 interface loginType {
   isAutoLogin: boolean
