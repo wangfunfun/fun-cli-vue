@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "lib": ["esnext", "dom","ES2015"],
+    "types": ["vite/client", "jest", "node"],
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+     // 允许字符串索引
+     "suppressImplicitAnyIndexErrors": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/settings.ts"]
+}

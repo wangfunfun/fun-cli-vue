@@ -1,0 +1,45 @@
+/**
+ * @name 覆盖elementPlus自带样式
+ * @type 内置 .scss
+ * @file 全局
+ */
+
+ // layout
+.el-menu {
+  border: none !important;
+}
+
+.el-header {
+  padding: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+.el-main {
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px 5px rgba($color: #999, $alpha: 0.1) inset;
+}
+
+.el-footer {
+  height: 30px !important;
+}
+
+.el-aside {
+  width: auto !important;
+}
+
+// 多选框
+.el-checkbox__inner {
+  border-radius: 4px;
+}
+
+// 按钮
+.el-button {
+  border-radius: 12px;
+}
+
+// 输入框
+.el-input__inner {
+  border-radius: 12px;
+  overflow: hidden;
+}

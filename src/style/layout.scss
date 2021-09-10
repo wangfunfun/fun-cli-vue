@@ -1,0 +1,57 @@
+/**
+ * @name layout 布局样式文件
+ * @type 内置 .scss
+ * @file /views/layout
+ */
+
+.unfold {
+  font-size: 20px;
+  cursor: pointer;
+  width: 60px;
+  text-align: center;
+  i {
+    transform: rotate(0deg);
+    transition: all 0.4s ease-out;
+    &.active {
+      transform: rotate(180deg);
+      transition: all 0.4s ease-in;
+    }
+  }
+}
+
+.btn {
+  font-size: 18px;
+  cursor: pointer;
+  min-width: 60px;
+  text-align: center;
+  transition: all 0.16s ease-out;
+  background-color: rgba($color: #000000, $alpha: 0);
+  line-height: 60px;
+  &:hover {
+    background-color: rgba($color: #000000, $alpha: 0.08);
+    transition: all 0.16s ease-in;
+  }
+}
+
+.user {
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+  transition: all 0.16s ease-out;
+  background-color: rgba($color: #000000, $alpha: 0);
+  i {
+    transform: rotate(0deg);
+    transition: all 0.24s ease-out;
+  }
+  &:hover {
+    background-color: rgba($color: #000000, $alpha: 0.08);
+    transition: all 0.16s ease-in;
+    i {
+      transform: rotate(180deg);
+      transition: all 0.24s ease-in;
+    }
+  }
+}
+.username {
+  padding: 0 10px;
+}

@@ -1,0 +1,12 @@
+@import './theme-violet.scss';
+
+
+/** 
+ * 自定义主题色
+ */
+$--ADMINSYS-primary: #1E1F21;
+
+
+:export {
+  colorPrimary: $--ADMINSYS-primary
+}

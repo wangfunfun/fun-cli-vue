@@ -1,0 +1,47 @@
+/**
+ * @name flex 快速布局
+ * @type 内置 .scss
+ * @file 全局
+ */
+
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.flex-align-center{
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
