@@ -18,7 +18,7 @@
 │  ├─ assets/                      #  静态资源目录
 │  ├─ common/                      #  通用类库目录
 │  ├─ components/                  #  公共组件目录
-│  ├─ hooks/                        #  钩子方法
+│  ├─ hooks/                       #  钩子方法
 │  ├─ locales/                     #  i18n 国际化
 │  ├─ mixins/                      #  全局混入方法
 │  ├─ router/                      #  router 配置目录
@@ -111,14 +111,14 @@ WebStorm 打开设置窗口，搜索 eslint，找到 Language & Frameworks / Jav
 - [x] 用户管理
 - [x] 工具函数
 
-
-
 ## 🚀 Vue3.x 渐进式 JavaScript 框架 | Vue3.x Progressive JavaScript framework
 
 <p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo"></a></p>
+<p align="center">
 
 [![npm](https://img.shields.io/npm/v/vue/next.svg)](https://www.npmjs.com/package/vue/v/next) [![build status](https://github.com/vuejs/vue-next/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/vuejs/vue-next/actions/workflows/ci.yml)
 
+</p>
 
 ## 🚀 基于 ElementPlus + 圆角 UI 风格 | Based on ElementPlus + round UI style
 
@@ -135,8 +135,3 @@ WebStorm 打开设置窗口，搜索 eslint，找到 Language & Frameworks / Jav
   </a>
   <br>
 </p>
-
-<p align="center">Element Plus - A Vue.js 3 UI library</p>
-
-- 💪 Vue 3 Composition API
-- 🔥 Written in TypeScript
