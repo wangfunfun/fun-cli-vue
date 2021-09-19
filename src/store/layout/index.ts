@@ -17,11 +17,13 @@ const layout: Module<layoutStateTypes, rootStateTypes> = {
       fullScreen: false, // 全屏状态
       showTheme: true, // 显示切换主题按钮
       showMessage: true, // 显示我的消息按钮
+      showLanguage: true, // 显示切换语言按钮
       height: '60px' // header 高度
     },
     // footer 需要显示的内容
     ADMINSYS_LAYOUT_FOOTEROPS: {
       nowRouter: true, // 正在浏览的位置
+      nowPath: '', // 当前正在浏览
       nowUserName: true, // 当前登录人
       loginDatetime: true, // 登录时间
       systemName: true, // 系统名称
@@ -40,6 +42,10 @@ const layout: Module<layoutStateTypes, rootStateTypes> = {
     // 展开 / 缩放 aside
     unfoldAside(state: layoutStateTypes) {
       state.ADMINSYS_LAYOUT_ASIDEOPS.unfold = !state.ADMINSYS_LAYOUT_ASIDEOPS.unfold
+    },
+    // 更新当前浏览位置
+    updateNowPath(state: layoutStateTypes, data) {
+      state.ADMINSYS_LAYOUT_FOOTEROPS.nowPath = data
     }
   }
 }

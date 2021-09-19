@@ -9,10 +9,18 @@ export default {
     userInfo: '用户信息',
     logout: '退出',
     unfoldTip: '缩略显示菜单栏',
-    unfoldActiveTip: '展开显示菜单栏'
+    unfoldActiveTip: '展开显示菜单栏',
+    nowView:'正在浏览：'
   },
   tip: {
-    development: '施工中...'
+    development: '施工中...',
+    logout:'是否退出登录？',
+    logoutSuccess:'退出成功！',
+    dialogTitle:'提示',
+  },
+  btn:{
+    confirm:'确定',
+    cancel:'取消'
   },
   login: {
     title: '⭐ 欢迎登录 ⭐',
@@ -26,5 +34,8 @@ export default {
     placeholder_pwd_null: '请输入密码',
     placeholder_pwd_error: '密码长度为6-16位，支持数字、字母组合',
     tip_account_not: '还没有账号？'
+  },
+  user:{
+    defaultName:'游客'
   }
 }

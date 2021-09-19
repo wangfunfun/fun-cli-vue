@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://z3.ax1x.com/2021/09/04/h2zT2D.png" alt="vue">
+  <img src="https://z3.ax1x.com/2021/09/19/48dhgs.png" alt="vue">
 </p>
 
 ## 目录结构 | Directory structure
@@ -18,6 +18,7 @@
 │  ├─ assets/                      #  静态资源目录
 │  ├─ common/                      #  通用类库目录
 │  ├─ components/                  #  公共组件目录
+│  ├─ hooks/                        #  钩子方法
 │  ├─ locales/                     #  i18n 国际化
 │  ├─ mixins/                      #  全局混入方法
 │  ├─ router/                      #  router 配置目录
@@ -43,7 +44,7 @@
 └─ package.json                    #  npm 包管理
 ```
 
-## 代码规范 | Code standards
+## 代码开发规范 | Code development specification
 
 - EditorConfig 注意</br>
   VSCode 使用 EditorConfig 需要去插件市场下载插件 EditorConfig for VS Code ； </br>
@@ -97,15 +98,45 @@ WebStorm 打开设置窗口，搜索 eslint，找到 Language & Frameworks / Jav
 - [√] Element Plus
 - [√] 动态路由
 - [√] Layout 配置
+- [√] i18n 国际化
+- [-] 切换主题色
+- [-] 404 / 403 / 500 / 502
 - [x] 快速 CRUD
 - [x] Tabs 标签页
 - [x] Echarts 图表
 - [x] QR-Code 二维码生成
 - [x] wangEditor 富文本编辑器
 - [x] 登录/注册页
-- [x] 404 / 403 / 500 / 502
 - [x] 系统设置
 - [x] 用户管理
-- [x] 切换主题色
-- [√] i18n 国际化
 - [x] 工具函数
+
+
+
+## 🚀 Vue3.x 渐进式 JavaScript 框架 | Vue3.x Progressive JavaScript framework
+
+<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo"></a></p>
+
+[![npm](https://img.shields.io/npm/v/vue/next.svg)](https://www.npmjs.com/package/vue/v/next) [![build status](https://github.com/vuejs/vue-next/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/vuejs/vue-next/actions/workflows/ci.yml)
+
+
+## 🚀 基于 ElementPlus + 圆角 UI 风格 | Based on ElementPlus + round UI style
+
+<p align="center">
+  <img width="300px" src="https://user-images.githubusercontent.com/10731096/95823103-9ce15780-0d5f-11eb-8010-1bd1b5910d4f.png">
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.org/package/element-plus">
+    <img src="https://img.shields.io/npm/v/element-plus.svg">
+  </a>
+  <a href="https://npmcharts.com/compare/element-plus?minimal=true">
+    <img src="http://img.shields.io/npm/dm/element-plus.svg">
+  </a>
+  <br>
+</p>
+
+<p align="center">Element Plus - A Vue.js 3 UI library</p>
+
+- 💪 Vue 3 Composition API
+- 🔥 Written in TypeScript

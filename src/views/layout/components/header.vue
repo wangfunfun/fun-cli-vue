@@ -4,7 +4,7 @@
       <!-- 展开/缩放 -->
       <Unfold></Unfold>
       <!-- 切换语言 -->
-      <ChangeLanguage mode="btn"></ChangeLanguage>
+      <ChangeLanguage mode="btn" v-if="ADMINSYS_LAYOUT_HEADEROPS.showLanguage"></ChangeLanguage>
     </div>
     <div class="flex-start">
       <!-- 刷新视图 -->
@@ -31,7 +31,6 @@ import Theme from './tools/theme.vue'
 import Message from './tools/message.vue'
 import User from './tools/user.vue'
 import ChangeLanguage from '../../../components/language/changeLanguage.vue'
-
 
 export default defineComponent({
   name: 'Header',

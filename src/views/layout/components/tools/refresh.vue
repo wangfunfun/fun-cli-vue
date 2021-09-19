@@ -17,7 +17,7 @@ import { useI18n } from 'vue-i18n'
 import { useStore } from '../../../../store/index'
 
 export default defineComponent({
-  name: 'Unfold',
+  name: 'refresh',
   setup() {
     const { t } = useI18n()
     const store = useStore()

@@ -17,6 +17,7 @@
     "dart-sass": "^1.25.0",
     "element-plus": "^1.0.2-beta.70",
     "js-cookie": "^3.0.0",
+    "mitt": "^3.0.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
     "vite": "^2.4.4",

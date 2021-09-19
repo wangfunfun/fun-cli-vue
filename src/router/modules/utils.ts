@@ -12,7 +12,7 @@ export default {
       path: 'format',
       name: 'UtilsFormat',
       component: () => import('../../views/modules/utils/format.vue'),
-      meta: { requiresAuth: true, icon: '', menuName: 'format.ts 格式化' }
+      meta: { requiresAuth: true, icon: '', menuName: 'format 格式化' }
     }
   ]
 }

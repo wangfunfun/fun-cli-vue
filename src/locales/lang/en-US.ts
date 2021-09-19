@@ -14,7 +14,15 @@ export default {
   },
   // 全局提示
   tip: {
-    development: 'Developing...'
+    development: 'Developing...',
+    logout: 'Log out?',
+    logoutSuccess: 'Exit the success',
+    dialogTitle: 'Tip'
+  },
+  // 按钮
+  btn: {
+    confirm: 'Confirm',
+    cancel: 'Cancel'
   },
   // 登录模块
   login: {
@@ -29,5 +37,9 @@ export default {
     placeholder_pwd_null: 'Please enter your password',
     placeholder_pwd_error: 'The password contains 6 to 16 letters and digits',
     tip_account_not: 'No account? '
+  },
+  // 用户模块
+  user: {
+    defaultName: 'Visitor'
   }
 }

@@ -5,7 +5,7 @@
         size="small"
         src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
       ></el-avatar>
-      <span class="username">游客</span>
+      <span class="username">{{ t('user.defaultName') }}</span>
       <i class="el-icon-arrow-down"></i>
     </div>
     <template #dropdown>
@@ -26,7 +26,7 @@ import Storage from '../../../../utils/storage'
 import { ElMessageBox, ElMessage } from 'element-plus'
 
 export default defineComponent({
-  name: 'Unfold',
+  name: 'user',
   setup() {
     const { t } = useI18n()
     const store = useStore()
@@ -51,9 +51,9 @@ export default defineComponent({
      * @name 退出登录
      */
     const logout = () => {
-      ElMessageBox.confirm('是否退出登录？', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      ElMessageBox.confirm(t('tip.logout'), '提示', {
+        confirmButtonText: t('btn.confirm'),
+        cancelButtonText: t('btn.cancel'),
         center: true
       })
         .then(() => {
@@ -61,7 +61,7 @@ export default defineComponent({
           router.replace('/login')
           ElMessage({
             type: 'success',
-            message: '已退出登录',
+            message: t('tip.logoutSuccess'),
             center: true
           })
         })

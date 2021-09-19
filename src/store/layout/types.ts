@@ -7,10 +7,12 @@ export default interface layoutStateTypes {
     fullScreen: boolean
     showTheme: boolean
     showMessage: boolean
+    showLanguage: boolean
     height: string
   }
   ADMINSYS_LAYOUT_FOOTEROPS: {
     nowRouter: boolean
+    nowPath: String
     nowUserName: boolean
     loginDatetime: boolean
     systemName: boolean
