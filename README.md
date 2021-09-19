@@ -113,25 +113,16 @@ WebStorm 打开设置窗口，搜索 eslint，找到 Language & Frameworks / Jav
 
 ## 🚀 Vue3.x 渐进式 JavaScript 框架 | Vue3.x Progressive JavaScript framework
 
-<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo"></a></p>
 <p align="center">
-
-[![npm](https://img.shields.io/npm/v/vue/next.svg)](https://www.npmjs.com/package/vue/v/next) [![build status](https://github.com/vuejs/vue-next/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/vuejs/vue-next/actions/workflows/ci.yml)
-
+  <a href="https://vuejs.org">
+    <img width="300px" src="https://vuejs.org/images/logo.png">
+  </a>
 </p>
 
 ## 🚀 基于 ElementPlus + 圆角 UI 风格 | Based on ElementPlus + round UI style
 
 <p align="center">
-  <img width="300px" src="https://user-images.githubusercontent.com/10731096/95823103-9ce15780-0d5f-11eb-8010-1bd1b5910d4f.png">
-</p>
-
-<p align="center">
-  <a href="https://www.npmjs.org/package/element-plus">
-    <img src="https://img.shields.io/npm/v/element-plus.svg">
+  <a href="https://element-plus.gitee.io/#/zh-CN">
+    <img width="300px" src="https://user-images.githubusercontent.com/10731096/95823103-9ce15780-0d5f-11eb-8010-1bd1b5910d4f.png">
   </a>
-  <a href="https://npmcharts.com/compare/element-plus?minimal=true">
-    <img src="http://img.shields.io/npm/dm/element-plus.svg">
-  </a>
-  <br>
 </p>
