@@ -38,7 +38,7 @@ export default defineComponent({
         url: 'https://www.tslang.cn/'
       },
       {
-        label: 'Github地址',
+        label: 'Github',
         url: 'https://github.com/wangqf19/AdminSys-vue3-ts-vite'
       }
     ]

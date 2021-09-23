@@ -1,8 +1,6 @@
 import { ElMessage } from 'element-plus'
 import router from './index'
 import Storage from '../utils/storage'
-import { useStore } from '../store'
-const store = useStore()
 
 /**
  * @name 重置路由
@@ -50,8 +48,6 @@ router.beforeResolve(async (to) => {
 
 // 全局后置钩子
 router.afterEach((to, from) => {
-  console.log(store)
-  store.commit('layout/updateNowPath', to.meta.menuName)
 })
 
 

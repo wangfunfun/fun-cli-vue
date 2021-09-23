@@ -17,10 +17,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed, toRefs } from 'vue'
+import { defineComponent, reactive, computed, toRefs, watch } from 'vue'
 import { useStore } from '../../../store'
 import { useI18n } from 'vue-i18n'
-
+import { useRoute } from 'vue-router'
 export default defineComponent({
   name: 'Footer',
   setup() {
@@ -31,6 +31,12 @@ export default defineComponent({
     const store = useStore()
     const footerOps = reactive({
       ADMINSYS_LAYOUT_FOOTEROPS: computed(() => store.state.layout.ADMINSYS_LAYOUT_FOOTEROPS)
+    })
+
+    // 监听路由
+    const route = useRoute()
+    watch(route.meta, (newVal) => {
+      console.log(newVal)
     })
 
     return {
