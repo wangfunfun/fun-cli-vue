@@ -7,6 +7,7 @@
     <el-container>
       <el-header>
         <Header></Header>
+        <Tags></Tags>
       </el-header>
       <el-main>
         <router-view></router-view>
@@ -20,6 +21,7 @@
   <el-container v-if="ADMINSYS_LAYOUT_METHOD == 'layoutB'">
     <el-header>
       <Header></Header>
+      <Tags></Tags>
     </el-header>
     <el-container>
       <el-aside>
@@ -43,13 +45,15 @@ import { useStore } from '../../store'
 import Header from './components/header.vue'
 import Aside from './components/aside.vue'
 import Footer from './components/footer.vue'
+import Tags from './components/tags.vue'
 
 export default defineComponent({
   name: 'Layout',
   components: {
     Header,
     Aside,
-    Footer
+    Footer,
+    Tags
   },
   setup() {
     const store = useStore()

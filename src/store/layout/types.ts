@@ -10,6 +10,11 @@ export default interface layoutStateTypes {
     showLanguage: boolean
     height: string
   }
+  ADMINSYS_LAYOUT_TAGSOPS: {
+    showTags: boolean
+    tagsList: Array<[]>
+    currentTag: string
+  }
   ADMINSYS_LAYOUT_FOOTEROPS: {
     nowRouter: boolean
     nowPath: String

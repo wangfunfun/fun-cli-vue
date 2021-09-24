@@ -20,6 +20,12 @@ const layout: Module<layoutStateTypes, rootStateTypes> = {
       showLanguage: true, // 显示切换语言按钮
       height: '60px' // header 高度
     },
+    // tags标签配置
+    ADMINSYS_LAYOUT_TAGSOPS: {
+      showTags: true, // 是否显示tags组件
+      tagsList: [], // tags列表
+      currentTag: '' // 当前的标签
+    },
     // footer 需要显示的内容
     ADMINSYS_LAYOUT_FOOTEROPS: {
       nowRouter: true, // 正在浏览的位置
@@ -46,6 +52,33 @@ const layout: Module<layoutStateTypes, rootStateTypes> = {
     // 更新当前浏览位置
     updateNowPath(state: layoutStateTypes, data) {
       state.ADMINSYS_LAYOUT_FOOTEROPS.nowPath = data
+    },
+    // 设置首标签
+    setFirstTag(state: layoutStateTypes, data) {
+      state.ADMINSYS_LAYOUT_TAGSOPS.tagsList = [data]
+      state.ADMINSYS_LAYOUT_TAGSOPS.currentTag = data.path
+    },
+    // 添加新tag
+    addTag(state: layoutStateTypes, data) {
+      state.ADMINSYS_LAYOUT_TAGSOPS.tagsList.push(data)
+    },
+    // 移除tag
+    removeTag(state: layoutStateTypes, data) {
+      state.ADMINSYS_LAYOUT_TAGSOPS.tagsList.splice(data.index, 1)
+    },
+    // 仅保留当前
+    only(state: layoutStateTypes, data) {
+      let arr: Array<[]> = []
+      state.ADMINSYS_LAYOUT_TAGSOPS.tagsList.map((item, index) => {
+        if (index == data.index) {
+          arr.push(item)
+        }
+      })
+      state.ADMINSYS_LAYOUT_TAGSOPS.tagsList = arr
+    },
+    // 全部关闭
+    close(state: layoutStateTypes) {
+      state.ADMINSYS_LAYOUT_TAGSOPS.tagsList = []
     }
   }
 }

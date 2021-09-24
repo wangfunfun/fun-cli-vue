@@ -53,10 +53,25 @@
   padding-bottom: 20px;
 }
 
-.el-message-box{
+.el-message-box {
   border-radius: 20px;
 }
 
-.el-message{
+.el-message {
   border-radius: 10px;
+}
+
+// tags
+.el-tabs--card > .el-tabs__header .el-tabs__nav {
+  border: none;
+}
+.el-tabs--card > .el-tabs__header {
+  border: none;
+  margin: 0;
+}
+.el-tabs__item {
+  border: none !important;
+}
+.el-tabs__item.is-active {
+  border-bottom: 2px solid !important;
 }
