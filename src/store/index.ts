@@ -26,6 +26,7 @@ export const store = createStore<rootStateTypes>({
   }
 })
 
+
 // vuex4.x 对 ts 的兼容性差，需要手动定义注入类型
 export const key: InjectionKey<Store<rootStateTypes>> = Symbol('vue-store')
 
