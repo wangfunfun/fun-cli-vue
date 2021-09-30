@@ -56,8 +56,6 @@ const route: Module<routeStateTypes, rootStateTypes> = {
           const B: number = b.meta.sort
           return A - B
         })
-        // 缓存首个tag
-        new Storage('FIRST_TAG', 'local', concatRoutes[0]).set()
         // 动态添加路由
         concatRoutes.forEach((item: RouteRecordRaw) => {
           const routeName: any = item.name

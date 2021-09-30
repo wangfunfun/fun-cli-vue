@@ -1,7 +1,8 @@
 // 模块化 types 定义
 import layoutStateTypes from './layout/types'
+import tagsStateTypes from './tags/types'
 import routeStateTypes from './route/types'
-import vuexExampleStateTypes from './vuexExample/types'
+import userStateTypes from './user/types'
 
 export default interface RootStateTypes {
   [x: string]: any
@@ -11,7 +12,10 @@ export default interface RootStateTypes {
 export interface AllStateTypes extends RootStateTypes {
   layout: any
   route: any
+  tags: any
+  user: any
   layoutStateTypes: layoutStateTypes
+  tagsStateTypes: tagsStateTypes
   routeStateTypes: routeStateTypes
-  vuexExampleStateTypes: vuexExampleStateTypes
+  userStateTypes: userStateTypes
 }

@@ -4,10 +4,12 @@ import rootStateTypes, { AllStateTypes } from './types'
 
 // layout 布局配置 store
 import layout from './layout/index'
+// tags 标签配置
+import tags from './tags/index'
 // 路由配置 store
 import route from './route/index'
-// vuex 示例模块
-import vuexExample from './vuexExample/index'
+// 用户模块
+import user from './user/index'
 
 export const store = createStore<rootStateTypes>({
   // 根仓库
@@ -18,8 +20,9 @@ export const store = createStore<rootStateTypes>({
   // 模块化仓库
   modules: {
     layout,
+    tags,
     route,
-    vuexExample
+    user
   }
 })
 

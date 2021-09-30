@@ -117,7 +117,7 @@ export default defineComponent({
      * @name 临时登录方法
      */
     const loginByTemp = () => {
-      new Storage('TOKEN', 'session', '123412341234').set()
+      new Storage('TOKEN', 'session', 'visitor').set()
       router.replace('/home')
     }
 

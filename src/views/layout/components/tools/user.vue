@@ -57,7 +57,11 @@ export default defineComponent({
         center: true
       })
         .then(() => {
+          // 清除token
           new Storage('TOKEN', 'session').remove()
+          // 关闭所有标签
+          store.commit('layout/closeAllTag')
+          // 跳转路由
           router.replace('/login')
           ElMessage({
             type: 'success',

@@ -1,8 +1,9 @@
 <template>
   <div class="components flex-between">
     <div>
-      <span class="txt" v-if="ADMINSYS_LAYOUT_FOOTEROPS.nowRouter"
-        >{{ t('layout.nowView') }}{{ ADMINSYS_LAYOUT_FOOTEROPS.nowPath }}</span
+      <span class="txt" v-if="ADMINSYS_LAYOUT_FOOTEROPS.showNowView"
+        >{{ t('layout.nowView')
+        }}{{ currentTag.meta ? currentTag.meta.menuName : '未知页面' }}</span
       >
     </div>
     <div class="info flex-start">
@@ -30,7 +31,8 @@ export default defineComponent({
     // 配置
     const store = useStore()
     const footerOps = reactive({
-      ADMINSYS_LAYOUT_FOOTEROPS: computed(() => store.state.layout.ADMINSYS_LAYOUT_FOOTEROPS)
+      ADMINSYS_LAYOUT_FOOTEROPS: computed(() => store.state.layout.ADMINSYS_LAYOUT_FOOTEROPS),
+      currentTag: computed(() => store.state.tags.CURRENT_TAG)
     })
 
     // 监听路由

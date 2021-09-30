@@ -1,15 +1,10 @@
 <template>
-  <div v-if="ADMINSYS_LAYOUT_TAGSOPS.showTags" class="slot">
+  <div v-if="showTags" class="slot">
     <!-- tags列表 -->
-    <el-tabs
-      v-model="ADMINSYS_LAYOUT_TAGSOPS.currentTag"
-      type="card"
-      @tab-click="clickTags"
-      @tab-remove="removeTags"
-    >
+    <el-tabs v-model="currentTagPath" type="card" @tab-click="clickTags" @tab-remove="removeTags">
       <el-tab-pane
         :key="index"
-        v-for="(item, index) in ADMINSYS_LAYOUT_TAGSOPS.tagsList"
+        v-for="(item, index) in tagsList"
         :label="item.meta.menuName"
         :name="item.path"
         closable
@@ -31,21 +26,69 @@
 <script lang="ts">
 import { defineComponent, reactive, computed, toRefs, ref, onMounted } from 'vue'
 import { useStore } from '../../../store'
-import { onBeforeRouteUpdate } from 'vue-router'
+import { onBeforeRouteUpdate, useRouter } from 'vue-router'
 import Storage from '../../../utils/storage'
 export default defineComponent({
   name: 'Tags',
   setup() {
+    // router
+
+    const router = useRouter()
+
     // vuex配置
+
     const store = useStore()
-    const layoutOps = reactive({
-      ADMINSYS_LAYOUT_TAGSOPS: computed(() => store.state.layout.ADMINSYS_LAYOUT_TAGSOPS)
+    const tagsOps = reactive({
+      showTags: computed(() => store.state.tags.SHOW_TAGS),
+      tagsList: computed(() => store.state.tags.TAGS_LIST),
+      currentTagPath: computed(() => store.state.tags.CURRENT_TAG.path)
+    })
+
+    // 初始化tag
+
+    onMounted(() => {
+      // 初始化刷新前的tag列表
+      let tagsList: any = new Storage('TAG_LIST', 'session').get()
+      if (tagsList) {
+        store.commit('tags/updateTagsList', tagsList.save_data)
+      }
+      // 校验是否有临时当前选中的tag
+      let currentTag: any = new Storage('CURRENT_TAG', 'session').get()
+      if (currentTag) {
+        router.replace(currentTag.save_data.path)
+        store.dispatch('tags/addTag', currentTag.save_data)
+        return
+      }
+      // 缓存首个tag
+      store.commit('tags/setFirstTag', store.state.route.ADMINSYS_LAYOUT_ROUTES[0])
+      // 获取配置好的首个tag
+      let firstTag: any = new Storage('FIRST_TAG', 'local').get()
+      if (firstTag) {
+        router.replace(firstTag.save_data.path)
+        store.dispatch('tags/addTag', firstTag.save_data)
+        return
+      }
     })
 
     // 监听路由
+
     onBeforeRouteUpdate((to) => {
-      store.commit('layout/addTag', to)
+      store.dispatch('tags/addTag', to)
     })
+
+    // 遍历tag
+
+    const queryTag = (name: string) => {
+      let queryRes = null
+      let queryIndex = null
+      tagsOps.tagsList.map((item: any, index: number) => {
+        if (item.path == name) {
+          queryRes = item
+          queryIndex = index
+        }
+      })
+      return { queryRes, queryIndex }
+    }
 
     // 右键菜单
     const operateMenu = ref(false)
@@ -55,22 +98,25 @@ export default defineComponent({
 
     // 点击标签
     const clickTags = (e: any) => {
-      console.log(e)
+      let tag = e.props.name
+      if (tag) {
+        let res: any = queryTag(tag)
+        store.commit('tags/setCurrentTag', res.queryRes)
+        router.replace(res.queryRes.path)
+      }
     }
 
     // 移除标签
     const removeTags = (e: any) => {
-      console.log(e)
+      let tag = e
+      if (tag) {
+        let res: any = queryTag(tag)
+        store.dispatch('tags/removeTag', res)
+      }
     }
 
-    // 初始化tag
-    onMounted(() => {
-      let obj: any = new Storage('FIRST_TAG', 'local').get()
-      store.commit('layout/setFirstTag', obj.save_data)
-    })
-
     return {
-      ...toRefs(layoutOps),
+      ...toRefs(tagsOps),
       operateMenu,
       updateMenuVisible,
       clickTags,
