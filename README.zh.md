@@ -10,7 +10,7 @@
     |
     <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.md">&nbsp;&nbsp;&nbsp;&nbsp;English&nbsp;&nbsp;&nbsp;&nbsp;</a>
     |
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/docs/"><strong>&nbsp;&nbsp;&nbsp;&nbsp;查看演示 »</strong></a>
+    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/docs/">&nbsp;&nbsp;&nbsp;&nbsp;查看演示 »</a>
   </p>
 
   <p align="left">
