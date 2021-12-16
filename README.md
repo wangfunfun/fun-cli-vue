@@ -1,10 +1,19 @@
-<div align="center">
-  <a href="https://github.com/wangqf19/cli-vue3-vite2-ts">
-    <img src="docs/logo.png" alt="Logo" width="120" height="auto">
-  </a>
+<p align="center">
+  <img src="docs/logo.png" alt="Logo" width="120" height="auto">
+</p>
 
-  <h3 align="center">cli-vue3-vite2-ts</h3>
-</div>
+<h3 align="center">cli-vue3-vite2-ts</h3>
+
+<p align="center">
+  <a href="">
+    <img src="https://img.shields.io/github/license/wangqf19/cli-vue3-vite2-ts">
+  </a>
+  <a href="https://www.npmjs.com/package/cli-vue3-vite2-ts">
+    <img src="https://img.shields.io/npm/v/cli-vue3-vite2-ts">
+  </a>
+  <br>
+</p>
+
 
 [中文](/README.zh.md) | [English](/README.md) | [View Demo »](https://github.com/wangqf19/cli-vue3-vite2-ts/docs/)
 
@@ -83,8 +92,9 @@ npm run test
 ### Any questions?
 
 - [🧩 You can submit issues on Github](https://github.com/wangqf19/cli-vue3-vite2-ts/issues)
-- 
+
 - <a href="mailto:wangqf19@189.cn">📮 Or contact the author for answers</a>
 
 ### LICENSE
 
+The copyright notice and license notice must be included with the software and all copies of the software.  
