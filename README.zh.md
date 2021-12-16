@@ -5,17 +5,23 @@
 
   <h3 align="center">cli-vue3-vite2-ts</h3>
 
-  <p align="center">
+  <p align="cneter">
+    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.zh.md">中文  </a>
+    |
+    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.md">  English</a>
+  </p>
+
+  <p align="left">
     🎄 基于Vue3、Vite2、TypeScript搭建，集成了Vue-router、Pinia、Axios、Vue-i18n等插件，使用ElementPlus作为组件库，引入Echarts、Draggable、wangEditor等功能组件。
-    <br />
     <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/docs/"><strong>查看演示 »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.md">查看英文README  </a>
-    ·
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/issues">在Github上提交 Bug  </a>
-    ·
-    <a href="mailto:wangqf19@189.cn">  联系作者</a>
+  </p>
+
+
+  <p align="left">遇到了问题？</p>
+  <p align="left">
+    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/issues">📌 您可以在Github上提交issues  </a>
+    <br/>  
+    <a href="mailto:wangqf19@189.cn">📬 或者联系作者寻求解答</a>
   </p>
 </div>
  

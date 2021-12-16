@@ -4,22 +4,28 @@
   </a>
 
   <h3 align="center">cli-vue3-vite2-ts</h3>
+  
+  <p align="cneter">
+    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.zh.md">中文  </a>
+    |
+    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.md">  English</a>
+  </p>
 
-  <p align="center">
+  <p align="left">
     🎄 Based on Vue3, Vite2 and TypeScript, Vue-router, Pinia, Axios, Vue-i18n and other plug-ins are integrated. ElementPlus is used as a component library, and Echarts, Draggable, wangEditor and other functional components are introduced.
-    <br />
     <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/docs/"><strong>View Demo »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.zh.md">See README in Chinese  </a>
-    ·
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/issues">Report bugs via Github  </a>
-    ·
-    <a href="mailto:wangqf19@189.cn">Contact Author</a>
+  </p>
+
+  <p align="left">Any questions?</p>
+
+  <p align="left">
+    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/issues">📌 You can submit issues on Github    </a>
+    <br/>  
+    <a href="mailto:wangqf19@189.cn">📬 Or contact the author for answers</a>
   </p>
 </div>
  
-### How to use
+### Usage
 
 1. Clone the repository
 
@@ -45,7 +51,7 @@ npm run dev
 npm run build
 ```
 
-### Other cli commands
+### Cli commands
 
 - Preview the production environment locally
 
