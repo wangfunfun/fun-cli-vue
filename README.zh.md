@@ -14,7 +14,7 @@
 
 # cli-vue3-vite2-ts
 
-=============
+------------------
 
 [中文](/README.zh.md) | [English](/README.md) | [查看演示 »](https://github.com/wangqf19/cli-vue3-vite2-ts/docs/)
 
