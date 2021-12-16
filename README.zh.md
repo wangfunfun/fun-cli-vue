@@ -14,11 +14,12 @@
 
 # cli-vue3-vite2-ts
 
+=============
+
 [中文](/README.zh.md) | [English](/README.md) | [查看演示 »](https://github.com/wangqf19/cli-vue3-vite2-ts/docs/)
 
 基于Vue3、Vite2、TypeScript搭建，集成了Vue-router、Pinia、Axios、Vue-i18n等插件，使用ElementPlus作为组件库，引入Echarts、Draggable、wangEditor等功能组件。
 
------------
  
 ### 使用方式
 
