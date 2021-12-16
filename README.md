@@ -6,7 +6,7 @@
   <h3 align="center">cli-vue3-vite2-ts</h3>
 </div>
 
-[/README.zh.md](中文) | [/README.md](English) | [https://github.com/wangqf19/cli-vue3-vite2-ts/docs/](View Demo »)
+[中文](/README.zh.md) | [English](/README.md) | [View Demo »](https://github.com/wangqf19/cli-vue3-vite2-ts/docs/)
 
 Based on Vue3, Vite2 and TypeScript, Vue-router, Pinia, Axios, Vue-i18n and other plug-ins are integrated. ElementPlus is used as a component library, and Echarts, Draggable, wangEditor and other functional components are introduced.
 
@@ -82,7 +82,7 @@ npm run test
 
 ### Any questions?
 
-- [https://github.com/wangqf19/cli-vue3-vite2-ts/issues]🧩 You can submit issues on Github</a>
+- [🧩 You can submit issues on Github](https://github.com/wangqf19/cli-vue3-vite2-ts/issues)
 - 
 - <a href="mailto:wangqf19@189.cn">📮 Or contact the author for answers</a>
 
