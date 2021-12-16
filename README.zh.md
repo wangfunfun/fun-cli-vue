@@ -22,7 +22,7 @@
     遇到了问题？
     <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/issues">您可以在Github上提交issues  </a>
     ，
-    <a href="mailto:wangqf19@189.cn">📮 或者联系作者寻求解答</a>
+    <a href="mailto:wangqf19@189.cn"> 或者联系作者寻求解答</a>
   </p>
 </div>
 
