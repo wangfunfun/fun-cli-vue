@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: ['vue', '@typescript-eslint'],
   rules: {
-    // 允许template存在多个根节点
+    // 允许<template/>存在多个根节点
     'vue/no-multiple-template-root': 'off',
   },
   globals: {
