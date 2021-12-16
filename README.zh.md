@@ -4,11 +4,20 @@
   </a>
 
   <h3 align="center">cli-vue3-vite2-ts</h3>
+
+  <p>
+    [中文](/README.zh.md) 
+    | [English](/README.md) 
+    | [查看演示 »](https://github.com/wangqf19/cli-vue3-vite2-ts/docs/)
+  </p>
+
+  <P>
+    基于Vue3、Vite2、TypeScript搭建，集成了Vue-router、Pinia、Axios、Vue-i18n等插件，使用ElementPlus作为组件库，引入Echarts、Draggable、wangEditor等功能组件。
+  </p>
 </div>
 
-[中文](/README.zh.md) | [English](/README.md) | [查看演示 »](https://github.com/wangqf19/cli-vue3-vite2-ts/docs/)
 
-基于Vue3、Vite2、TypeScript搭建，集成了Vue-router、Pinia、Axios、Vue-i18n等插件，使用ElementPlus作为组件库，引入Echarts、Draggable、wangEditor等功能组件。
+
 
 -----------
  
@@ -79,7 +88,7 @@ npm run test
 - [ ] Jest 单元测试 
 
 
-##### 遇到了问题？
+### 遇到了问题？
 
 - [🧩 您可以在Github上提交issues  ](https://github.com/wangqf19/cli-vue3-vite2-ts/issues)
 - 
