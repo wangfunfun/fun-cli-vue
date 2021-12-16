@@ -1,4 +1,4 @@
-<p>
+<p align="cneter">
   <a href="https://github.com/wangqf19/fage-cli">
     <img src="docs/logo.png" alt="Logo" width="120" height="auto">
   </a>
