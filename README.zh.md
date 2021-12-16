@@ -6,9 +6,9 @@
   <h3 align="center">cli-vue3-vite2-ts</h3>
 
   <p align="cneter">
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.zh.md">中文&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.zh.md">[中文](README.zh.md)&nbsp;&nbsp;&nbsp;&nbsp;</a>
     |
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.md">&nbsp;&nbsp;&nbsp;&nbsp;English&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.md">&nbsp;&nbsp;&nbsp;&nbsp; [English](README.md) &nbsp;&nbsp;&nbsp;&nbsp;</a>
     |
     <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/docs/">&nbsp;&nbsp;&nbsp;&nbsp;查看演示 »</a>
   </p>
