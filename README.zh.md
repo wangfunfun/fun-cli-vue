@@ -1,8 +1,8 @@
-<p align="cneter">
+<div align="cneter">
   <a href="https://github.com/wangqf19/fage-cli">
     <img src="docs/logo.png" alt="Logo" width="120" height="auto">
   </a>
-</p>
+</div>
 
 <h3 align="center">cli-vue3-vite2-ts</h3>
 
