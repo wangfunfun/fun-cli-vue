@@ -91,5 +91,5 @@ npm run test
 ### 遇到了问题？
 
 - [🧩 您可以在Github上提交issues  ](https://github.com/wangqf19/cli-vue3-vite2-ts/issues)
-- 
+
 - <a href="mailto:wangqf19@189.cn">📮 或者联系作者寻求解答</a>
