@@ -4,27 +4,11 @@
   </a>
 
   <h3 align="center">cli-vue3-vite2-ts</h3>
-  
-  <p align="cneter">
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.zh.md">中文&nbsp;&nbsp;&nbsp;&nbsp;</a>
-    |
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.md">&nbsp;&nbsp;&nbsp;&nbsp;English&nbsp;&nbsp;&nbsp;&nbsp;</a>
-    |
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/docs/"><strong>&nbsp;&nbsp;&nbsp;&nbsp;View Demo »</strong></a>
-  </p>
-
-  <p align="left">
-    Based on Vue3, Vite2 and TypeScript, Vue-router, Pinia, Axios, Vue-i18n and other plug-ins are integrated. ElementPlus is used as a component library, and Echarts, Draggable, wangEditor and other functional components are introduced.
-  </p>
-
-  <p align="left">Any questions?</p>
-
-  <p align="left">
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/issues">🧩 You can submit issues on Github    </a>
-    <br/>  
-    <a href="mailto:wangqf19@189.cn">📮 Or contact the author for answers</a>
-  </p>
 </div>
+
+[/README.zh.md](中文) | [/README.md](English) | [https://github.com/wangqf19/cli-vue3-vite2-ts/docs/](View Demo »)
+
+Based on Vue3, Vite2 and TypeScript, Vue-router, Pinia, Axios, Vue-i18n and other plug-ins are integrated. ElementPlus is used as a component library, and Echarts, Draggable, wangEditor and other functional components are introduced.
 
 -----------
  
@@ -93,3 +77,14 @@ npm run test
 - [ ] Pinia state management
 - [ ] Topic configuration based on ElementPlus  
 - [ ] Jest unit tests  
+
+
+
+### Any questions?
+
+- [https://github.com/wangqf19/cli-vue3-vite2-ts/issues]🧩 You can submit issues on Github</a>
+- 
+- <a href="mailto:wangqf19@189.cn">📮 Or contact the author for answers</a>
+
+### LICENSE
+
