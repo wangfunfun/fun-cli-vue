@@ -19,11 +19,13 @@
   <p align="left">Any questions?</p>
 
   <p align="left">
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/issues">📌 You can submit issues on Github    </a>
+    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/issues">🧩 You can submit issues on Github    </a>
     <br/>  
-    <a href="mailto:wangqf19@189.cn">📬 Or contact the author for answers</a>
+    <a href="mailto:wangqf19@189.cn">📮 Or contact the author for answers</a>
   </p>
 </div>
+
+-----------
  
 ### Usage
 
