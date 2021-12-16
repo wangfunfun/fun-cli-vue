@@ -1,6 +1,6 @@
 {
   "name": "cli-vue3-vite2-ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "init": "npm install",
     "dev": "vite --mode development",
@@ -45,7 +45,7 @@
     "vite-plugin-html-env": "^1.0.3",
     "vue-tsc": "^0.29.8"
   },
-  "description": "<div align=\"center\">   <a href=\"https://github.com/wangqf19/fage-cli\">     <img src=\"docs/logo.png\" alt=\"Logo\" width=\"120\" height=\"auto\">   </a>",
+  "description": "",
   "main": "index.html",
   "directories": {
     "test": "test"

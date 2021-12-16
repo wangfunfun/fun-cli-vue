@@ -75,9 +75,9 @@ npm run test
 
 ### Built in Functions
 
-- [x] HTTP status code page  
-- [x] Login, registration, password retrieval page
-- [x] Management background system
+- [ ] HTTP status code page  
+- [ ] Login, registration, password retrieval page
+- [ ] Management background system
 - [ ] Echarts sample  page  
 - [ ] Draggable sample page  
 - [ ] Internationalization based on VUE-I18N
