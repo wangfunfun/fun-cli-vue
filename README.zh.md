@@ -1,23 +1,22 @@
-<div align="center">
-  <a href="https://github.com/wangqf19/fage-cli">
-    <img src="docs/logo.png" alt="Logo" width="120" height="auto">
+<p align="center">
+  <img src="docs/logo.png" alt="Logo" width="120" height="auto">
+</p>
+<p align="center">
+  <a href="">
+    <img src="https://img.shields.io/github/license/wangqf19/cli-vue3-vite2-ts">
   </a>
-
-  <h3 align="center">cli-vue3-vite2-ts</h3>
-
-  <p>
-    [中文](/README.zh.md) 
-    | [English](/README.md) 
-    | [查看演示 »](https://github.com/wangqf19/cli-vue3-vite2-ts/docs/)
-  </p>
-
-  <P>
-    基于Vue3、Vite2、TypeScript搭建，集成了Vue-router、Pinia、Axios、Vue-i18n等插件，使用ElementPlus作为组件库，引入Echarts、Draggable、wangEditor等功能组件。
-  </p>
-</div>
+  <a href="https://www.npmjs.com/package/cli-vue3-vite2-ts">
+    <img src="https://img.shields.io/npm/v/cli-vue3-vite2-ts">
+  </a>
+  <br>
+</p>
 
 
+# cli-vue3-vite2-ts
 
+[中文](/README.zh.md) | [English](/README.md) | [查看演示 »](https://github.com/wangqf19/cli-vue3-vite2-ts/docs/)
+
+基于Vue3、Vite2、TypeScript搭建，集成了Vue-router、Pinia、Axios、Vue-i18n等插件，使用ElementPlus作为组件库，引入Echarts、Draggable、wangEditor等功能组件。
 
 -----------
  
