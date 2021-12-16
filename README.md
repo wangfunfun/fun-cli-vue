@@ -45,24 +45,28 @@ npm run dev
 npm run build
 ```
 
-5. Other cli commands  
+### Other cli commands
 
-Preview the production environment locally<br/>
+- Preview the production environment locally
+
 ```sh
 npm run preview
 ```
 
-Prettier automatically formats code  <br/>
+- Prettier automatically formats code
+
 ```sh
 npm run prettier
 ```
 
-Eslint validates code formats  <br/>
+- Eslint validates code formats
+
 ```sh
 npm run lint
 ```
 
-Jest unit tests<br/>
+- Jest unit tests
+
 ```sh
 npm run test
 ```

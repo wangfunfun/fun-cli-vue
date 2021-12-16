@@ -11,11 +11,11 @@
     <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/docs/"><strong>查看演示 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.md">查看英文 README  </a>
+    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/README.md">查看英文README  </a>
     ·
-    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/issues">在 Github 上提交 Bug  </a>
+    <a href="https://github.com/wangqf19/cli-vue3-vite2-ts/issues">在Github上提交 Bug  </a>
     ·
-    <a href="mailto:wangqf19@189.cn">联系作者</a>
+    <a href="mailto:wangqf19@189.cn">  联系作者</a>
   </p>
 </div>
  
@@ -33,7 +33,7 @@ git clone https://github.com/wangqf19/cli-vue3-vite2-ts.git
 npm install
 ```
 
-1. 运行开发环境
+3. 运行开发环境
 
 ```sh
 npm run dev
@@ -45,24 +45,28 @@ npm run dev
 npm run build
 ```
 
-1. 其他内置命令
+### 其他cli命令
 
-本地预览生产环境<br/>
+- 本地预览生产环境
+
 ```sh
 npm run preview
 ```
 
-Prettier 代码格式化<br/>
+- Prettier 代码格式化
+
 ```sh
 npm run prettier
 ```
 
-Eslint 检查代码格式<br/>
+- Eslint 检查代码格式
+
 ```sh
 npm run lint
 ```
 
-运行 Jest 单元测试<br/>
+- 运行 Jest 单元测试
+
 ```sh
 npm run test
 ```
