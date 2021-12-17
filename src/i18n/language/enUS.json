@@ -1,0 +1,94 @@
+{
+  "languageName": "English",
+  "symbol": {
+    "comma": ", "
+  },
+  "btn": {
+    "darkTheme": "Dark",
+    "lightTheme": "Light",
+    "zhCN": "Chinese",
+    "enUS": "English",
+    "home": "Home",
+    "document": "Document",
+    "github": "Github",
+    "icons": "Icons",
+    "goNaive": "About NaiveUI",
+    "startUse": "Get Started",
+    "login": "Log in",
+    "clickToLoginAdmin": "Click me to log in to the admin system",
+    "resetPassword": "Forget the password ?",
+    "signup": "Sign up",
+    "existingAccount": "Existing account? ",
+    "backLogin": "Return to the log in",
+    "resetPasswordSubmit": "Reset password",
+    "sendEmailCode": "Send code",
+    "contactUs": "Contact us",
+    "reportBug": "Report Bug",
+    "goPrePage": "Back to previous",
+    "goHome": "Back home page",
+    "more": "Learn More"
+  },
+  "info": {
+    "version": "Version : ",
+    "technology": "Technology",
+    "dependencies": "Dependencies",
+    "more": "More",
+    "code": "Code",
+    "editor": "Made by wangqf19",
+    "slogan": "A journey of a thousand miles begins with a single step",
+    "login": "Log in",
+    "signup": "Sign up",
+    "resetPassword": "Reset password",
+    "xicons": "Rich library of ICONS based on Xicons",
+    "providedPage": "we have provided some basic and commonly used standalone pages",
+    "admin": "fage-cli's core function is an admin system,",
+    "adminDesc": "it integrates NaiveUI, Echarts, Editor, and related built-in functionality pages, ",
+    "building": "Building...",
+    "loading": "Loading",
+    "loadingPage": "This may take a little longer to load the resource for the first time, please wait a moment  "
+  },
+  "welcome": {
+    "title": "fage-cli × Naive UI",
+    "description": "🛠 🛠 🛠 Based on Vue3, Vite, NaiveUI build front-end scaffolding, using typescript development. Fage-cli integrates vuex, VUE-Router, I18N, JEST, Sass, Axios, etc. It contains several common pages and can be used for rapid development of single-page (multi-page) projects."
+  },
+  "placeholder": {
+    "email": "Please enter your e-mail address",
+    "emailCode": "Please enter the e-mail code",
+    "password": "Please enter your password",
+    "confirmPassword": "Please enter your password again"
+  },
+  "rules": {
+    "email": "Please enter your e-mail address",
+    "emailCode": "Please enter the e-mail code",
+    "password": "Please enter your password",
+    "confirmPassword": "Please enter your password again"
+  },
+  "code": {
+    "401": "Unauthorized",
+    "403": "Forbidden",
+    "404": "Not Found Page",
+    "500": "Server internal error",
+    "503": "Service unavailable"
+  },
+  "document": {
+    "start": "Starting",
+    "source": "Source directory",
+    "page": "Built-in page"
+  },
+  "tooltip": {
+    "setting": "Setting",
+    "search": "Global Search",
+    "fullscreen": "Full screen",
+    "exitFullscreen": "Exit Full screen",
+    "refresh": "Refresh",
+    "message": "Message",
+    "fold": "Fold Menu",
+    "unfold": "Unfold Menu",
+    "language": "Switch Language"
+  },
+  "dropdown": {
+    "userInfo": "User Info",
+    "lock": "Lock Screen",
+    "logout": "Log Out"
+  }
+}
