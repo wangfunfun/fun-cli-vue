@@ -1,0 +1,36 @@
+$master-color: rgba(4, 19, 36, 1);
+$sub-color: rgba(4, 19, 36, 0.8);
+
+$primary-color: #1890ff;
+$link-color: #1890ff;
+$success-color: #52c41a;
+$warning-color: #faad14;
+$error-color: #f5222d;
+
+$heading-color: rgba(0, 0, 0, 0.85);
+$text-color: rgba(0, 0, 0, 0.65);
+$text-color-secondary: rgba(0, 0, 0, 0.45);
+$disabled-color: rgba(0, 0, 0, 0.25);
+$white-color: #fff;
+$white-opacity-color: rgba(255, 255, 255, 0.6);
+$bg-color: #f0eff5;
+
+$border-radius-base: 4px;
+$border-color-base: #d9d9d9;
+$box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+$gutter-min: 0.08rem;
+$gutter: 0.24rem;
+$gutter-max: 0.48rem;
+
+$container-width: 1100px;
+$content-width: calc(100% - 0.48rem * 2);
+
+$font-size-sm: 0.12rem;
+$font-size-base: 0.14rem;
+$font-size-md: 0.16rem;
+$font-size-lg: 0.18rem;
+$font-size-xl: 0.24rem;
+$font-size-xxl: 0.3rem;
+$font-size-xxxl: 0.4rem;
+$font-size-max: 0.5rem;
