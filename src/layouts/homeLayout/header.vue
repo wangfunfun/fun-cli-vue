@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name header
- * component to pageLayout/index.vue
- */
-
 import { NButton, NSpace, NCard } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
@@ -31,7 +26,7 @@ const checkVersion = () => {}
     <div class="flex-between">
       <n-space>
         <div class="logo" @click="goRoute('/home/welcome')">
-          <img src="@/assets/image/logo-1x-green.png" alt="" />
+          <img src="@/assets/image/logo.png" alt="" />
           <span>
             {{ APP_NAME }}
           </span>

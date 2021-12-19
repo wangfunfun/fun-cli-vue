@@ -1,19 +1,6 @@
 import FormatDateTime from './format-dateTime'
 import { GENERAL_CACHE_EXPIRE, GENERAL_CACHE_ALIAS } from '@/common/constant'
 
-/**
- * @name general-cache
- *
- * @param key 缓存的键名
- * @param data 缓存的数据
- * @param type 缓存类型，分为 session、local
- * @param desc 缓存信息的描述
- *
- * @method set() 缓存方法
- * @method remove() 移除方法
- * @method get() 读取缓存方法
- */
-
 export default class GeneralCache {
   private cacheKey: string
 

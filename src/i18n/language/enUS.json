@@ -40,16 +40,15 @@
     "signup": "Sign up",
     "resetPassword": "Reset password",
     "xicons": "Rich library of ICONS based on Xicons",
-    "providedPage": "we have provided some basic and commonly used standalone pages",
-    "admin": "fage-cli's core function is an admin system,",
+    "providedPage": "Some commonly used pages",
+    "admin": "Administrator Operating system",
     "adminDesc": "it integrates NaiveUI, Echarts, Editor, and related built-in functionality pages, ",
     "building": "Building...",
     "loading": "Loading",
     "loadingPage": "This may take a little longer to load the resource for the first time, please wait a moment  "
   },
   "welcome": {
-    "title": "fage-cli × Naive UI",
-    "description": "🛠 🛠 🛠 Based on Vue3, Vite, NaiveUI build front-end scaffolding, using typescript development. Fage-cli integrates vuex, VUE-Router, I18N, JEST, Sass, Axios, etc. It contains several common pages and can be used for rapid development of single-page (multi-page) projects."
+    "description": "Based on Vue3, Vite2 and TypeScript, Vue-router, Pinia, Axios, Vue-i18n and other plug-ins are integrated. NaiveUI is used as a component library, and Echarts, Draggable, wangEditor and other functional components are introduced."
   },
   "placeholder": {
     "email": "Please enter your e-mail address",

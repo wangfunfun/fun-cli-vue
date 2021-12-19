@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name login
- * Built-in login, registration, password recovery page
- */
-
 import { ref, onBeforeMount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'

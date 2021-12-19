@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name landing-page
- * The landing page cannot write any code in principle and is only used for page redirection
- */
-
 import { onBeforeMount, onMounted, ref } from 'vue'
 import { Logo } from '@/components/common'
 import { LoadingCircle } from '@/components/animation'

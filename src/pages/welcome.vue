@@ -1,11 +1,8 @@
 <script lang="ts" setup>
-/**
- * @name welcome-page
- */
-
 import { reactive, computed } from 'vue'
 import { NButton, NSpace, NGradientText, NCarousel, NCard, NIcon } from 'naive-ui'
 import { DoubleRightOutlined } from '@vicons/antd'
+import { APP_NAME } from '@/common/constant'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { useConfigStore } from '@/store/config'
@@ -31,14 +28,14 @@ const theme = reactive({
     if (theme.theme) {
       return {
         from: '#fff',
-        to: '#eee'
+        to: '#eee',
       }
     }
     return {
       from: '#444',
-      to: '#999'
+      to: '#999',
     }
-  })
+  }),
 })
 </script>
 
@@ -46,7 +43,7 @@ const theme = reactive({
   <div class="introduce flex-center flex-wrap">
     <div class="title">
       <n-gradient-text :gradient="theme.gradientColor">
-        <span> {{ t('welcome.title') }}</span>
+        <span> {{ APP_NAME }}</span>
       </n-gradient-text>
     </div>
     <div class="description">
@@ -70,11 +67,6 @@ const theme = reactive({
 
   <div class="slogan">
     <n-gradient-text :gradient="theme.gradientColor">
-      <span>🧩 </span>
-      <span> {{ t('info.slogan') }}</span>
-      <span> {{ t('symbol.comma') }}</span>
-    </n-gradient-text>
-    <n-gradient-text :gradient="theme.gradientColor">
       <span> {{ t('info.providedPage') }}</span>
     </n-gradient-text>
   </div>
@@ -87,7 +79,6 @@ const theme = reactive({
 
   <div class="slogan">
     <n-gradient-text :gradient="theme.gradientColor">
-      <span>📦 </span>
       <span> {{ t('info.xicons') }}</span>
       <span>{{ t('symbol.comma') }}</span>
       <span class="btn-more" @click="goWebsite('https://www.xicons.org/#/')">
@@ -104,13 +95,8 @@ const theme = reactive({
 
   <div class="slogan">
     <n-gradient-text :gradient="theme.gradientColor">
-      <span>💻 </span>
       <span> {{ t('info.admin') }}</span>
-    </n-gradient-text>
-    <n-gradient-text :gradient="theme.gradientColor">
-      <span> {{ t('info.adminDesc') }}</span>
-    </n-gradient-text>
-    <n-gradient-text :gradient="theme.gradientColor">
+      <span>{{ t('symbol.comma') }}</span>
       <span class="btn-more" @click="goLogin">
         <span>{{ t('btn.clickToLoginAdmin') }}</span>
         <n-icon size="20" style="margin-left: 5px">
@@ -150,6 +136,7 @@ const theme = reactive({
   width: $container-width;
   padding: 150px 0;
   margin: 0 auto;
+  text-align: center;
   span {
     font-size: $font-size-xxl;
     font-weight: bold;

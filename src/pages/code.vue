@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name code
- * Built-in HTTP status code page
- */
-
 import { ref, onBeforeMount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'

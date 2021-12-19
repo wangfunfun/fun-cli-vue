@@ -41,16 +41,15 @@
     "register": "注册新账户",
     "resetPassword": "重置密码",
     "xicons": "基于 xicons 的丰富图标库",
-    "providedPage": "我们提供了一些基础且常用的独立页面",
-    "admin": "fage-cli 的核心功能是一个后台管理系统，",
+    "providedPage": "一些常用的页面",
+    "admin": "后台管理系统",
     "adminDesc": "它集成了 NaiveUI、Echarts、Editor 以及相关的内置功能页面，",
     "building": "建设中...",
     "loading": "正在加载",
     "loadingPage": "初次加载资源，这可能需要多花费一点时间，请稍等片刻"
   },
   "welcome": {
-    "title": "fage-cli × Naive UI",
-    "description": "🛠 🛠 🛠 基于Vue3、Vite、NaiveUI构建前端脚手架，使用Typescript开发。 fage-cli集成了Vuex、Vue-router、I18n、Jest、Sass、Axios等。 它包含几个常见页面，可以用于单页(多页)项目的快速开发。 "
+    "description": "基于Vue3、Vite2、TypeScript搭建，集成了Vue-router、Pinia、Axios、Vue-i18n等插件，使用NaiveUI作为组件库，引入Echarts、Draggable、wangEditor等功能组件。"
   },
   "placeholder": {
     "email": "请输入电子邮箱",

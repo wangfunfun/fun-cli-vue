@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name pageLayout-index
- * individual page layout
- */
-
 import { NLayout, NLayoutHeader, NLayoutContent, NLayoutFooter } from 'naive-ui'
 import Header from './header.vue'
 import Footer from './footer.vue'

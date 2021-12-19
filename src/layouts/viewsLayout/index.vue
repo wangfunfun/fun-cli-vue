@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name adminLayout-index
- * a component to set admin page layout
- */
-
 import { useConfigStore } from '@/store/config'
 import LeftMenuLayout from './leftMenuLayout/index.vue'
 

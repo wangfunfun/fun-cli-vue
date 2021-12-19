@@ -1,18 +1,9 @@
 <script lang="ts" setup>
-/**
- * @name footer
- * component to pageLayout/index.vue
- */
-
 import { NButton } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { APP_VERSION } from '@/common/constant'
 
-// i8n
-
 const { t } = useI18n()
-
-// website
 
 const goWebsite = (url: string): void => {
   window.open(url)

@@ -14,7 +14,9 @@ module.exports = {
   rules: {
     // 允许<template/>存在多个根节点
     'vue/no-multiple-template-root': 'off',
+    // 未被使用的定义
     'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }],
+    '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true }],
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
     'import/no-absolute-path': 'off',
@@ -27,7 +29,6 @@ module.exports = {
     'no-bitwise': 'off',
     'vue/no-v-model-argument': 'off',
     'import/prefer-default-export': 'off',
-    '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true }],
     'no-param-reassign': [
       'error',
       {

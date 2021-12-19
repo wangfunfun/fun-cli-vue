@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name menu
- * a component to admin layout
- */
-
 import { reactive, computed, onMounted, ref } from 'vue'
 import { useRouteStore } from '@/store/route'
 

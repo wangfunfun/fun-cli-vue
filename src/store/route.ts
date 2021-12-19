@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { store } from '@/store'
 import { RouteRecordRaw } from 'vue-router'
 import router from '@/router/config'
 import GeneralCache from '@/utils/general-cache'

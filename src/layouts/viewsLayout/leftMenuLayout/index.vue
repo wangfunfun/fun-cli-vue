@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name adminLayout-index
- * a component to set admin page layout
- */
-
 import { NLayout, NLayoutHeader, NLayoutContent, NLayoutFooter, NLayoutSider } from 'naive-ui'
 import { useConfigStore } from '@/store/config'
 import Header from './header.vue'

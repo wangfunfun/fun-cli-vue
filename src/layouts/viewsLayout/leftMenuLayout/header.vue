@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name header
- * component to adminLayout/index.vue
- */
-
 import { NCard } from 'naive-ui'
 import { reactive } from 'vue'
 import {

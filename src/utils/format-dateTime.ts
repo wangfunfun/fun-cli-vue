@@ -1,12 +1,3 @@
-/**
- * @name format-dateTime
- *
- * @param datetime 日期/时间
- * @param template 格式化模板
- *
- * @method format() 格式化方法
- */
-
 export default class FormatDateTime {
   private datetime: Date
 

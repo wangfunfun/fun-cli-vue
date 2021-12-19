@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { store } from '@/store'
 import GeneralCache from '@/utils/general-cache'
 
 interface configStateTypes {
@@ -17,7 +16,7 @@ export const useConfigStore = defineStore({
   }),
   getters: {
     theme() {
-      return state.theme
+      return this.theme
     },
     language() {
       return this.language

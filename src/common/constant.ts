@@ -11,7 +11,7 @@
 
 const GENERAL_CACHE_EXPIRE: number = 60 * 60 * 24 * 7
 
-const GENERAL_CACHE_ALIAS: string = 'fage-cli'
+const GENERAL_CACHE_ALIAS: string = import.meta.env.VITE_APP_ALIAS_NAME
 
 const DEFAULT_LANGUAGE_ALIAS: string = 'enUS'
 

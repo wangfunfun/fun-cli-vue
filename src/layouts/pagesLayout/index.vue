@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name adminLayout-index
- * a component to set admin page layout
- */
-
 import { NLayout, NLayoutContent } from 'naive-ui'
 </script>
 
