@@ -1,3 +1,12 @@
+/**
+ * @name 日期格式化工具函数
+ *
+ * @param datetime 默认：new Date()
+ * @param template 默认：yyyy-MM-dd hh:mm:ss
+ *
+ * @method format() 按照提供的 template 进行格式化方法
+ */
+
 export default class FormatDateTime {
   private datetime: Date
 

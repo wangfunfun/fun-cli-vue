@@ -5,7 +5,7 @@
   font-size: $font-size-base;
 }
 
-// ban on selected
+// 禁止选中
 
 .not-select {
   -moz-user-select: none;
@@ -14,6 +14,8 @@
   -khtml-user-select: none;
   user-select: none;
 }
+
+// 禁止触摸
 
 .no-touch {
   -webkit-touch-callout: none;
@@ -24,18 +26,20 @@
   user-select: none;
 }
 
+// 禁止选择图片
+
 .not-select-pic {
   pointer-events: none;
 }
 
-// shadow
+// 阴影
 
 .shadow {
   box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.08), 0 3px 6px 0 rgba(0, 0, 0, 0.06),
     0 5px 12px 4px rgba(0, 0, 0, 0.04);
 }
 
-// multiple lines of text omitted
+// 文本缩略显示
 
 .line-omitted-1 {
   overflow: hidden;
@@ -61,7 +65,7 @@
   -webkit-box-orient: vertical;
 }
 
-// text is forced to wrap
+// 文本换行
 
 .white-sapce-wrap {
   white-space: pre-wrap;

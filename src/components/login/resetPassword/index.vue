@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name reset-password
- * component to login page
- */
-
 import { ref, reactive } from 'vue'
 import { NForm, NInput, NFormItem, NButton } from 'naive-ui'
 import { useI18n } from 'vue-i18n'

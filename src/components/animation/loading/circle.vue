@@ -1,10 +1,3 @@
-<script lang="ts" setup>
-/**
- * @name loading
- * a component to display loading page
- */
-</script>
-
 <template>
   <div class="loading flex-between">
     <span v-for="i in 5" :key="i"></span>

@@ -11,20 +11,20 @@ export default [
       {
         path: '/',
         component: Index,
-        meta: { requiresAuth: false }
+        meta: { requiresAuth: false },
       },
       {
         path: '/login',
         name: 'Login',
         component: () => import('@/pages/login.vue'),
-        meta: { requiresAuth: false }
+        meta: { requiresAuth: false },
       },
       {
         path: '/code',
         name: 'Code',
         component: () => import('@/pages/code.vue'),
-        meta: { requiresAuth: false }
-      }
-    ]
-  }
+        meta: { requiresAuth: false },
+      },
+    ],
+  },
 ]

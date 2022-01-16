@@ -1,13 +1,6 @@
 <script lang="ts" setup>
-/**
- * @name 403
- * component to code page
- */
-
 import { NGradientText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
-
-// i8n
 
 const { t } = useI18n()
 </script>

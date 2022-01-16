@@ -1,13 +1,6 @@
 <script lang="ts" setup>
-/**
- * @name hover
- * A btn-hover animation component
- */
-
 import { NTooltip } from 'naive-ui'
 import { Placement } from 'naive-ui/lib/drawer/src/DrawerBodyWrapper'
-
-// props
 
 interface Props {
   showTooltip?: boolean

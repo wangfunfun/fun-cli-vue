@@ -1,12 +1,5 @@
-<script lang="ts" setup>
-/**
- * @name logo
- * a component to show logo by shadow circle's shape
- */
-</script>
-
 <template>
-  <div class="logo">
+  <div class="logo flex-center">
     <img src="@/assets/images/logo.png" alt="" />
   </div>
 </template>
@@ -19,7 +12,7 @@
   background-color: #fff;
   padding: 30px;
   margin: 0 auto;
-  box-shadow: 0px 0px 10px 10px rgba($color: #000000, $alpha: 0.1);
+  // box-shadow: 0px 0px 30px 10px rgba($color: #000000, $alpha: 0.09);
   img {
     width: 100px;
     height: auto;

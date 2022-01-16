@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import GeneralCache from '@/utils/general-cache'
 
-// auto import routes files
+// 自动引入路由文件
 
 const pagesFiles: Object = import.meta.globEager('./pages/*.ts')
 const viewsFiles: Object = import.meta.globEager('./views/*.ts')
@@ -17,7 +17,7 @@ Object.keys(viewsFiles).forEach((key) => {
   viewsRoutes = viewsRoutes.concat(viewsFiles[key].default)
 })
 
-// set up routes
+// 初始化路由
 
 allRoutes = pagesRoutes.concat(viewsRoutes)
 

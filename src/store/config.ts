@@ -4,37 +4,40 @@ import GeneralCache from '@/utils/general-cache'
 interface configStateTypes {
   theme: any
   language: any
-  viewsLayout: object
 }
 
 export const useConfigStore = defineStore({
   id: 'configStore',
   state: (): configStateTypes => ({
+    // 主题
     theme: new GeneralCache('theme', 'local').get(),
+    // 语言
     language: new GeneralCache('language', 'local').get(),
-    viewsLayout: new GeneralCache('language', 'local').get()
   }),
   getters: {
-    theme() {
-      return this.theme
+    // 主题
+    theme(state) {
+      return state.theme
     },
-    language() {
-      return this.language
+    // 语言
+    language(state) {
+      return state.language
     },
-    viewsLayout() {
-      return this.viewsLayout
-    }
   },
   actions: {
-    setTheme: (data) => {
+    // 设置主题
+    setTheme(data: any) {
       this.theme = data
-      new GeneralCache('theme', 'local').set(data.alias)
+      new GeneralCache('theme', 'local').set(data)
     },
-    setLanguage: (data) => {
+    // 设置语言
+    setLanguage(data: any) {
       this.language = data
       new GeneralCache('language', 'local').set(data.alias)
       new GeneralCache('naiveuiLanguage', 'local').set(data.naiveuiLanguage)
-      new GeneralCache('naiveuiDateLanguage', 'local').set(data.naiveuiDateLanguage)
-    }
-  }
+      new GeneralCache('naiveuiDateLanguage', 'local').set(
+        data.naiveuiDateLanguage
+      )
+    },
+  },
 })

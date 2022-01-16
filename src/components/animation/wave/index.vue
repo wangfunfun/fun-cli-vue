@@ -1,10 +1,3 @@
-<script lang="ts" setup>
-/**
- * @name wave
- * An SVG-based wave component
- */
-</script>
-
 <template>
   <svg
     width="100%"

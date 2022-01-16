@@ -30,7 +30,7 @@ const goWebsite = (url: string): void => {
       <div class="list flex-start flex-wrap">
         <div class="title">{{ t('info.dependencies') }}</div>
         <div class="link">
-          <n-button text @click="goWebsite('https://next.vuex.vuejs.org/')">Vuex 4.x</n-button>
+          <n-button text @click="goWebsite('https://pinia.vuejs.org/')">Pinia</n-button>
         </div>
         <div class="link">
           <n-button text @click="goWebsite('https://next.router.vuejs.org/')">Vue-router</n-button>

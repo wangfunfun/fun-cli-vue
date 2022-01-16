@@ -1,8 +1,10 @@
+// 切换vue-i18n国家化语言钩子函数
+
 import { reactive, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useConfigStore } from '@/store/config'
 import GeneralCache from '@/utils/general-cache'
-import { DEFAULT_LANGUAGE_ALIAS } from '@/common/constant'
+import { LANGUAGE_DEFAULT } from '@/common/constant'
 import i18nConfig from '@/i18n/config'
 
 const useLanguageHook = () => {
@@ -12,15 +14,15 @@ const useLanguageHook = () => {
   const configStore = useConfigStore()
 
   const language = reactive({
-    nowLanguage: computed(() => messages.value[locale.value || DEFAULT_LANGUAGE_ALIAS].languageName)
+    nowLanguage: computed(() => messages.value[locale.value || LANGUAGE_DEFAULT].languageName)
   })
 
   const selectLanguage = (e: any) => {
     locale.value = e
     configStore.setLanguage({
       alias: e,
-      naiveuiLanguage: messages.value[e || DEFAULT_LANGUAGE_ALIAS].naiveuiLanguage,
-      naiveuiDateLanguage: messages.value[e || DEFAULT_LANGUAGE_ALIAS].naiveuiDateLanguage
+      naiveuiLanguage: messages.value[e || LANGUAGE_DEFAULT].naiveuiLanguage,
+      naiveuiDateLanguage: messages.value[e || LANGUAGE_DEFAULT].naiveuiDateLanguage
     })
   }
 

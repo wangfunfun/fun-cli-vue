@@ -1,4 +1,4 @@
-// separate page scrollbar styles
+// pagesLayout 的滚动条样式
 
 .page-scrollbar {
   overflow-y: scroll;
@@ -28,8 +28,7 @@
   }
 }
 
-// admin page scrollbar styles
-
+// viewsLayout 的滚动条样式
 .admin-scrollbar {
   overflow-y: scroll;
   height: 100vh;

@@ -18,7 +18,7 @@
     "login": "登录",
     "clickToLoginAdmin": "点我去登录管理系统",
     "resetPassword": "忘记密码？",
-    "register": "注册新用户",
+    "signup": "注册新用户",
     "existingAccount": "已有账号？",
     "backLogin": "返回登录",
     "resetPasswordSubmit": "重置密码",

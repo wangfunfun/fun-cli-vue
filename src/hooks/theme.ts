@@ -1,5 +1,6 @@
+// 切换主题钩子函数
+
 import { darkTheme } from 'naive-ui'
-import { reactive, computed } from 'vue'
 import { useConfigStore } from '@/store/config'
 
 const useThemeHook = () => {
@@ -11,7 +12,7 @@ const useThemeHook = () => {
 
   return {
     nowTheme: configStore.theme,
-    setTheme
+    setTheme,
   }
 }
 

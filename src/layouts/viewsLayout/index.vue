@@ -1,12 +1,15 @@
 <script lang="ts" setup>
-import { useConfigStore } from '@/store/config'
+import { useLayoutStore } from '@/store/layout'
+import { VIEWS_LAYOUT_MODE } from '@/common/config'
 import LeftMenuLayout from './leftMenuLayout/index.vue'
 
-const configStore = useConfigStore()
+const layoutStore = useLayoutStore()
 </script>
 
 <template>
-  <LeftMenuLayout v-if="configStore.viewsLayout.mode == 'leftMenu'"></LeftMenuLayout>
+  <LeftMenuLayout
+    v-if="layoutStore.mode == 'leftMenu' || VIEWS_LAYOUT_MODE == 'leftMenu'"
+  ></LeftMenuLayout>
 </template>
 
 <style lang="scss" scoped>
