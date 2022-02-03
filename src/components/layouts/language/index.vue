@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name language
- * a component to change language by vue-i18n
- */
-
 import { NButton, NDropdown } from 'naive-ui'
 import { Hover } from '@/components/animation'
 import { useLanguageHook, i18nConfig } from '@/hooks/language'

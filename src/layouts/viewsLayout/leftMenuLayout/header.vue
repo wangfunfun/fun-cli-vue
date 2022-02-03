@@ -11,15 +11,15 @@ import {
   Theme,
   Breadcrumb,
   User,
-  Message
-} from '../../components'
+  Message,
+} from '@/components/layouts'
 
 interface optionsState {
   iconSize?: number | string
 }
 
 const options = reactive<optionsState>({
-  iconSize: 20
+  iconSize: 20,
 })
 </script>
 

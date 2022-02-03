@@ -2,9 +2,6 @@
 import { ref, onBeforeMount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
-import { GENERAL_CACHE_ALIAS } from '@/common/constant'
-import { Wave } from '@/components/animation'
-import { Logo } from '@/components/common/'
 import { LoginForm, ResetPasswordForm, SignupForm } from '@/components/login'
 
 const { t } = useI18n()
@@ -45,7 +42,7 @@ onBeforeMount(() => {
 .inner {
   background-color: #fff;
   box-shadow: $box-shadow-base;
-  padding: 100px 60px;
+  padding: 50px;
   width: 30%;
 }
 </style>

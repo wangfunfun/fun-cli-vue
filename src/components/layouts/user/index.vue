@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name unfold
- * a component to user's operation
- */
-
 import { reactive, h } from 'vue'
 import { NDropdown, NIcon, NButton, NAvatar } from 'naive-ui'
 import { useI18n } from 'vue-i18n'

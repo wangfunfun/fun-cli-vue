@@ -1,12 +1,8 @@
 <script lang="ts" setup>
-/**
- * @name message
- * a component to open message's dialog
- */
-
 import { NIcon } from 'naive-ui'
-import { BellOutlined } from '@vicons/antd'
+import { FullscreenExitOutlined, FullscreenOutlined } from '@vicons/antd'
 import { useI18n } from 'vue-i18n'
+import { ref } from 'vue'
 import { Hover } from '@/components/animation'
 
 // props
@@ -22,13 +18,21 @@ const props = withDefaults(defineProps<Props>(), {
 // i18n
 
 const { t } = useI18n()
+
+// screen status
+
+const isFullscreen = ref<boolean>(false)
 </script>
 
 <template>
-  <Hover showTooltip :tooltip="t('tooltip.message')">
+  <Hover
+    showTooltip
+    :tooltip="isFullscreen ? t('tooltip.exitFullscreen') : t('tooltip.fullscreen')"
+  >
     <template #content>
       <n-icon :size="props.iconSize">
-        <BellOutlined></BellOutlined>
+        <FullscreenExitOutlined v-if="isFullscreen"></FullscreenExitOutlined>
+        <FullscreenOutlined v-else></FullscreenOutlined>
       </n-icon>
     </template>
   </Hover>

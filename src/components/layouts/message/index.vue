@@ -1,11 +1,6 @@
 <script lang="ts" setup>
-/**
- * @name search
- * a component to global seach
- */
-
 import { NIcon } from 'naive-ui'
-import { SearchOutlined } from '@vicons/antd'
+import { BellOutlined } from '@vicons/antd'
 import { useI18n } from 'vue-i18n'
 import { Hover } from '@/components/animation'
 
@@ -25,10 +20,10 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <Hover showTooltip :tooltip="t('tooltip.search')">
+  <Hover showTooltip :tooltip="t('tooltip.message')">
     <template #content>
       <n-icon :size="props.iconSize">
-        <SearchOutlined></SearchOutlined>
+        <BellOutlined></BellOutlined>
       </n-icon>
     </template>
   </Hover>

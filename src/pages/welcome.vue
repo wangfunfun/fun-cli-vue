@@ -1,21 +1,19 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
 import { APP_NAME } from '@/common/constant'
 import { NButton } from 'naive-ui'
-import { useLanguageHook } from '@/hooks/language'
-import { useThemeHook } from '@/hooks/theme'
 import { useRouter } from 'vue-router'
 
 const { t } = useI18n()
 
-const language = useLanguageHook()
-
-const theme = useThemeHook()
-
 const router = useRouter()
 
-const goPage = (route: string) => {
+const goRoutes = (route: string) => {
   router.push({ path: route })
+}
+
+const goWebsite = (url: string) => {
+  window.open(url)
 }
 </script>
 
@@ -28,34 +26,23 @@ const goPage = (route: string) => {
       <div class="title">{{ APP_NAME }}</div>
       <div class="desc">{{ t('welcome.description') }}</div>
       <div class="link flex-between">
-        <n-button text type="info" @click="goPage('/login')">{{
+        <n-button text type="info" @click="goRoutes('/login')">{{
           t('btn.pages')
         }}</n-button>
         |
         <n-button
           text
           type="info"
-          @click="goPage('/admin/dashboard/workbench')"
+          @click="goRoutes('/admin/dashboard/workbench')"
           >{{ t('btn.admin') }}</n-button
         >
-        |
-        <n-button text type="info" @click="goPage('')">{{
-          t('btn.github')
-        }}</n-button>
-        <!-- <n-button text type="info" @click="theme.setTheme()">{{
-          theme.nowTheme ? t('btn.darkTheme') : t('btn.lightTheme')
-        }}</n-button>
         |
         <n-button
           text
           type="info"
-          @click="
-            language.selectLanguage(
-              language.nowLanguage === 'enUS' ? 'zhCN' : 'enUS'
-            )
-          "
-          >{{ language.nowLanguage }}</n-button
-        > -->
+          @click="goWebsite('https://github.com/wangqf19/cli-vue3-vite2-ts')"
+          >{{ t('btn.github') }}</n-button
+        >
       </div>
     </div>
   </div>

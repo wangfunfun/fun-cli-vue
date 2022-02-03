@@ -1,11 +1,6 @@
 <script lang="ts" setup>
-/**
- * @name setting
- * a component to open setting's dialog
- */
-
 import { NIcon } from 'naive-ui'
-import { SettingOutlined } from '@vicons/antd'
+import { SearchOutlined } from '@vicons/antd'
 import { useI18n } from 'vue-i18n'
 import { Hover } from '@/components/animation'
 
@@ -25,10 +20,10 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <Hover showTooltip :tooltip="t('tooltip.setting')">
+  <Hover showTooltip :tooltip="t('tooltip.search')">
     <template #content>
       <n-icon :size="props.iconSize">
-        <SettingOutlined></SettingOutlined>
+        <SearchOutlined></SearchOutlined>
       </n-icon>
     </template>
   </Hover>

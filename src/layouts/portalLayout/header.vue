@@ -3,7 +3,7 @@ import { NButton, NSpace, NCard } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { APP_VERSION, APP_NAME } from '@/common/constant'
-import { Language, Theme } from '../components'
+import { Language, Theme } from '@/components/layouts'
 import { Hover } from '@/components/animation'
 
 const { t } = useI18n()

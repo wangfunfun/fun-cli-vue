@@ -63,14 +63,14 @@ const signupSubmit = () => {}
         />
       </n-form-item>
       <n-form-item>
-        <n-button size="large" @click="signupSubmit" type="primary" style="width: 100%">{{
+        <n-button size="large" @click="signupSubmit" type="info" style="width: 100%">{{
           t('btn.signup')
         }}</n-button>
       </n-form-item>
     </n-form>
     <div class="flex-start operate">
       <span style="padding-right: 10px">{{ t('btn.existingAccount') }}</span>
-      <n-button size="large" @click="backLogin" text type="primary">{{
+      <n-button size="large" @click="backLogin" text type="info">{{
         t('btn.backLogin')
       }}</n-button>
     </div>

@@ -1,11 +1,6 @@
 <script lang="ts" setup>
-/**
- * @name refresh
- * a component to refresh crud's view
- */
-
 import { NIcon } from 'naive-ui'
-import { SyncOutlined } from '@vicons/antd'
+import { SettingOutlined } from '@vicons/antd'
 import { useI18n } from 'vue-i18n'
 import { Hover } from '@/components/animation'
 
@@ -25,10 +20,10 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <Hover showTooltip :tooltip="t('tooltip.refresh')">
+  <Hover showTooltip :tooltip="t('tooltip.setting')">
     <template #content>
       <n-icon :size="props.iconSize">
-        <SyncOutlined></SyncOutlined>
+        <SettingOutlined></SettingOutlined>
       </n-icon>
     </template>
   </Hover>

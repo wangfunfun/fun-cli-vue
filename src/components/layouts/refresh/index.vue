@@ -1,13 +1,7 @@
 <script lang="ts" setup>
-/**
- * @name unfold
- * a component to fold or unfold menu
- */
-
 import { NIcon } from 'naive-ui'
-import { MenuFoldOutlined, MenuUnfoldOutlined } from '@vicons/antd'
+import { SyncOutlined } from '@vicons/antd'
 import { useI18n } from 'vue-i18n'
-import { ref } from 'vue'
 import { Hover } from '@/components/animation'
 
 // props
@@ -23,18 +17,13 @@ const props = withDefaults(defineProps<Props>(), {
 // i18n
 
 const { t } = useI18n()
-
-// screen status
-
-const isFold = ref<boolean>(false)
 </script>
 
 <template>
-  <Hover showTooltip :tooltip="isFold ? t('tooltip.unfold') : t('tooltip.fold')">
+  <Hover showTooltip :tooltip="t('tooltip.refresh')">
     <template #content>
       <n-icon :size="props.iconSize">
-        <MenuUnfoldOutlined v-if="isFold"></MenuUnfoldOutlined>
-        <MenuFoldOutlined v-else></MenuFoldOutlined>
+        <SyncOutlined></SyncOutlined>
       </n-icon>
     </template>
   </Hover>

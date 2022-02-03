@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-/**
- * @name theme
- * a component to change system theme
- */
-
 import { NButton } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { Hover } from '@/components/animation'
