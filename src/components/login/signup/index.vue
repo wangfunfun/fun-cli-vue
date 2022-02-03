@@ -79,9 +79,6 @@ const signupSubmit = () => {}
 
 <style lang="scss" scoped>
 .slot {
-  width: 70%;
-  margin: 0 auto;
-  padding-right: 80px;
 }
 
 .title {

@@ -4,7 +4,7 @@ export default [
   {
     path: '/admin/dashboard',
     name: 'AdminDashboard',
-    menuName: '系统设置',
+    menuName: '首页',
     component: viewsLayout,
     meta: { isMenu: true, requiresAuth: true, icon: '', menuName: '系统设置', sort: 0 },
     children: [

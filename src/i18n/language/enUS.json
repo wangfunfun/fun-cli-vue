@@ -4,6 +4,8 @@
     "comma": ", "
   },
   "btn": {
+    "pages":"Separate page",
+    "admin":"Management system",
     "darkTheme": "Dark",
     "lightTheme": "Light",
     "zhCN": "Chinese",
@@ -68,11 +70,6 @@
     "404": "Not Found Page",
     "500": "Server internal error",
     "503": "Service unavailable"
-  },
-  "document": {
-    "start": "Starting",
-    "source": "Source directory",
-    "page": "Built-in page"
   },
   "tooltip": {
     "setting": "Setting",

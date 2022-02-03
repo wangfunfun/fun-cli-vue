@@ -11,6 +11,7 @@ export default [
       {
         path: '/',
         component: Index,
+        redirect: '/welcome',
         meta: { requiresAuth: false },
       },
       {
@@ -23,6 +24,12 @@ export default [
         path: '/code',
         name: 'Code',
         component: () => import('@/pages/code.vue'),
+        meta: { requiresAuth: false },
+      },
+      {
+        path: '/welcome',
+        name: 'Welcome',
+        component: () => import('@/pages/welcome.vue'),
         meta: { requiresAuth: false },
       },
     ],

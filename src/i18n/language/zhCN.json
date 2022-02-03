@@ -4,6 +4,8 @@
     "comma": "，"
   },
   "btn": {
+    "pages":"独立页面",
+    "admin":"管理系统",
     "darkTheme": "深色",
     "lightTheme": "浅色",
     "zhCN": "中文",
@@ -69,11 +71,6 @@
     "404": "未找到",
     "500": "服务器内部错误",
     "503": "服务不可用"
-  },
-  "document": {
-    "start": "起步",
-    "source": "源码目录",
-    "page": "内置页面"
   },
   "tooltip": {
     "setting": "设置",

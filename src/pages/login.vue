@@ -23,19 +23,12 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div class="page flex-between not-select">
-    <div class="left bgColor">
-      <div class="info">
-        <Logo></Logo>
-        <div class="name">{{ GENERAL_CACHE_ALIAS }}</div>
-        <div class="slogan">{{ t('info.slogan') }}</div>
-      </div>
-      <div class="wave">
-        <Wave></Wave>
-      </div>
-    </div>
-    <div class="right">
-      <LoginForm v-if="currentComponent === 'login'" @changeComponent="changeComponent"></LoginForm>
+  <div class="page flex-center not-select">
+    <div class="inner">
+      <LoginForm
+        v-if="currentComponent === 'login'"
+        @changeComponent="changeComponent"
+      ></LoginForm>
       <ResetPasswordForm
         v-if="currentComponent === 'resetPassword'"
         @changeComponent="changeComponent"
@@ -49,45 +42,10 @@ onBeforeMount(() => {
 </template>
 
 <style lang="scss" scoped>
-.bgColor {
-  background-color: #18a058;
-}
-
-.left {
-  width: 55%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  .info {
-    padding-top: 20vh;
-
-    .name {
-      color: #fff;
-      font-size: $font-size-max;
-      font-weight: bold;
-      text-align: center;
-      width: 100%;
-      padding-top: 10vh;
-    }
-
-    .slogan {
-      color: #eee;
-      font-size: $font-size-xl;
-      text-align: center;
-      width: 100%;
-      padding-top: 20px;
-    }
-  }
-
-  .wave {
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-    width: 100%;
-  }
-}
-.right {
-  width: 40%;
-  height: 100%;
+.inner {
+  background-color: #fff;
+  box-shadow: $box-shadow-base;
+  padding: 100px 60px;
+  width: 30%;
 }
 </style>
