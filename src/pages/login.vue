@@ -43,6 +43,6 @@ onBeforeMount(() => {
   background-color: #fff;
   box-shadow: $box-shadow-base;
   padding: 50px;
-  width: 30%;
+  width: 25%;
 }
 </style>
