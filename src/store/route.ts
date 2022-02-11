@@ -11,6 +11,9 @@ interface routeStateTypes {
 
 export const useRouteStore = defineStore({
   id: 'routeStore',
+  persist: {
+    enabled: true,
+  },
   state: (): routeStateTypes => ({
     // 独立页面路由
     pagesRoutes: new GeneralCache('pagesRoutes', 'local').get(),
@@ -19,12 +22,7 @@ export const useRouteStore = defineStore({
     // 全部路由
     allRoutes: new GeneralCache('allRoutes', 'local').get(),
   }),
-  getters: {
-    // 管理系统路由
-    viewsRoutes(state) {
-      return state.viewsRoutes
-    },
-  },
+  getters: {},
   actions: {
     // 设置独立页面路由
     setPagesRoutes(data: Array<RouteRecordRaw>) {

@@ -5,19 +5,22 @@ import {
   NNotificationProvider,
   NMessageProvider,
   NConfigProvider,
-  NElement
+  NElement,
 } from 'naive-ui'
 import { Provider } from '@/components/common'
 import { reactive, computed } from 'vue'
 import { useConfigStore } from '@/store/config'
-import GeneralCache from '@/utils/general-cache'
 
 const configStore: any = useConfigStore()
 
 const config = reactive({
   theme: computed(() => configStore.theme),
-  naiveuiLanguage: computed(() => new GeneralCache('naiveuiLanguage', 'local').get()),
-  naiveuiDateLanguage: computed(() => new GeneralCache('naiveuiDateLanguage', 'local').get())
+  naiveuiLanguage: computed(() =>
+    configStore.theme ? configStore.theme.naiveuiLanguage : null
+  ),
+  naiveuiDateLanguage: computed(() =>
+    configStore.theme ? configStore.theme.naiveuiDateLanguage : null
+  ),
 })
 </script>
 

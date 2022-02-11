@@ -5,7 +5,10 @@ interface tagStateTypes {}
 
 export const useTagStore = defineStore({
   id: 'tagStore',
+  persist: {
+    enabled: true,
+  },
   state: (): tagStateTypes => ({}),
-  actions: {}
+  getters: {},
+  actions: {},
 })
-

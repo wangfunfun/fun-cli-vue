@@ -5,6 +5,10 @@ export interface userStateTypes {}
 
 export const useUserStore = defineStore({
   id: 'userStore',
+  persist: {
+    enabled: true,
+  },
   state: (): userStateTypes => ({}),
-  actions: {}
+  getters: {},
+  actions: {},
 })

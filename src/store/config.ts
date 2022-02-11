@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import GeneralCache from '@/utils/general-cache'
+import { APP_DEFAULT_THEME, APP_DEFAULT_LANGUAGE } from '@/common/config'
 
 interface configStateTypes {
   theme: any
@@ -8,36 +8,24 @@ interface configStateTypes {
 
 export const useConfigStore = defineStore({
   id: 'configStore',
+  persist: {
+    enabled: true,
+  },
   state: (): configStateTypes => ({
     // 主题
-    theme: new GeneralCache('theme', 'local').get(),
+    theme: APP_DEFAULT_THEME,
     // 语言
-    language: new GeneralCache('language', 'local').get(),
+    language: APP_DEFAULT_LANGUAGE,
   }),
-  getters: {
-    // 主题
-    theme(state) {
-      return state.theme
-    },
-    // 语言
-    language(state) {
-      return state.language
-    },
-  },
+  getters: {},
   actions: {
     // 设置主题
     setTheme(data: any) {
       this.theme = data
-      new GeneralCache('theme', 'local').set(data)
     },
     // 设置语言
     setLanguage(data: any) {
       this.language = data
-      new GeneralCache('language', 'local').set(data.alias)
-      new GeneralCache('naiveuiLanguage', 'local').set(data.naiveuiLanguage)
-      new GeneralCache('naiveuiDateLanguage', 'local').set(
-        data.naiveuiDateLanguage
-      )
     },
   },
 })

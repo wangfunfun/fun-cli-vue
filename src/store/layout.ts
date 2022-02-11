@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import GeneralCache from '@/utils/general-cache'
+import { APP_LAYOUT_MODE } from '@/common/config'
 
 interface layoutStateTypes {
   mode: any
@@ -7,21 +7,18 @@ interface layoutStateTypes {
 
 export const useLayoutStore = defineStore({
   id: 'layoutStore',
+  persist: {
+    enabled: true,
+  },
   state: (): layoutStateTypes => ({
     // 布局模式
-    mode: new GeneralCache('mode', 'local').get(),
+    mode: APP_LAYOUT_MODE,
   }),
-  getters: {
-    // 布局模式
-    mode(state) {
-      return state.mode
-    },
-  },
+  getters: {},
   actions: {
     // 设置布局模式
     setMode(data: any) {
       this.mode = data
-      new GeneralCache('mode', 'local').set(data)
     },
   },
 })
