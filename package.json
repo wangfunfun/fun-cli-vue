@@ -1,6 +1,6 @@
 {
   "name": "cli-vue3-vite2-ts",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "scripts": {
     "init": "npm install",
     "dev": "vite --mode development",
@@ -22,7 +22,8 @@
     "vue": "^3.2.25",
     "vue-i18n": "^9.2.0-beta.21",
     "vue-router": "^4.0.12",
-    "wangeditor": "^4.7.10"
+    "wangeditor": "^4.7.10",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",

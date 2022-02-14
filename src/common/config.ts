@@ -1,18 +1,21 @@
+/**
+ * 应用配置
+ */
+
 // 应用首路由
-const APP_FIRST_ROUTE = '/home/welcome'
+export const APP_FIRST_ROUTE: string = '/home/welcome'
 
 // 应用管理系统 layout 默认布局
-const APP_LAYOUT_MODE = 'leftMenu'
+export const APP_LAYOUT_MODE: string = 'leftMenu'
 
 // 应用默认主题
-const APP_DEFAULT_THEME = null
+export const APP_DEFAULT_THEME: Object | null = null
 
 // 应用默认语言
-const APP_DEFAULT_LANGUAGE = 'enUS'
+export const APP_DEFAULT_LANGUAGE: string = 'enUS'
 
-export {
-  APP_FIRST_ROUTE,
-  APP_LAYOUT_MODE,
-  APP_DEFAULT_THEME,
-  APP_DEFAULT_LANGUAGE,
-}
+// pinia 数据持久化的方式，0为 sessionStorage， 1为 localStorage
+export const APP_PINIA_STORAGE: Storage = sessionStorage
+
+// crud 全局配置
+export const APP_CRUD_GLOBAL = {}

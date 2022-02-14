@@ -3,7 +3,13 @@ import { ref, onBeforeMount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { NButton } from 'naive-ui'
-import { Code401, Code403, Code404, Code500, Code503 } from '@/components/code'
+import {
+  Error401,
+  Error403,
+  Error404,
+  Error500,
+  Error503,
+} from '@/components/error'
 import { Wave } from '@/components/animation'
 
 const { t } = useI18n()
@@ -29,18 +35,26 @@ onBeforeMount(() => {
 
 <template>
   <div class="page">
-    <Code401 v-if="currentCode === '401'"></Code401>
-    <Code403 v-if="currentCode === '403'"></Code403>
-    <Code404 v-if="currentCode === '404'"></Code404>
-    <Code500 v-if="currentCode === '500'"></Code500>
-    <Code503 v-if="currentCode === '503'"></Code503>
+    <Error401 v-if="currentCode === '401'"></Error401>
+    <Error403 v-if="currentCode === '403'"></Error403>
+    <Error404 v-if="currentCode === '404'"></Error404>
+    <Error500 v-if="currentCode === '500'"></Error500>
+    <Error503 v-if="currentCode === '503'"></Error503>
     <div class="operate flex-center">
-      <n-button text type="primary" style="margin-right: 40px" @click="goPrePage()">{{
-        t('btn.goPrePage')
-      }}</n-button>
-      <n-button round type="primary" style="min-width: 120px" @click="goIndexPage()">{{
-        t('btn.goHome')
-      }}</n-button>
+      <n-button
+        text
+        type="primary"
+        style="margin-right: 40px"
+        @click="goPrePage()"
+        >{{ t('btn.goPrePage') }}</n-button
+      >
+      <n-button
+        round
+        type="primary"
+        style="min-width: 120px"
+        @click="goIndexPage()"
+        >{{ t('btn.goHome') }}</n-button
+      >
     </div>
     <div class="wave">
       <Wave></Wave>
