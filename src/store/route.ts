@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { RouteRecordRaw } from 'vue-router'
-import router from '@/router/config'
-import GeneralCache from '@/utils/general-cache'
+import router from '@/router'
+import { APP_PINIA_STORAGE } from '@/common/config'
 
 interface routeStateTypes {
   pagesRoutes: any
@@ -13,31 +13,34 @@ export const useRouteStore = defineStore({
   id: 'routeStore',
   persist: {
     enabled: true,
+    strategies: [
+      {
+        key: 'configStore',
+        storage: APP_PINIA_STORAGE,
+      },
+    ],
   },
   state: (): routeStateTypes => ({
     // 独立页面路由
-    pagesRoutes: new GeneralCache('pagesRoutes', 'local').get(),
+    pagesRoutes: [],
     // 管理系统路由
-    viewsRoutes: new GeneralCache('viewsRoutes', 'local').get(),
+    viewsRoutes: [],
     // 全部路由
-    allRoutes: new GeneralCache('allRoutes', 'local').get(),
+    allRoutes: [],
   }),
   getters: {},
   actions: {
     // 设置独立页面路由
     setPagesRoutes(data: Array<RouteRecordRaw>) {
       this.pagesRoutes = data
-      new GeneralCache('pagesRoutes', 'local').set(data)
     },
     // 设置管理系统路由
     setViewsRoutes(data: Array<RouteRecordRaw>) {
       this.viewsRoutes = data
-      new GeneralCache('viewsRoutes', 'local').set(data)
     },
     // 设置全部路由
     setAllRoutes(data: Array<RouteRecordRaw>) {
       this.allRoutes = data
-      new GeneralCache('allRoutes', 'local').set(data)
     },
     // 异步获取管理系统路由
     getAsyncViewsRoutes() {

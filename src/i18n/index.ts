@@ -1,27 +1,17 @@
-import { zhCN, dateZhCN, enUS, dateEnUS } from 'naive-ui'
-import { createI18n } from 'vue-i18n'
-import GeneralCache from '@/utils/general-cache'
-import { APP_DEFAULT_LANGUAGE } from '@/common/config'
-import customZhCN from './language/zhCN.json'
-import customEnUS from './language/enUS.json'
+import { DropdownOption } from 'naive-ui'
+import i18N from './config'
 
-const messages = {
-  zhCN: {
-    ...customZhCN,
-    naiveuiLanguage: zhCN,
-    naiveuiDateLanguage: dateZhCN
+const i18nConfig: Array<DropdownOption> = [
+  {
+    label: '简体中文',
+    key: 'zhCN',
   },
-  enUS: {
-    ...customEnUS,
-    naiveuiLanguage: enUS,
-    naiveuiDateLanguage: dateEnUS
-  }
-}
+  {
+    label: 'English',
+    key: 'enUS',
+  },
+]
 
-const language: any = new GeneralCache('language', 'local').get()
-const i18n = createI18n({
-  locale: language || APP_DEFAULT_LANGUAGE,
-  messages
-})
+export { i18nConfig }
 
-export default i18n
+export default i18N

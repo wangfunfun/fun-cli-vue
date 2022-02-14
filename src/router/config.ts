@@ -1,33 +1,33 @@
-import router from './index'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import GeneralCache from '@/utils/general-cache'
 
-// Reset the route
+// 自动引入路由文件
 
-export function resetRouter() {
-  const newRouter = router
-  ;(router as any).matcher = (newRouter as any).matcher
-}
+const pagesFiles: Object = import.meta.globEager('./pages/*.ts')
+const viewsFiles: Object = import.meta.globEager('./views/*.ts')
 
-// route front-guard
+let pagesRoutes: Array<RouteRecordRaw> = []
+let viewsRoutes: Array<RouteRecordRaw> = []
+let allRoutes: Array<RouteRecordRaw> = []
 
-router.beforeEach((to: any, from: any, next: any) => {
-  const token: any = new GeneralCache('token', 'session').get()
-  const requiresAuth = to.matched.some((item: any) => item.meta.requiresAuth)
-  if (requiresAuth && !token) {
-    next({
-      path: '/login'
-    })
-    return
-  }
-  next()
+Object.keys(pagesFiles).forEach((key) => {
+  pagesRoutes = pagesRoutes.concat(pagesFiles[key].default)
+})
+Object.keys(viewsFiles).forEach((key) => {
+  viewsRoutes = viewsRoutes.concat(viewsFiles[key].default)
 })
 
-// route resolution
+// 初始化路由
 
-router.beforeResolve(async (to) => {})
+allRoutes = pagesRoutes.concat(viewsRoutes)
 
-// route post-hook
+new GeneralCache('pagesRoutes', 'local').set(pagesRoutes)
+new GeneralCache('viewsRoutes', 'local').set(viewsRoutes)
+new GeneralCache('allRoutes', 'local').set(allRoutes)
 
-router.afterEach((to, from) => {})
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes: allRoutes,
+})
 
 export default router
