@@ -11,11 +11,11 @@ import enUSLanguage from './enUS'
 const messages: IObject = {
   zhCN: {
     ...zhCNLanguage,
-    el: zhCN.el,
+    ...zhCN,
   },
   enUS: {
     ...enUSLanguage,
-    el: enUS.el,
+    ...enUS,
   },
 }
 

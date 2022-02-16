@@ -13,7 +13,7 @@ t.login.sendEmailCode = '发送验证码'
 
 t.login.info = {}
 t.login.info.login = '登录'
-t.login.info.register = '注册新账户'
+t.login.info.signup = '注册新用户'
 t.login.info.resetPassword = '找回密码'
 
 t.login.placeholder = {}
