@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
 import { APP_NAME } from '@/common/constant'
-import { NButton } from 'naive-ui'
 import { useRouter } from 'vue-router'
 
 const { t } = useI18n()
@@ -26,22 +25,22 @@ const goWebsite = (url: string) => {
       <div class="title">{{ APP_NAME }}</div>
       <div class="desc">{{ t('welcome.description') }}</div>
       <div class="link flex-between">
-        <n-button text type="info" @click="goRoutes('/login')">{{
-          t('btn.pages')
-        }}</n-button>
-        |
-        <n-button
-          text
-          type="info"
-          @click="goRoutes('/admin/dashboard/workbench')"
-          >{{ t('btn.admin') }}</n-button
+        <el-button
+          type="text"
+          @click="goWebsite('https://element-plus.org/')"
+          >{{ t('welcome.elementPlus') }}</el-button
         >
         |
-        <n-button
-          text
-          type="info"
+        <el-button
+          type="text"
+          @click="goRoutes('/admin/dashboard/workbench')"
+          >{{ t('welcome.toAdmin') }}</el-button
+        >
+        |
+        <el-button
+          type="text"
           @click="goWebsite('https://github.com/wangqf19/cli-vue3-vite2-ts')"
-          >{{ t('btn.github') }}</n-button
+          >{{ t('btn.github') }}</el-button
         >
       </div>
     </div>

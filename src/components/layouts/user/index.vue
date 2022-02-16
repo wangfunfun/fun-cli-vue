@@ -1,64 +1,50 @@
 <script lang="ts" setup>
 import { reactive, h } from 'vue'
-import { NDropdown, NIcon, NButton, NAvatar } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
+import { ElIcon } from 'element-plus'
 import { UserOutlined, LockOutlined, LogoutOutlined } from '@vicons/antd'
 import { Hover } from '@/components/animation'
 
-// i18n
-
 const { t } = useI18n()
 
-// user info
-
 const userInfo = reactive({
-  username: '游客'
+  username: '游客',
 })
-
-// user's options
 
 const renderIcon = (icon: any) => {
   return () => {
-    return h(NIcon, null, {
-      default: () => h(icon)
+    return h(ElIcon, null, {
+      default: () => h(icon),
     })
   }
 }
-
-const options = reactive([
-  {
-    label: t('dropdown.userInfo'),
-    key: 'userInfo',
-    icon: renderIcon(UserOutlined)
-  },
-  {
-    label: t('dropdown.lock'),
-    key: 'lock',
-    icon: renderIcon(LockOutlined)
-  },
-  {
-    label: t('dropdown.logout'),
-    key: 'logout',
-    icon: renderIcon(LogoutOutlined)
-  }
-])
 </script>
 
 <template>
   <Hover>
     <template #content>
-      <n-dropdown :options="options">
+      <el-dropdown>
         <div class="flex-start">
-          <n-avatar
-            round
+          <el-avatar
             size="small"
-            src="https://07akioni.oss-cn-beijing.aliyuncs.com/07akioni.jpeg"
-          />
-          <div class="username line-omitted-1" style="margin-left: 14px">
-            {{ userInfo.username }}
-          </div>
+            src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
+          ></el-avatar>
+          <span style="padding-left: 12px">{{ userInfo.username }}</span>
         </div>
-      </n-dropdown>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item :icon="renderIcon(UserOutlined)">
+              <span>{{ t('user.userInfo') }}</span>
+            </el-dropdown-item>
+            <el-dropdown-item :icon="renderIcon(LockOutlined)">
+              <span>{{ t('user.lock') }}</span>
+            </el-dropdown-item>
+            <el-dropdown-item :icon="renderIcon(LogoutOutlined)">
+              <span>{{ t('user.logout') }}</span>
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
     </template>
   </Hover>
 </template>

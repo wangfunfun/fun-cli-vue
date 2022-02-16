@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { NGradientText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -7,10 +6,8 @@ const { t } = useI18n()
 
 <template>
   <div class="slot flex-center">
-    <n-gradient-text type="success">
-      <span class="code">401</span>
-      <span class="info"> {{ t('code.401') }}</span>
-    </n-gradient-text>
+    <span class="code">401</span>
+    <span class="info"> {{ t('error.Code401') }}</span>
   </div>
 </template>
 

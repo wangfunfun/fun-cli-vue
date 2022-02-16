@@ -1,24 +1,25 @@
-import { zhCN, dateZhCN, enUS, dateEnUS } from 'naive-ui'
+import zhCN from 'element-plus/es/locale/lang/zh-cn'
+import enUS from 'element-plus/es/locale/lang/en'
 import { createI18n } from 'vue-i18n'
 import GeneralCache from '@/utils/general-cache'
 import { APP_DEFAULT_LANGUAGE } from '@/common/config'
-import customZhCN from './lang/zhCN.json'
-import customEnUS from './lang/enUS.json'
+import { IObject } from '@/@types/interface'
 
-const messages = {
+import zhCNLanguage from './zhCN'
+import enUSLanguage from './enUS'
+
+const messages: IObject = {
   zhCN: {
-    ...customZhCN,
-    naiveuiLanguage: zhCN,
-    naiveuiDateLanguage: dateZhCN,
+    ...zhCNLanguage,
+    el: zhCN.el,
   },
   enUS: {
-    ...customEnUS,
-    naiveuiLanguage: enUS,
-    naiveuiDateLanguage: dateEnUS,
+    ...enUSLanguage,
+    el: enUS.el,
   },
 }
 
-const language: any = new GeneralCache('language', 'local').get()
+const language: any = new GeneralCache('languageAlias', 'local').get()
 const i18n = createI18n({
   locale: language || APP_DEFAULT_LANGUAGE,
   messages,

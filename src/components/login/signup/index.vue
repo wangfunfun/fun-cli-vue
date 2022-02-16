@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import { NForm, NInput, NFormItem, NButton } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -20,25 +19,31 @@ interface FormState {
 const signupForm = reactive<FormState>({
   email: '',
   password: '',
-  confirmPassword: ''
+  confirmPassword: '',
 })
 
 const signupRules = ref({
-  email: {
-    required: true,
-    message: t('rules.email'),
-    trigger: ['input']
-  },
-  password: {
-    required: true,
-    message: t('rules.password'),
-    trigger: ['input']
-  },
-  confirmPassword: {
-    required: true,
-    message: t('rules.confirmPassword'),
-    trigger: ['input']
-  }
+  email: [
+    {
+      required: true,
+      message: t('login.placeholder.email'),
+      trigger: 'blur',
+    },
+  ],
+  password: [
+    {
+      required: true,
+      message: t('login.placeholder.password'),
+      trigger: 'blur',
+    },
+  ],
+  confirmPassword: [
+    {
+      required: true,
+      message: t('login.placeholder.confirmPassword'),
+      trigger: 'blur',
+    },
+  ],
 })
 
 const signupSubmit = () => {}
@@ -47,32 +52,47 @@ const signupSubmit = () => {}
 <template>
   <div class="slot">
     <div class="title">
-      {{ t('info.signup') }}
+      {{ t('login.info.signup') }}
     </div>
-    <n-form :label-width="80" :model="signupForm" :rules="signupRules" size="large" ref="formRef">
-      <n-form-item path="email">
-        <n-input v-model:value="signupForm.email" :placeholder="t('placeholder.email')" />
-      </n-form-item>
-      <n-form-item path="password">
-        <n-input v-model:value="signupForm.password" :placeholder="t('placeholder.password')" />
-      </n-form-item>
-      <n-form-item path="confirmPassword">
-        <n-input
-          v-model:value="signupForm.confirmPassword"
-          :placeholder="t('placeholder.confirmPassword')"
+    <el-form
+      :model="signupForm"
+      :rules="signupRules"
+      size="large"
+      ref="formRef"
+    >
+      <el-form-item prop="email">
+        <el-input
+          v-model="signupForm.email"
+          :placeholder="t('login.placeholder.email')"
         />
-      </n-form-item>
-      <n-form-item>
-        <n-button size="large" @click="signupSubmit" type="info" style="width: 100%">{{
-          t('btn.signup')
-        }}</n-button>
-      </n-form-item>
-    </n-form>
+      </el-form-item>
+      <el-form-item prop="password">
+        <el-input
+          v-model="signupForm.password"
+          :placeholder="t('login.placeholder.password')"
+        />
+      </el-form-item>
+      <el-form-item prop="confirmPassword">
+        <el-input
+          v-model="signupForm.confirmPassword"
+          :placeholder="t('login.placeholder.confirmPassword')"
+        />
+      </el-form-item>
+      <el-form-item>
+        <el-button
+          size="large"
+          @click="signupSubmit"
+          type="primary"
+          style="width: 100%"
+          >{{ t('login.signup') }}</el-button
+        >
+      </el-form-item>
+    </el-form>
     <div class="flex-start operate">
-      <span style="padding-right: 10px">{{ t('btn.existingAccount') }}</span>
-      <n-button size="large" @click="backLogin" text type="info">{{
-        t('btn.backLogin')
-      }}</n-button>
+      <span style="padding-right: 10px">{{ t('login.existingAccount') }}</span>
+      <el-button size="large" @click="backLogin" type="text">{{
+        t('login.backLogin')
+      }}</el-button>
     </div>
   </div>
 </template>
@@ -88,6 +108,6 @@ const signupSubmit = () => {}
 }
 
 .operate {
-  padding-top: 60px;
+  padding-top: 25px;
 }
 </style>

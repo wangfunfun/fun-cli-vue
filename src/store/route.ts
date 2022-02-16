@@ -21,28 +21,21 @@ export const useRouteStore = defineStore({
     ],
   },
   state: (): routeStateTypes => ({
-    // 独立页面路由
     pagesRoutes: [],
-    // 管理系统路由
     viewsRoutes: [],
-    // 全部路由
     allRoutes: [],
   }),
   getters: {},
   actions: {
-    // 设置独立页面路由
     setPagesRoutes(data: Array<RouteRecordRaw>) {
       this.pagesRoutes = data
     },
-    // 设置管理系统路由
     setViewsRoutes(data: Array<RouteRecordRaw>) {
       this.viewsRoutes = data
     },
-    // 设置全部路由
     setAllRoutes(data: Array<RouteRecordRaw>) {
       this.allRoutes = data
     },
-    // 异步获取管理系统路由
     getAsyncViewsRoutes() {
       return new Promise((resolve, reject) => {
         // ...

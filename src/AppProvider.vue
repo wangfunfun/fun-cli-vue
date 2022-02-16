@@ -1,46 +1,18 @@
 <script lang="ts" setup>
-import {
-  NLoadingBarProvider,
-  NDialogProvider,
-  NNotificationProvider,
-  NMessageProvider,
-  NConfigProvider,
-  NElement,
-} from 'naive-ui'
-import { Provider } from '@/components/common'
-import { reactive, computed } from 'vue'
+import { ElConfigProvider } from 'element-plus'
+import { useLanguageHook } from '@/hooks/language'
 import { useConfigStore } from '@/store/config'
 
-const configStore: any = useConfigStore()
+const configStore = useConfigStore()
 
-const config = reactive({
-  theme: computed(() => configStore.theme),
-  naiveuiLanguage: computed(() =>
-    configStore.theme ? configStore.theme.naiveuiLanguage : null
-  ),
-  naiveuiDateLanguage: computed(() =>
-    configStore.theme ? configStore.theme.naiveuiDateLanguage : null
-  ),
-})
+const language = useLanguageHook()
 </script>
 
 <template>
-  <n-config-provider
-    :theme="config.theme"
-    :locale="config.naiveuiLanguage"
-    :date-locale="config.naiveuiDateLanguage"
+  <el-config-provider
+    :zIndex="configStore.elementPlusConfig.zIndex"
+    :locale="language.messages.value[configStore.language].el"
   >
-    <n-element>
-      <n-loading-bar-provider>
-        <n-dialog-provider>
-          <n-notification-provider>
-            <n-message-provider>
-              <slot name="app"></slot>
-              <Provider></Provider>
-            </n-message-provider>
-          </n-notification-provider>
-        </n-dialog-provider>
-      </n-loading-bar-provider>
-    </n-element>
-  </n-config-provider>
+    <slot name="app"></slot>
+  </el-config-provider>
 </template>

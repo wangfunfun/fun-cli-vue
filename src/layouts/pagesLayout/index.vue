@@ -1,13 +1,11 @@
-<script lang="ts" setup>
-import { NLayout, NLayoutContent } from 'naive-ui'
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <n-layout>
-    <n-layout-content>
+  <el-container>
+    <el-main>
       <router-view></router-view>
-    </n-layout-content>
-  </n-layout>
+    </el-main>
+  </el-container>
 </template>
 
 <style lang="scss" scoped>

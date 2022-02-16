@@ -1,11 +1,15 @@
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import { NForm, NInput, NFormItem, NButton } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import GeneralCache from '@/utils/general-cache'
+import { useLanguageHook, i18nConfig } from '@/hooks/language'
 
 const { t } = useI18n()
+
+const language = useLanguageHook()
+
+const languageName = ref(language.languageName.value)
 
 const emit = defineEmits(['changeComponent'])
 
@@ -28,16 +32,20 @@ const loginForm = reactive<FormState>({
 })
 
 const loginRules = ref({
-  email: {
-    required: true,
-    message: t('rules.email'),
-    trigger: ['input'],
-  },
-  password: {
-    required: true,
-    message: t('rules.password'),
-    trigger: ['input'],
-  },
+  email: [
+    {
+      required: true,
+      message: t('login.placeholder.email'),
+      trigger: 'blur',
+    },
+  ],
+  password: [
+    {
+      required: true,
+      message: t('login.placeholder.password'),
+      trigger: 'blur',
+    },
+  ],
 })
 
 const router = useRouter()
@@ -53,62 +61,61 @@ const loginSubmit = () => {
 
 <template>
   <div class="slot">
-    <div class="title">{{ t('info.login') }}</div>
-    <n-form
-      :label-width="80"
-      :model="loginForm"
-      :rules="loginRules"
-      size="large"
-      ref="formRef"
-    >
-      <n-form-item path="email">
-        <n-input
-          v-model:value="loginForm.email"
-          :placeholder="t('placeholder.email')"
+    <div class="title">{{ t('login.info.login') }}</div>
+    <el-form :model="loginForm" :rules="loginRules" ref="formRef" size="large">
+      <el-form-item prop="email">
+        <el-input
+          v-model="loginForm.email"
+          :placeholder="t('login.placeholder.email')"
         />
-      </n-form-item>
-      <n-form-item path="password">
-        <n-input
-          v-model:value="loginForm.password"
-          :placeholder="t('placeholder.password')"
+      </el-form-item>
+      <el-form-item prop="password">
+        <el-input
+          v-model="loginForm.password"
+          :placeholder="t('login.placeholder.password')"
         />
-      </n-form-item>
-      <n-form-item>
-        <n-button
-          size="large"
-          @click="loginSubmit"
-          type="info"
+      </el-form-item>
+      <el-form-item prop="password">
+        <el-select
           style="width: 100%"
-          >{{ t('btn.login') }}</n-button
+          v-model="languageName"
+          @change="language.changeLanguage"
         >
-      </n-form-item>
-    </n-form>
+          <el-option
+            v-for="(value, key) in i18nConfig"
+            :key="key"
+            :label="value"
+            :value="key"
+          >
+          </el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item>
+        <el-button @click="loginSubmit" type="primary" style="width: 100%">{{
+          t('login.login')
+        }}</el-button>
+      </el-form-item>
+    </el-form>
     <div class="flex-between operate">
-      <n-button
-        size="large"
+      <el-button
         @click="resetPassword"
-        text
+        type="text"
         color="rgb(118, 124, 130)"
-        >{{ t('btn.resetPassword') }}</n-button
+        >{{ t('login.resetPassword') }}</el-button
       >
-      <n-button size="large" @click="signup" text type="info">{{
-        t('btn.signup')
-      }}</n-button>
+      <el-button @click="signup" type="text">{{ t('login.signup') }}</el-button>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.slot {
-}
-
 .title {
   font-size: $font-size-xxl;
   font-weight: 600;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 
 .operate {
-  padding-top: 40px;
+  padding-top: 25px;
 }
 </style>

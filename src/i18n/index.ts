@@ -1,16 +1,10 @@
-import { DropdownOption } from 'naive-ui'
 import i18N from './config'
+import { IObject } from '@/@types/interface'
 
-const i18nConfig: Array<DropdownOption> = [
-  {
-    label: '简体中文',
-    key: 'zhCN',
-  },
-  {
-    label: 'English',
-    key: 'enUS',
-  },
-]
+const i18nConfig: IObject = {
+  zhCN: '简体中文',
+  enUS: 'English',
+}
 
 export { i18nConfig }
 

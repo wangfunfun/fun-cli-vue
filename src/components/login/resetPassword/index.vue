@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import { NForm, NInput, NFormItem, NButton } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -26,26 +25,34 @@ const registerForm = reactive<FormState>({
 })
 
 const registerRules = ref({
-  email: {
-    required: true,
-    message: t('rules.email'),
-    trigger: ['input'],
-  },
-  emailCode: {
-    required: true,
-    message: t('rules.emailCode'),
-    trigger: ['input'],
-  },
-  password: {
-    required: true,
-    message: t('rules.password'),
-    trigger: ['input'],
-  },
-  confirmPassword: {
-    required: true,
-    message: t('rules.confirmPassword'),
-    trigger: ['input'],
-  },
+  email: [
+    {
+      required: true,
+      message: t('login.placeholder.email'),
+      trigger: 'blur',
+    },
+  ],
+  emailCode: [
+    {
+      required: true,
+      message: t('login.placeholder.emailCode'),
+      trigger: 'blur',
+    },
+  ],
+  password: [
+    {
+      required: true,
+      message: t('login.placeholder.password'),
+      trigger: 'blur',
+    },
+  ],
+  confirmPassword: [
+    {
+      required: true,
+      message: t('login.placeholder.confirmPassword'),
+      trigger: 'blur',
+    },
+  ],
 })
 
 const sendEmailCode = () => {}
@@ -55,59 +62,58 @@ const resetPasswordSubmit = () => {}
 
 <template>
   <div class="slot">
-    <div class="title">{{ t('info.resetPassword') }}</div>
-    <n-form
-      :label-width="80"
+    <div class="title">{{ t('login.info.resetPassword') }}</div>
+    <el-form
       :model="registerForm"
       :rules="registerRules"
       size="large"
       ref="formRef"
     >
-      <n-form-item path="email">
-        <n-input
-          v-model:value="registerForm.email"
-          :placeholder="t('placeholder.email')"
+      <el-form-item prop="email">
+        <el-input
+          v-model="registerForm.email"
+          :placeholder="t('login.placeholder.email')"
         />
-      </n-form-item>
-      <n-form-item path="emailCode">
-        <n-input
-          v-model:value="registerForm.emailCode"
-          :placeholder="t('placeholder.emailCode')"
+      </el-form-item>
+      <el-form-item prop="emailCode">
+        <el-input
+          style="width: 60%"
+          v-model="registerForm.emailCode"
+          :placeholder="t('login.placeholder.emailCode')"
         />
-        <n-button
+        <el-button
           size="large"
+          type="primary"
           @click="sendEmailCode"
-          type="info"
-          style="width: 200px; margin-left: 20px"
-          >{{ t('btn.sendEmailCode') }}</n-button
+          style="width: 35%; margin-left: 5%"
+          >{{ t('login.sendEmailCode') }}</el-button
         >
-      </n-form-item>
-      <n-form-item path="password">
-        <n-input
-          v-model:value="registerForm.password"
-          :placeholder="t('placeholder.password')"
+      </el-form-item>
+      <el-form-item prop="password">
+        <el-input
+          v-model="registerForm.password"
+          :placeholder="t('login.placeholder.password')"
         />
-      </n-form-item>
-      <n-form-item path="confirmPassword">
-        <n-input
-          v-model:value="registerForm.confirmPassword"
-          :placeholder="t('placeholder.confirmPassword')"
+      </el-form-item>
+      <el-form-item prop="confirmPassword">
+        <el-input
+          v-model="registerForm.confirmPassword"
+          :placeholder="t('login.placeholder.confirmPassword')"
         />
-      </n-form-item>
-      <n-form-item>
-        <n-button
-          size="large"
+      </el-form-item>
+      <el-form-item>
+        <el-button
           @click="resetPasswordSubmit"
-          type="info"
+          type="primary"
           style="width: 100%"
-          >{{ t('btn.resetPasswordSubmit') }}</n-button
+          >{{ t('login.resetPasswordSubmit') }}</el-button
         >
-      </n-form-item>
-    </n-form>
+      </el-form-item>
+    </el-form>
     <div class="flex-start operate">
-      <n-button size="large" @click="backLogin" text type="info">{{
-        t('btn.backLogin')
-      }}</n-button>
+      <el-button size="large" @click="backLogin" type="text">{{
+        t('login.backLogin')
+      }}</el-button>
     </div>
   </div>
 </template>
@@ -123,6 +129,6 @@ const resetPasswordSubmit = () => {}
 }
 
 .operate {
-  padding-top: 60px;
+  padding-top: 25px;
 }
 </style>

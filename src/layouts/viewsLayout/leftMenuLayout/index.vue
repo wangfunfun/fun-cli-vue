@@ -1,31 +1,28 @@
 <script lang="ts" setup>
-import { NLayout, NLayoutHeader, NLayoutContent, NLayoutFooter, NLayoutSider } from 'naive-ui'
-import { useConfigStore } from '@/store/config'
 import Header from './header.vue'
 import Footer from './footer.vue'
 import Sider from './sider.vue'
 import Tags from './tags.vue'
-
-const configStore = useConfigStore()
 </script>
 
 <template>
-  <n-layout has-sider>
-    <n-layout-sider>
+  <el-container>
+    <el-aside width="200px">
       <Sider></Sider>
-    </n-layout-sider>
-    <n-layout class="admin-scrollbar">
-      <n-layout-header>
+    </el-aside>
+    <el-container>
+      <el-header>
         <Header></Header>
-      </n-layout-header>
-      <n-layout-content>
+        <Tags></Tags>
+      </el-header>
+      <el-main class="admin-scrollbar">
         <router-view></router-view>
-      </n-layout-content>
-      <n-layout-footer>
+      </el-main>
+      <el-footer>
         <Footer></Footer>
-      </n-layout-footer>
-    </n-layout>
-  </n-layout>
+      </el-footer>
+    </el-container>
+  </el-container>
 </template>
 
 <style lang="scss" scoped>

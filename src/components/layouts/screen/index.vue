@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { NIcon } from 'naive-ui'
 import { FullscreenExitOutlined, FullscreenOutlined } from '@vicons/antd'
 import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
@@ -12,14 +11,10 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  iconSize: 20
+  iconSize: 20,
 })
 
-// i18n
-
 const { t } = useI18n()
-
-// screen status
 
 const isFullscreen = ref<boolean>(false)
 </script>
@@ -27,13 +22,15 @@ const isFullscreen = ref<boolean>(false)
 <template>
   <Hover
     showTooltip
-    :tooltip="isFullscreen ? t('tooltip.exitFullscreen') : t('tooltip.fullscreen')"
+    :tooltip="
+      isFullscreen ? t('tooltip.exitFullscreen') : t('tooltip.fullscreen')
+    "
   >
     <template #content>
-      <n-icon :size="props.iconSize">
+      <el-icon :size="props.iconSize">
         <FullscreenExitOutlined v-if="isFullscreen"></FullscreenExitOutlined>
         <FullscreenOutlined v-else></FullscreenOutlined>
-      </n-icon>
+      </el-icon>
     </template>
   </Hover>
 </template>

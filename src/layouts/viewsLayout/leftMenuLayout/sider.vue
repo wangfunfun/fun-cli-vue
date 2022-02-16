@@ -1,24 +1,5 @@
-<script lang="ts" setup>
-import { reactive, computed, onMounted, ref } from 'vue'
-import { useRouteStore } from '@/store/route'
+<script lang="ts" setup></script>
 
-const routeStore: any = useRouteStore()
+<template></template>
 
-const config = reactive({
-  viewsRoutes: computed(() => routeStore.viewsRoutes)
-})
-
-const activeMenuPath = ref('/admin/dashboard/workbench')
-
-onMounted(() => {})
-</script>
-
-<template>
-  <n-menu
-    :options="config.viewsRoutes"
-    v-model:value="activeMenuPath"
-    key-field="path"
-    label-field="menuName"
-    children-field="children"
-  />
-</template>
+<style lang="scss" scoped></style>

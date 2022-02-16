@@ -1,20 +1,15 @@
 <script lang="ts" setup>
-import { NIcon } from 'naive-ui'
 import { SyncOutlined } from '@vicons/antd'
 import { useI18n } from 'vue-i18n'
 import { Hover } from '@/components/animation'
-
-// props
 
 interface Props {
   iconSize?: string | number
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  iconSize: 20
+  iconSize: 20,
 })
-
-// i18n
 
 const { t } = useI18n()
 </script>
@@ -22,9 +17,9 @@ const { t } = useI18n()
 <template>
   <Hover showTooltip :tooltip="t('tooltip.refresh')">
     <template #content>
-      <n-icon :size="props.iconSize">
+      <el-icon :size="props.iconSize">
         <SyncOutlined></SyncOutlined>
-      </n-icon>
+      </el-icon>
     </template>
   </Hover>
 </template>

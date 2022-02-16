@@ -1,10 +1,7 @@
 <script lang="ts" setup>
 import { ref, onBeforeMount } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 import { LoginForm, ResetPasswordForm, SignupForm } from '@/components/login'
-
-const { t } = useI18n()
 
 const route = useRoute()
 
@@ -43,6 +40,6 @@ onBeforeMount(() => {
   background-color: #fff;
   box-shadow: $box-shadow-base;
   padding: 50px;
-  width: 25%;
+  width: 400px;
 }
 </style>

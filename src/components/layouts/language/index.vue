@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { NButton, NDropdown } from 'naive-ui'
 import { Hover } from '@/components/animation'
 import { useLanguageHook, i18nConfig } from '@/hooks/language'
 
@@ -9,15 +8,22 @@ const language = useLanguageHook()
 <template>
   <Hover>
     <template #content>
-      <n-dropdown
-        trigger="click"
-        :options="i18nConfig"
-        @select="language.selectLanguage"
-      >
-        <n-button text size="large"> {{ language.nowLanguage }}</n-button>
-      </n-dropdown>
+      <el-dropdown @command="language.changeLanguage">
+        <el-button type="text">
+          {{ language.configStore.languageName }}</el-button
+        >
+        <template #dropdown>
+          <el-dropdown-menu v-for="(value, key) in i18nConfig" :key="key">
+            <el-dropdown-item :command="key">{{ value }}</el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
     </template>
   </Hover>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+:deep(.el-button--text) {
+  color: #303133;
+}
+</style>

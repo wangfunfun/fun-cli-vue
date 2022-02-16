@@ -2,7 +2,6 @@
 import { ref, onBeforeMount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { NButton } from 'naive-ui'
 import {
   Error401,
   Error403,
@@ -10,8 +9,6 @@ import {
   Error500,
   Error503,
 } from '@/components/error'
-import { Wave } from '@/components/animation'
-
 const { t } = useI18n()
 
 const route = useRoute()
@@ -41,23 +38,15 @@ onBeforeMount(() => {
     <Error500 v-if="currentCode === '500'"></Error500>
     <Error503 v-if="currentCode === '503'"></Error503>
     <div class="operate flex-center">
-      <n-button
-        text
-        type="primary"
-        style="margin-right: 40px"
-        @click="goPrePage()"
-        >{{ t('btn.goPrePage') }}</n-button
-      >
-      <n-button
-        round
+      <el-button type="text" style="margin-right: 40px" @click="goPrePage()">{{
+        t('error.goPrePage')
+      }}</el-button>
+      <el-button
         type="primary"
         style="min-width: 120px"
         @click="goIndexPage()"
-        >{{ t('btn.goHome') }}</n-button
+        >{{ t('error.goHome') }}</el-button
       >
-    </div>
-    <div class="wave">
-      <Wave></Wave>
     </div>
   </div>
 </template>
@@ -67,6 +56,7 @@ onBeforeMount(() => {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  color: #409eff;
 }
 
 :deep(.slot) {

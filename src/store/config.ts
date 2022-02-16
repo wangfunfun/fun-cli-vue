@@ -1,13 +1,13 @@
+import { i18nConfig } from '@/i18n'
 import { defineStore } from 'pinia'
-import {
-  APP_DEFAULT_THEME,
-  APP_DEFAULT_LANGUAGE,
-  APP_PINIA_STORAGE,
-} from '@/common/config'
+import { APP_DEFAULT_LANGUAGE, APP_PINIA_STORAGE } from '@/common/config'
+import GeneralCache from '@/utils/general-cache'
+import { IObject } from '@/@types/interface'
 
 interface configStateTypes {
-  theme: any
-  language: any
+  language: string
+  languageName: string
+  elementPlusConfig: IObject
 }
 
 export const useConfigStore = defineStore({
@@ -22,29 +22,25 @@ export const useConfigStore = defineStore({
     ],
   },
   state: (): configStateTypes => ({
-    // 主题
-    theme: APP_DEFAULT_THEME,
-    // 语言
     language: APP_DEFAULT_LANGUAGE,
+    languageName: i18nConfig[APP_DEFAULT_LANGUAGE],
+    elementPlusConfig: {
+      zIndex: 3000,
+    },
   }),
   getters: {
-    // 当前语言
     nowLanguage: (state) => {
       return state.language
     },
-    // 当前主题
-    nowTheme: (state) => {
-      return state.theme
+    nowLanguageName: (state) => {
+      return state.languageName
     },
   },
   actions: {
-    // 设置主题
-    setTheme(data: any) {
-      this.theme = data
-    },
-    // 设置语言
     setLanguage(data: any) {
-      this.language = data
+      this.language = data.alias
+      this.languageName = data.name
+      new GeneralCache('languageAlias', 'local').set(data.alias)
     },
   },
 })

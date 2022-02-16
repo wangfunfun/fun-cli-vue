@@ -9,7 +9,7 @@ export const APP_FIRST_ROUTE: string = '/home/welcome'
 export const APP_LAYOUT_MODE: string = 'leftMenu'
 
 // 应用默认主题
-export const APP_DEFAULT_THEME: Object | null = null
+export const APP_DEFAULT_THEME: string = 'dark'
 
 // 应用默认语言
 export const APP_DEFAULT_LANGUAGE: string = 'enUS'

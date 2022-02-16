@@ -2,7 +2,6 @@
 
 .page-scrollbar {
   overflow-y: scroll;
-  height: 100vh;
   &::-webkit-scrollbar {
     width: 8px;
     height: 1px;
@@ -31,7 +30,6 @@
 // viewsLayout 的滚动条样式
 .admin-scrollbar {
   overflow-y: scroll;
-  height: 100vh;
   &::-webkit-scrollbar {
     width: 8px;
     height: 1px;

@@ -17,12 +17,10 @@ export const useLayoutStore = defineStore({
     ],
   },
   state: (): layoutStateTypes => ({
-    // 布局模式
     mode: APP_LAYOUT_MODE,
   }),
   getters: {},
   actions: {
-    // 设置布局模式
     setMode(data: any) {
       this.mode = data
     },

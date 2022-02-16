@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-import { NTooltip } from 'naive-ui'
-import { Placement } from 'naive-ui/lib/drawer/src/DrawerBodyWrapper'
+import { Placement } from 'element-plus'
+import { BuildPropType } from 'element-plus/lib/utils'
 
 interface Props {
   showTooltip?: boolean
   tooltip?: string
-  placement?: Placement | undefined
+  placement?: BuildPropType<StringConstructor, Placement, unknown> | undefined
 }
 
 const props = withDefaults(defineProps<Props>(), {
   showTooltip: false,
   tooltip: '',
-  placement: 'bottom'
+  placement: 'bottom',
 })
 </script>
 
@@ -19,14 +19,11 @@ const props = withDefaults(defineProps<Props>(), {
   <div class="hover flex-start" v-if="!props.showTooltip">
     <slot name="content"></slot>
   </div>
-  <n-tooltip :placement="props.placement" trigger="hover" v-else>
-    <template #trigger>
-      <div class="hover flex-start">
-        <slot name="content"></slot>
-      </div>
-    </template>
-    <span>{{ props.tooltip }}</span>
-  </n-tooltip>
+  <el-tooltip :content="props.tooltip" :placement="props.placement" v-else>
+    <div class="hover flex-start">
+      <slot name="content"></slot>
+    </div>
+  </el-tooltip>
 </template>
 
 <style lang="scss" scoped>
