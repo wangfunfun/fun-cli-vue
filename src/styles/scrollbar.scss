@@ -54,3 +54,17 @@
     border-radius: 10px;
   }
 }
+
+// admin slider 的滚动条样式
+.slider-scrollbar {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--thumb-color);
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--track-color);
+  }
+}

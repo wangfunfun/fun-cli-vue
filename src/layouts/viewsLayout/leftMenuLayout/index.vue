@@ -3,11 +3,27 @@ import Header from './header.vue'
 import Footer from './footer.vue'
 import Sider from './sider.vue'
 import Tags from './tags.vue'
+
+import { ref } from 'vue'
+
+import { useLayoutStore } from '@/store/layout'
+
+const layoutStore = useLayoutStore()
+
+const siderBgColor = ref(layoutStore.layoutTheme.siderBgColor)
+const mentTextColor = ref(layoutStore.layoutTheme.mentTextColor)
 </script>
 
 <template>
   <el-container>
-    <el-aside width="200px">
+    <el-aside
+      class="slider-scrollbar"
+      width="200px"
+      :style="{
+        '--thumb-color': mentTextColor,
+        '--track-color': siderBgColor,
+      }"
+    >
       <Sider></Sider>
     </el-aside>
     <el-container>
@@ -27,4 +43,11 @@ import Tags from './tags.vue'
 
 <style lang="scss" scoped>
 @import '@/styles/scrollbar.scss';
+
+.el-aside {
+  background-color: v-bind(siderBgColor);
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 </style>

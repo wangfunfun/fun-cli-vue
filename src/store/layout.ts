@@ -6,12 +6,14 @@ import {
   ADMIN_MENU_IS_ROUTER,
   ADMIN_MENU_UNFOLD,
 } from '@/common/admin'
+import { IObject } from '@/@types/interface'
 
 interface layoutStateTypes {
   mode: string
   uniqueOpened: boolean
   isVueRouter: boolean
   menuUnfoldStatus: boolean
+  layoutTheme: IObject
 }
 
 export const useLayoutStore = defineStore({
@@ -30,6 +32,11 @@ export const useLayoutStore = defineStore({
     uniqueOpened: ADMIN_MENU_ONLY,
     isVueRouter: ADMIN_MENU_IS_ROUTER,
     menuUnfoldStatus: ADMIN_MENU_UNFOLD,
+    layoutTheme: {
+      siderBgColor: '#263238',
+      mentTextColor: '#8a979e',
+      mentActiveColor: '#e8eaec',
+    },
   }),
   getters: {},
   actions: {
@@ -38,6 +45,9 @@ export const useLayoutStore = defineStore({
     },
     setMenuUnfoldStatus(data: any) {
       this.menuUnfoldStatus = data
+    },
+    setLayoutTheme(data: any) {
+      this.layoutTheme = data
     },
   },
 })

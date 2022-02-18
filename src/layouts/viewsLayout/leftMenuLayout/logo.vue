@@ -19,5 +19,6 @@ const layoutStore = useLayoutStore()
 .name {
   font-size: $font-size-lg;
   font-weight: bold;
+  color: #fff;
 }
 </style>

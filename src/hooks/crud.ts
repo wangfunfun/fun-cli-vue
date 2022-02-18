@@ -2,7 +2,7 @@
  * CRUD增删改查钩子
  */
 
-import { APP_CRUD_GLOBAL } from '@/common/config'
+import { ADMIN_CRUD_GLOBAL } from '@/common/admin'
 
 const useCrudHook = () => {
   const query = () => {}
@@ -29,4 +29,4 @@ const useCrudHook = () => {
   }
 }
 
-export { useCrudHook, APP_CRUD_GLOBAL as crudConfig }
+export { useCrudHook, ADMIN_CRUD_GLOBAL as crudConfig }

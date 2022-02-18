@@ -14,9 +14,16 @@ const layoutStore = useLayoutStore()
     :router="layoutStore.isVueRouter"
     :unique-opened="layoutStore.uniqueOpened"
     :default-active="ADMIN_FIRST_PAGE"
+    :background-color="layoutStore.layoutTheme.siderBgColor"
+    :text-color="layoutStore.layoutTheme.mentTextColor"
+    :active-text-color="layoutStore.layoutTheme.mentActiveColor"
   >
     <MenuItem :data="routeStore.allViewsRoutes"></MenuItem>
   </el-menu>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.el-menu {
+  border: none;
+}
+</style>

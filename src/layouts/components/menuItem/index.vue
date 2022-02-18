@@ -18,6 +18,13 @@ const Props = withDefaults(defineProps<Props>(), {
       v-if="route.children && route.children.length > 0"
     >
       <template #title>
+        <svg-icon
+          v-if="route.meta?.icon && route.meta?.iconType == 'custom'"
+          :name="route.meta.icon"
+        ></svg-icon>
+        <el-icon v-if="route.meta?.icon && route.meta?.iconType == 'el'">
+          {{ route.meta?.icon }}
+        </el-icon>
         <span>{{ route.meta?.menuName }}</span>
       </template>
       <MenuItem :data="route.children"></MenuItem>
