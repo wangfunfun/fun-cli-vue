@@ -10,7 +10,8 @@
  */
 
 import FormatDateTime from './format-dateTime'
-import { GENERAL_CACHE_EXPIRE, GENERAL_CACHE_ALIAS } from '@/common/constant'
+import { GENERAL_CACHE_ALIAS } from '@/common/constant'
+import { GENERAL_CACHE_EXPIRE } from '@/common/config'
 
 export default class GeneralCache {
   private cacheKey: string

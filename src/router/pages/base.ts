@@ -1,5 +1,6 @@
 import Index from '@/pages/index.vue'
 import pagesLayout from '@/layouts/pagesLayout/index.vue'
+import { APP_FIRST_ROUTE } from '@/common/config'
 
 export default [
   {
@@ -11,13 +12,13 @@ export default [
       {
         path: '/',
         component: Index,
-        redirect: '/welcome',
+        redirect: APP_FIRST_ROUTE,
         meta: { requiresAuth: false },
       },
       {
         path: '/error',
         name: 'Error',
-        component: () => import('@/pages/error.vue'),
+        component: () => import('@/pages/error/index.vue'),
         meta: { requiresAuth: false },
       },
     ],

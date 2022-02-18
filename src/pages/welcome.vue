@@ -53,7 +53,7 @@ const goWebsite = (url: string) => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  width: 506px;
 }
 
 .logo {
@@ -75,5 +75,9 @@ const goWebsite = (url: string) => {
 .link {
   padding: 40px;
   text-align: center;
+}
+
+.el-button + .el-button {
+  margin: 0 !important;
 }
 </style>

@@ -1,8 +1,17 @@
 import { defineStore } from 'pinia'
-import { APP_LAYOUT_MODE, APP_PINIA_STORAGE } from '@/common/config'
+import { APP_PINIA_STORAGE } from '@/common/config'
+import {
+  ADMIN_LAYOUT_MODE,
+  ADMIN_MENU_ONLY,
+  ADMIN_MENU_IS_ROUTER,
+  ADMIN_MENU_UNFOLD,
+} from '@/common/admin'
 
 interface layoutStateTypes {
-  mode: any
+  mode: string
+  uniqueOpened: boolean
+  isVueRouter: boolean
+  menuUnfoldStatus: boolean
 }
 
 export const useLayoutStore = defineStore({
@@ -17,12 +26,18 @@ export const useLayoutStore = defineStore({
     ],
   },
   state: (): layoutStateTypes => ({
-    mode: APP_LAYOUT_MODE,
+    mode: ADMIN_LAYOUT_MODE,
+    uniqueOpened: ADMIN_MENU_ONLY,
+    isVueRouter: ADMIN_MENU_IS_ROUTER,
+    menuUnfoldStatus: ADMIN_MENU_UNFOLD,
   }),
   getters: {},
   actions: {
     setMode(data: any) {
       this.mode = data
+    },
+    setMenuUnfoldStatus(data: any) {
+      this.menuUnfoldStatus = data
     },
   },
 })

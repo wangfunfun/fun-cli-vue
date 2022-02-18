@@ -14,7 +14,7 @@ export default [
     },
     children: [
       {
-        path: 'elementPlus',
+        path: '/admin/external/elementPlus',
         name: 'AdminExternalElementPlus',
         component: () => import('@/views/external/elementPlus.vue'),
         meta: {
@@ -25,13 +25,13 @@ export default [
         },
       },
       {
-        path: 'vite',
+        path: '/admin/external/vite',
         name: 'AdminExternalVite',
         component: () => import('@/views/external/vite.vue'),
         meta: { requiresAuth: true, icon: '', menuName: 'Vite文档', sort: 1 },
       },
       {
-        path: 'vue',
+        path: '/admin/external/vue',
         name: 'AdminExternalVue',
         component: () => import('@/views/external/vue.vue'),
         meta: { requiresAuth: true, icon: '', menuName: 'Vue文档', sort: 2 },

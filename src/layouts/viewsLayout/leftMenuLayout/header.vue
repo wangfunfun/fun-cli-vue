@@ -8,7 +8,7 @@ import {
   Unfold,
   User,
   Message,
-} from '@/components/layouts'
+} from '@/layouts/components'
 
 interface optionsState {
   iconSize?: number | string

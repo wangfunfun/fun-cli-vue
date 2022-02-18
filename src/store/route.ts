@@ -4,9 +4,10 @@ import router from '@/router'
 import { APP_PINIA_STORAGE } from '@/common/config'
 
 interface routeStateTypes {
-  pagesRoutes: any
-  viewsRoutes: any
-  allRoutes: any
+  pagesRoutes: Array<RouteRecordRaw>
+  viewsRoutes: Array<RouteRecordRaw>
+  allViewsRoutes: Array<RouteRecordRaw>
+  allRoutes: Array<RouteRecordRaw>
 }
 
 export const useRouteStore = defineStore({
@@ -23,6 +24,7 @@ export const useRouteStore = defineStore({
   state: (): routeStateTypes => ({
     pagesRoutes: [],
     viewsRoutes: [],
+    allViewsRoutes: [],
     allRoutes: [],
   }),
   getters: {},
@@ -42,21 +44,20 @@ export const useRouteStore = defineStore({
         // API
         // ...
         const asnycRoutes: any = []
-        const allViewsRoutes: Array<RouteRecordRaw> =
-          this.viewsRoutes.concat(asnycRoutes)
-        allViewsRoutes.sort((a: any, b: any) => {
+        this.allViewsRoutes = this.viewsRoutes.concat(asnycRoutes)
+        this.allViewsRoutes.sort((a: any, b: any) => {
           const A: number = a.meta.sort
           const B: number = b.meta.sort
           return A - B
         })
-        allViewsRoutes.forEach((item: RouteRecordRaw) => {
+        this.allViewsRoutes.forEach((item: RouteRecordRaw) => {
           const routeName: any = item.name
           if (!router.hasRoute(routeName)) {
             router.getRoutes()
             router.addRoute(item)
           }
         })
-        this.setPagesRoutes(allViewsRoutes)
+        this.setPagesRoutes(this.allViewsRoutes)
         resolve(true)
       })
     },

@@ -1,5 +1,11 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { Menu } from '@/layouts/components'
+import Logo from './logo.vue'
+</script>
 
-<template></template>
+<template>
+  <Logo></Logo>
+  <Menu></Menu>
+</template>
 
 <style lang="scss" scoped></style>

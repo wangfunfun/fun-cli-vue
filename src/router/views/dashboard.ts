@@ -4,22 +4,27 @@ export default [
   {
     path: '/admin/dashboard',
     name: 'AdminDashboard',
-    menuName: '首页',
     component: viewsLayout,
-    meta: { isMenu: true, requiresAuth: true, icon: '', menuName: '系统设置', sort: 0 },
+    meta: {
+      isMenu: true,
+      requiresAuth: true,
+      icon: '',
+      menuName: '首页',
+      sort: 0,
+    },
     children: [
       {
-        path: 'workbench',
+        path: '/admin/dashboard/workbench',
         name: 'AdminDashboardWorkbench',
         component: () => import('@/views/dashboard/workbench.vue'),
-        meta: { requiresAuth: true, icon: '', menuName: '工作台', sort: 0 }
+        meta: { requiresAuth: true, icon: '', menuName: '工作台', sort: 0 },
       },
       {
-        path: 'visual',
+        path: '/admin/dashboard/visual',
         name: 'AdminDashboardVisual',
         component: () => import('@/views/dashboard/visual.vue'),
-        meta: { requiresAuth: true, icon: '', menuName: '仪表盘', sort: 1 }
-      }
-    ]
-  }
+        meta: { requiresAuth: true, icon: '', menuName: '仪表盘', sort: 1 },
+      },
+    ],
+  },
 ]

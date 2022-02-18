@@ -17,7 +17,7 @@ Object.keys(viewsFiles).forEach((key) => {
   viewsRoutes = viewsRoutes.concat(viewsFiles[key].default)
 })
 
-// 初始化路由
+// 初始化静态路由
 
 allRoutes = pagesRoutes.concat(viewsRoutes)
 
@@ -29,5 +29,9 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: allRoutes,
 })
+
+// 导出路由配置
+
+export { pagesRoutes, viewsRoutes, allRoutes }
 
 export default router

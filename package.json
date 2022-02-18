@@ -1,6 +1,6 @@
 {
   "name": "cli-vue3-vite2-ts",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "scripts": {
     "init": "npm install",
     "dev": "vite --mode development",
@@ -32,6 +32,7 @@
     "@typescript-eslint/parser": "^5.7.0",
     "@vitejs/plugin-vue": "^2.0.0",
     "@vue/test-utils": "^2.0.0-rc.12",
+    "vite-plugin-svg-icons": "^0.7.1",
     "dart-sass": "^1.25.0",
     "eslint": "^8.4.1",
     "eslint-config-airbnb-base": "^14.2.1",
