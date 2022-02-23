@@ -13,6 +13,10 @@ t.enUS = 'English'
 t.btn = {}
 t.btn.home = 'Home'
 t.btn.github = 'Github'
+t.btn.more = 'More'
+t.btn.closeTag = 'Close the tag'
+t.btn.closeOtherTag = 'Close Other tags'
+t.btn.closeAllTag = 'Close all tags'
 
 t.tooltip = {}
 t.tooltip.setting = 'Setting'

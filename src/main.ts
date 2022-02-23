@@ -10,6 +10,9 @@ import AppProvider from './AppProvider.vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import SvgIcon from '@/components/svg-icon'
+import CrudPage from '@/components/crud-page'
+import CrudSearch from '@/components/crud-search'
+import CrudTable from '@/components/crud-table'
 
 // 注册插件
 import piniaPluginPersist from 'pinia-plugin-persist'
@@ -28,4 +31,7 @@ app
   .use(router)
   .use(createPinia().use(piniaPluginPersist))
   .use(SvgIcon)
+  .use(CrudPage)
+  .use(CrudSearch)
+  .use(CrudTable)
   .mount('#app', true)

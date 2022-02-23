@@ -10,6 +10,7 @@ import MenuItem from './menuItem/index.vue'
 import MessageInfo from './messageInfo/index.vue'
 import UserInfo from './userInfo/index.vue'
 import Lock from './lock/index.vue'
+import Tabs from './tabs/index.vue'
 
 export {
   Language,
@@ -24,4 +25,5 @@ export {
   MessageInfo,
   UserInfo,
   Lock,
+  Tabs,
 }

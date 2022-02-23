@@ -2,7 +2,7 @@
 import Header from './header.vue'
 import Footer from './footer.vue'
 import Sider from './sider.vue'
-import Tags from './tags.vue'
+import { Tabs } from '@/layouts/components'
 
 import { ref } from 'vue'
 
@@ -28,8 +28,10 @@ const mentTextColor = ref(layoutStore.layoutTheme.mentTextColor)
     </el-aside>
     <el-container>
       <el-header>
-        <Header></Header>
-        <Tags></Tags>
+        <el-card class="shadow">
+          <Header></Header>
+          <Tabs></Tabs>
+        </el-card>
       </el-header>
       <el-main class="admin-scrollbar">
         <router-view></router-view>
@@ -43,7 +45,13 @@ const mentTextColor = ref(layoutStore.layoutTheme.mentTextColor)
 
 <style lang="scss" scoped>
 @import '@/styles/scrollbar.scss';
+:deep(.el-card__body) {
+  padding: 0 !important;
+}
 
+.el-header {
+  height: auto !important;
+}
 .el-aside {
   background-color: v-bind(siderBgColor);
   height: 100vh;

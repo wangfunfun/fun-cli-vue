@@ -13,6 +13,10 @@ t.enUS = '英语'
 t.btn = {}
 t.btn.home = '首页'
 t.btn.github = 'Github'
+t.btn.more = '更多'
+t.btn.closeTag = '关闭当前标签'
+t.btn.closeOtherTag = '关闭其他标签'
+t.btn.closeAllTag = '关闭全部标签'
 
 t.tooltip = {}
 t.tooltip.setting = '设置'

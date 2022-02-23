@@ -20,25 +20,23 @@ const options = reactive<optionsState>({
 </script>
 
 <template>
-  <el-card class="shadow">
-    <div class="slot flex-between">
-      <div class="left flex-start">
-        <Unfold :iconSize="options.iconSize"></Unfold>
-        <Refresh :iconSize="options.iconSize"></Refresh>
-      </div>
-      <div class="right flex-start">
-        <Language :showTooltip="false"></Language>
-        <Screen :iconSize="options.iconSize"></Screen>
-        <Message :iconSize="options.iconSize"></Message>
-        <Setting :iconSize="options.iconSize"></Setting>
-        <User :showTooltip="false"></User>
-      </div>
+  <div class="slot flex-between">
+    <div class="left flex-start">
+      <Unfold :iconSize="options.iconSize"></Unfold>
+      <Refresh :iconSize="options.iconSize"></Refresh>
     </div>
-  </el-card>
+    <div class="right flex-start">
+      <Language :showTooltip="false"></Language>
+      <Screen :iconSize="options.iconSize"></Screen>
+      <Message :iconSize="options.iconSize"></Message>
+      <Setting :iconSize="options.iconSize"></Setting>
+      <User :showTooltip="false"></User>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-:deep(.el-card__body) {
-  padding: 0 20px !important;
+.slot {
+  padding: 0 20px;
 }
 </style>
