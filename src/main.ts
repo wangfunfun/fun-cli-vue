@@ -35,3 +35,12 @@ app
   .use(CrudSearch)
   .use(CrudTable)
   .mount('#app', true)
+
+
+// 【默认关闭】全局挂载 elementPlus的 svg图标库
+// import * as ElIcons from '@element-plus/icons-vue'
+// for (const icon in ElIcons) {
+//   if (Reflect.has(ElIcons, icon)) {
+//     app.component(icon, ElIcons[icon])
+//   }
+// }

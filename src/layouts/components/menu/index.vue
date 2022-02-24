@@ -10,15 +10,14 @@ const route = useRoute()
 const routeStore = useRouteStore()
 
 const layoutStore = useLayoutStore()
-
-const nowRoute = ref(route.path)
 </script>
 
 <template>
   <el-menu
+    :collapse="!layoutStore.menuUnfoldStatus"
     :router="layoutStore.isVueRouter"
     :unique-opened="layoutStore.uniqueOpened"
-    :default-active="nowRoute"
+    :default-active="route.path"
     :background-color="layoutStore.layoutTheme.siderBgColor"
     :text-color="layoutStore.layoutTheme.mentTextColor"
     :active-text-color="layoutStore.layoutTheme.mentActiveColor"

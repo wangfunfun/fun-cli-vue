@@ -22,6 +22,8 @@ const mentTextColor = ref(layoutStore.layoutTheme.mentTextColor)
       :style="{
         '--thumb-color': mentTextColor,
         '--track-color': siderBgColor,
+        width: layoutStore.menuUnfoldStatus ? '200px' : '60px',
+        transition:'all 0.3s ease-in-out'
       }"
     >
       <Sider></Sider>

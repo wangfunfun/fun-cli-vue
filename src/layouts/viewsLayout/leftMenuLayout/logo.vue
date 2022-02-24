@@ -7,8 +7,8 @@ const layoutStore = useLayoutStore()
 
 <template>
   <div class="logo flex-center">
-    <div class="name" v-if="layoutStore.menuUnfoldStatus">{{ APP_NAME }}</div>
-    <SvgIcon name="logo" v-else width="30px" height="30px"></SvgIcon>
+    <div class="name line-omitted-1" v-if="layoutStore.menuUnfoldStatus">{{ APP_NAME }}</div>
+    <SvgIcon name="Logo" v-else width="30px" height="30px"></SvgIcon>
   </div>
 </template>
 
@@ -20,5 +20,7 @@ const layoutStore = useLayoutStore()
   font-size: $font-size-lg;
   font-weight: bold;
   color: #fff;
+  width: 100%;
+  text-align: center;
 }
 </style>

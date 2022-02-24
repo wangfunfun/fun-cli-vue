@@ -49,5 +49,8 @@ export const useLayoutStore = defineStore({
     setLayoutTheme(data: any) {
       this.layoutTheme = data
     },
+    changeMenuUnfoldStatus() {
+      this.menuUnfoldStatus = !this.menuUnfoldStatus
+    },
   },
 })

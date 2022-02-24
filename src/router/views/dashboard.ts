@@ -8,7 +8,8 @@ export default [
     meta: {
       isMenu: true,
       requiresAuth: true,
-      icon: '',
+      iconType: 'cli',
+      icon: 'HomeOutline',
       menuName: '首页',
       sort: 0,
     },
@@ -19,8 +20,8 @@ export default [
         component: () => import('@/views/dashboard/workbench.vue'),
         meta: {
           requiresAuth: true,
-          iconType: 'el',
-          icon: 'Monitor',
+          iconType: 'cli',
+          icon: 'LaptopOutline',
           menuName: '工作台',
           sort: 0,
         },
@@ -31,8 +32,8 @@ export default [
         component: () => import('@/views/dashboard/visual.vue'),
         meta: {
           requiresAuth: true,
-          iconType: 'el',
-          icon: 'Odometer',
+          iconType: 'cli',
+          icon: 'SpeedometerOutline',
           menuName: '仪表盘',
           sort: 1,
         },

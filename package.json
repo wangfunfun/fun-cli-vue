@@ -1,6 +1,6 @@
 {
   "name": "cli-vue3-vite2-ts",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "scripts": {
     "init": "npm install",
     "dev": "vite --mode development",
@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^0.2.7",
     "@vicons/antd": "^0.10.0",
     "axios": "^0.24.0",
     "echarts": "^5.2.1",
@@ -20,6 +21,7 @@
     "mitt": "^3.0.0",
     "pinia": "^2.0.6",
     "pinia-plugin-persist": "0.0.93",
+    "screenfull": "^6.0.1",
     "vue": "^3.2.25",
     "vue-i18n": "^9.2.0-beta.21",
     "vue-router": "^4.0.12",

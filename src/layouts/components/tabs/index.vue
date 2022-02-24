@@ -96,8 +96,6 @@ const clickOperationMenu = (command: string | number | object) => {
     tab.nowTab = ''
     tab.tabList = []
     addTab(tab.homeTab, true)
-    // TODO
-    // 路由变了，菜单没有变
   }
 }
 </script>
@@ -155,6 +153,7 @@ const clickOperationMenu = (command: string | number | object) => {
 :deep(.el-tabs__header) {
   background-color: #fff !important;
   border: none !important;
+  margin: 0 !important;
 }
 :deep(.el-tabs__nav) {
   border: none !important;

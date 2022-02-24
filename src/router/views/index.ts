@@ -8,7 +8,8 @@ export default [
     meta: {
       isMenu: true,
       requiresAuth: true,
-      icon: '',
+      iconType:'cli',
+      icon: 'InformationCircleOutline',
       menuName: '关于',
       sort: 4,
     },

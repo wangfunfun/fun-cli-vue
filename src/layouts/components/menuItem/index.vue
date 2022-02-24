@@ -19,13 +19,13 @@ const Props = withDefaults(defineProps<Props>(), {
     >
       <template #title>
         <svg-icon
-          v-if="route.meta?.icon && route.meta?.iconType == 'custom'"
+          v-if="route.meta?.icon && route.meta?.iconType == 'cli'"
           :name="route.meta.icon"
         ></svg-icon>
         <el-icon v-if="route.meta?.icon && route.meta?.iconType == 'el'">
-          {{ route.meta?.icon }}
+          <component :is="route.meta?.icon"></component>
         </el-icon>
-        <span>{{ route.meta?.menuName }}</span>
+        <span class="menuLabel line-omitted-1">{{ route.meta?.menuName }}</span>
       </template>
       <MenuItem :data="route.children"></MenuItem>
     </el-sub-menu>
@@ -37,8 +37,27 @@ const Props = withDefaults(defineProps<Props>(), {
           :href="`${route.meta?.pageUrl}`"
           >{{ route.meta?.menuName }}</a
         >
-        <span v-else>{{ route.meta?.menuName }}</span>
+        <template v-else>
+          <svg-icon
+            v-if="route.meta?.icon && route.meta?.iconType == 'cli'"
+            :name="route.meta.icon"
+          ></svg-icon>
+          <el-icon v-if="route.meta?.icon && route.meta?.iconType == 'el'">
+            <component :is="route.meta?.icon"></component>
+          </el-icon>
+          <span class="menuLabel line-omitted-1">{{
+            route.meta?.menuName
+          }}</span>
+        </template>
       </template>
     </el-menu-item>
   </template>
 </template>
+
+<style lang="scss" scoped>
+.menuLabel {
+  padding-left: 8px;
+  width: 100%;
+  display: inline-block;
+}
+</style>
