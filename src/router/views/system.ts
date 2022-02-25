@@ -1,10 +1,10 @@
-import viewsLayout from '@/layouts/viewsLayout/index.vue'
+import Router from '@/layouts/router.vue'
 
 export default [
   {
     path: '/admin/system',
     name: 'AdminSystem',
-    component: viewsLayout,
+    component: Router,
     meta: {
       isMenu: true,
       requiresAuth: true,
@@ -19,6 +19,7 @@ export default [
         name: 'AdminSystemLog',
         component: () => import('@/views/system/log.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'DocumentLockOutline',
@@ -31,6 +32,7 @@ export default [
         name: 'AdminSystemDict',
         component: () => import('@/views/system/dict.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'BookOutline',
@@ -43,6 +45,7 @@ export default [
         name: 'AdminSystemMenu',
         component: () => import('@/views/system/menu.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'GridOutline',
@@ -55,6 +58,7 @@ export default [
         name: 'AdminSystemRole',
         component: () => import('@/views/system/role.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'KeyOutline',

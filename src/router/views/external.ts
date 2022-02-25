@@ -1,10 +1,10 @@
-import viewsLayout from '@/layouts/viewsLayout/index.vue'
+import Router from '@/layouts/router.vue'
 
 export default [
   {
     path: '/admin/external',
     name: 'AdminExternal',
-    component: viewsLayout,
+    component: Router,
     meta: {
       isMenu: true,
       requiresAuth: true,
@@ -19,6 +19,7 @@ export default [
         name: 'AdminExternalElementPlus',
         component: () => import('@/views/external/elementPlus.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'FastFoodOutline',
@@ -31,6 +32,7 @@ export default [
         name: 'AdminExternalVite',
         component: () => import('@/views/external/vite.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'FlashOutline',
@@ -43,6 +45,7 @@ export default [
         name: 'AdminExternalVue',
         component: () => import('@/views/external/vue.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'LogoVue',

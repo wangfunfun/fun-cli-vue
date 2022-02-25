@@ -1,10 +1,10 @@
-import viewsLayout from '@/layouts/viewsLayout/index.vue'
+import Router from '@/layouts/router.vue'
 
 export default [
   {
     path: '/admin/dashboard',
     name: 'AdminDashboard',
-    component: viewsLayout,
+    component: Router,
     meta: {
       isMenu: true,
       requiresAuth: true,
@@ -19,6 +19,7 @@ export default [
         name: 'AdminDashboardWorkbench',
         component: () => import('@/views/dashboard/workbench.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'LaptopOutline',
@@ -31,6 +32,7 @@ export default [
         name: 'AdminDashboardVisual',
         component: () => import('@/views/dashboard/visual.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'SpeedometerOutline',

@@ -3,7 +3,7 @@
 <template>
   <el-container>
     <el-main>
-      <router-view></router-view>
+      <slot name="pagesLayout"></slot>
     </el-main>
   </el-container>
 </template>

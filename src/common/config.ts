@@ -13,3 +13,6 @@ export const APP_DEFAULT_LANGUAGE: string = 'enUS'
 
 // pinia 数据持久化的方式，0为 sessionStorage， 1为 localStorage
 export const APP_PINIA_STORAGE: Storage = sessionStorage
+
+// 是否开启 keepAlive
+export const APP_KEEP_ALIVE: boolean = true

@@ -14,6 +14,7 @@ t.btn = {}
 t.btn.home = '首页'
 t.btn.github = 'Github'
 t.btn.more = '更多'
+t.btn.about = '关于'
 t.btn.closeTag = '关闭当前标签'
 t.btn.closeOtherTag = '关闭其他标签'
 t.btn.closeAllTag = '关闭全部标签'
@@ -33,5 +34,19 @@ t.user = {}
 t.user.userInfo = '用户信息'
 t.user.lock = '锁屏'
 t.user.logout = '退出'
+
+t.info = {}
+t.info.project = '项目信息'
+t.info.name = '名称'
+t.info.version = '版本'
+t.info.buildTime = '更新时间'
+t.info.githubAddress = 'Github'
+t.info.giteeAddress = 'Gitee'
+t.info.preview = '预览'
+t.info.githubUrl = '查看Github地址'
+t.info.giteeUrl = '查看Gitee地址'
+t.info.previewUrl = '查看预览地址'
+t.info.dependencies = '生产环境依赖'
+t.info.devDependencies = '开发产环境依赖'
 
 export default t

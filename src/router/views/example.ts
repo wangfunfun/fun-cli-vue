@@ -1,10 +1,10 @@
-import viewsLayout from '@/layouts/viewsLayout/index.vue'
+import Router from '@/layouts/router.vue'
 
 export default [
   {
     path: '/admin/example',
     name: 'AdminExample',
-    component: viewsLayout,
+    component: Router,
     meta: {
       isMenu: true,
       requiresAuth: true,
@@ -19,6 +19,7 @@ export default [
         name: 'AdminExampleEcharts',
         component: () => import('@/views/example/echarts.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'PieChartOutline',
@@ -31,6 +32,7 @@ export default [
         name: 'AdminExampleDrag',
         component: () => import('@/views/example/drag.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'MoveOutline',
@@ -43,6 +45,7 @@ export default [
         name: 'AdminExampleEditor',
         component: () => import('@/views/example/editor.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'NewspaperOutline',
@@ -55,6 +58,7 @@ export default [
         name: 'AdminExampleForm',
         component: () => import('@/views/example/form.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'DocumentAttachOutline',
@@ -67,6 +71,7 @@ export default [
         name: 'AdminExampleTable',
         component: () => import('@/views/example/table.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'BrowsersSharp',
@@ -79,6 +84,7 @@ export default [
         name: 'AdminExampleUpload',
         component: () => import('@/views/example/upload.vue'),
         meta: {
+          layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'CloudUploadOutline',

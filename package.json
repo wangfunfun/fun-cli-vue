@@ -1,6 +1,7 @@
 {
   "name": "cli-vue3-vite2-ts",
-  "version": "0.6.0",
+  "version": "0.7.1",
+  "updateTime":"2022-02-25",
   "scripts": {
     "init": "npm install",
     "dev": "vite --mode development",

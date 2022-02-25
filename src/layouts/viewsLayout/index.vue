@@ -17,9 +17,19 @@ onBeforeMount(async () => {
 <template>
   <LeftMenuLayout
     v-if="layoutStore.mode == 'leftMenu' || ADMIN_LAYOUT_MODE == 'leftMenu'"
-  ></LeftMenuLayout>
+  >
+    <template #leftMenuLayout>
+      <div class="view-container">
+        <slot name="viewsLayout"></slot>
+      </div>
+    </template>
+  </LeftMenuLayout>
 </template>
 
 <style lang="scss" scoped>
 @import '@/styles/scrollbar.scss';
+
+.view-container {
+  padding: 20px;
+}
 </style>
