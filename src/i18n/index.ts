@@ -2,8 +2,8 @@ import i18N from './config'
 import { IObject } from '@/@types/interface'
 
 const i18nConfig: IObject = {
-  zhCN: '简体中文',
-  enUS: 'English',
+  zh: '简体中文',
+  en: 'English',
 }
 
 export { i18nConfig }

@@ -5,6 +5,16 @@ export default defineComponent({
 })
 </script>
 
-<template></template>
+<template>
+  <div class="crud-table">
+    <slot></slot>
+  </div>
+</template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.crud-table {
+  width: calc(100% - 40px);
+  background-color: #fff;
+  padding: 20px;
+}
+</style>

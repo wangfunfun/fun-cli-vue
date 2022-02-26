@@ -30,6 +30,9 @@ onBeforeMount(async () => {
 @import '@/styles/scrollbar.scss';
 
 .view-container {
+  width: calc(100% - 40px);
+  min-height: calc(100% - 40px);
   padding: 20px;
+  background-color: $bg-color;
 }
 </style>

@@ -1,7 +1,10 @@
 import { defineStore } from 'pinia'
 import { APP_PINIA_STORAGE } from '@/common/config'
-
-export interface userStateTypes {}
+import { IObject } from '@/@types/interface'
+import { logTypeDicts, userTypeDicts } from '@/common/dict'
+export interface userStateTypes {
+  dicts: IObject[]
+}
 
 export const useUserStore = defineStore({
   id: 'userStore',
@@ -14,7 +17,9 @@ export const useUserStore = defineStore({
       },
     ],
   },
-  state: (): userStateTypes => ({}),
+  state: (): userStateTypes => ({
+    dicts: [logTypeDicts, userTypeDicts],
+  }),
   getters: {},
   actions: {},
 })

@@ -9,13 +9,13 @@ import zhCNLanguage from './zhCN'
 import enUSLanguage from './enUS'
 
 const messages: IObject = {
-  zhCN: {
+  zh: {
     ...zhCNLanguage,
-    ...zhCN,
+    el: zhCN,
   },
-  enUS: {
+  en: {
     ...enUSLanguage,
-    ...enUS,
+    el: enUS,
   },
 }
 

@@ -4,7 +4,7 @@ import router from './router'
 import { createPinia } from 'pinia'
 import i18N from './i18n'
 
-// 组件导入
+// 导入
 import App from './App.vue'
 import AppProvider from './AppProvider.vue'
 import ElementPlus from 'element-plus'
@@ -14,11 +14,11 @@ import CrudPage from '@/components/crud-page'
 import CrudSearch from '@/components/crud-search'
 import CrudTable from '@/components/crud-table'
 
-// 注册插件
+// 注册
 import piniaPluginPersist from 'pinia-plugin-persist'
 import 'vite-plugin-svg-icons/register'
 
-// 挂载 app && appprovider
+// 挂载
 const app = createApp(App)
 
 const appprovider = createApp(AppProvider)
