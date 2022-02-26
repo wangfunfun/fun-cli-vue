@@ -79,9 +79,11 @@ const tabRemove = (e: string | number) => {
   let nowTabRes = findTab(tab.nowTab)
   if (isFind) {
     tab.tabList.splice(index, 1)
-    nowTabRes.index == index
-      ? router.push({ path: tab.tabList[index - 1].name })
-      : null
+    if (nowTabRes.index == index && nowTabRes.index !== 0) {
+      router.push({ path: tab.tabList[index - 1].name })
+    } else if (nowTabRes.index === 0) {
+      router.push({ path: tab.tabList[0].name })
+    }
   }
 }
 
