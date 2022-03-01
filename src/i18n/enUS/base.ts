@@ -15,9 +15,13 @@ t.btn.home = 'Home'
 t.btn.github = 'Github'
 t.btn.more = 'More'
 t.btn.about = 'About'
+t.btn.cancel = 'Cancel'
+t.btn.confirm = 'Confirm'
 t.btn.closeTag = 'Close the tag'
 t.btn.closeOtherTag = 'Close Other tags'
 t.btn.closeAllTag = 'Close all tags'
+t.btn.upload = 'Upload'
+t.btn.update = 'Update'
 
 t.tooltip = {}
 t.tooltip.setting = 'Setting'
@@ -48,5 +52,16 @@ t.info.giteeUrl = 'View the Gitee address  '
 t.info.previewUrl = 'Viewing preview Address'
 t.info.dependencies = 'Production environment dependencies'
 t.info.devDependencies = 'Development environment dependencies'
+t.info.userInfo = 'User Info'
+t.info.male = 'Male'
+t.info.female = 'Female'
+
+t.label = {}
+t.label.userName = 'User Name'
+t.label.phone = 'Phone'
+t.label.dept = 'Department'
+t.label.role = 'Role'
+t.label.avatar = 'Avatar'
+t.label.sex = 'Sex'
 
 export default t

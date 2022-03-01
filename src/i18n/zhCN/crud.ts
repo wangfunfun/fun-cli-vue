@@ -22,4 +22,13 @@ t.crud.info.confirm = '确定进行{handle}操作?'
 t.crud.placeholder = {}
 t.crud.placeholder.input = '请输入{label}'
 
+t.crud.rule = {}
+t.crud.rule.enter = '请输入{label}'
+t.crud.rule.enterAgain = '请再次输入{label}'
+t.crud.rule.select = '请选择{label}'
+t.crud.rule.enterError = '{label}是必输项'
+t.crud.rule.enterAgainError = '两次输入的{label}不一致'
+t.crud.rule.selectError = '{label}是必选项'
+t.crud.rule.formatAgainError = '请输入格式正确的{label}'
+
 export default t

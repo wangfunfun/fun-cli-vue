@@ -17,9 +17,7 @@ const { t } = useI18n()
 <template>
   <BtnHover showTooltip :tooltip="t('tooltip.setting')">
     <template #content>
-      <el-icon :size="props.iconSize">
-        <SettingOutlined></SettingOutlined>
-      </el-icon>
+      <SvgIcon name="SettingsOutline"></SvgIcon>
     </template>
   </BtnHover>
 </template>

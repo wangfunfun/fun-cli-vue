@@ -19,6 +19,7 @@ export interface crudOptionsTypes {
   dataListSelections?: IObject[]
   addOrUpdateVisible?: boolean
   addOrUpdateDom?: IObject
+  isPageSearch?: boolean
 }
 
 export interface crudMethodsTypes extends crudOptionsTypes, IObject {

@@ -18,12 +18,22 @@ const renderIcon = (icon: any) => {
     })
   }
 }
+
+const emit = defineEmits(['openUserInfo'])
+
+const clickMenu = (command: string) => {
+  if (command === 'userInfo') {
+    emit('openUserInfo')
+  } else if (command === 'lock') {
+  } else if (command === 'logout') {
+  }
+}
 </script>
 
 <template>
   <BtnHover>
     <template #content>
-      <el-dropdown>
+      <el-dropdown @command="clickMenu">
         <div class="flex-start">
           <el-avatar
             size="small"
@@ -33,13 +43,19 @@ const renderIcon = (icon: any) => {
         </div>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item :icon="renderIcon(UserOutlined)">
+            <el-dropdown-item
+              command="userInfo"
+              :icon="renderIcon(UserOutlined)"
+            >
               <span>{{ t('user.userInfo') }}</span>
             </el-dropdown-item>
-            <el-dropdown-item :icon="renderIcon(LockOutlined)">
+            <el-dropdown-item command="lock" :icon="renderIcon(LockOutlined)">
               <span>{{ t('user.lock') }}</span>
             </el-dropdown-item>
-            <el-dropdown-item :icon="renderIcon(LogoutOutlined)">
+            <el-dropdown-item
+              command="logout"
+              :icon="renderIcon(LogoutOutlined)"
+            >
               <span>{{ t('user.logout') }}</span>
             </el-dropdown-item>
           </el-dropdown-menu>

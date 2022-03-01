@@ -62,6 +62,8 @@ const useCrudHook = (props: crudOptionsTypes | IObject): crudMethodsTypes => {
     addOrUpdateVisible: false,
     // 新增／更新，组件DOM
     addOrUpdateDom: {},
+    // 是否是分页查询
+    isPageSearch: true,
   }
 
   const state = mergeOptionsToPageState(crudOptions, props)

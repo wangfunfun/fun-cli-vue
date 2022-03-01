@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { reactive } from 'vue'
+import { reactive, ref, nextTick } from 'vue'
 import {
   Language,
   Refresh,
@@ -8,6 +8,7 @@ import {
   Unfold,
   User,
   Message,
+  UserInfo,
 } from '@/layouts/components'
 
 interface optionsState {
@@ -17,6 +18,16 @@ interface optionsState {
 const options = reactive<optionsState>({
   iconSize: 20,
 })
+
+const userInfoVisible = ref(false)
+const userInfoDom: any = ref(null)
+
+const openUserInfo = () => {
+  userInfoVisible.value = true
+  nextTick(() => {
+    userInfoDom.value.init()
+  })
+}
 </script>
 
 <template>
@@ -30,9 +41,14 @@ const options = reactive<optionsState>({
       <Screen :iconSize="options.iconSize"></Screen>
       <Message :iconSize="options.iconSize"></Message>
       <Setting :iconSize="options.iconSize"></Setting>
-      <User :showTooltip="false"></User>
+      <User :showTooltip="false" @openUserInfo="openUserInfo"></User>
     </div>
   </div>
+  <UserInfo
+    ref="userInfoDom"
+    v-if="userInfoVisible"
+    @close="userInfoVisible = false"
+  ></UserInfo>
 </template>
 
 <style lang="scss" scoped>

@@ -15,9 +15,13 @@ t.btn.home = '首页'
 t.btn.github = 'Github'
 t.btn.more = '更多'
 t.btn.about = '关于'
+t.btn.cancel = '取消'
+t.btn.confirm = '确定'
 t.btn.closeTag = '关闭当前标签'
 t.btn.closeOtherTag = '关闭其他标签'
 t.btn.closeAllTag = '关闭全部标签'
+t.btn.upload = '上传'
+t.btn.update = '更新'
 
 t.tooltip = {}
 t.tooltip.setting = '设置'
@@ -48,5 +52,16 @@ t.info.giteeUrl = '查看Gitee地址'
 t.info.previewUrl = '查看预览地址'
 t.info.dependencies = '生产环境依赖'
 t.info.devDependencies = '开发产环境依赖'
+t.info.userInfo = '用户信息'
+t.info.male = '男'
+t.info.female = '女'
+
+t.label = {}
+t.label.userName = '用户名'
+t.label.phone = '手机号'
+t.label.dept = '部门'
+t.label.role = '角色'
+t.label.avatar = '头像'
+t.label.sex = '性别'
 
 export default t

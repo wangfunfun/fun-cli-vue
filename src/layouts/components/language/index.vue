@@ -9,9 +9,7 @@ const language = useLanguageHook()
   <BtnHover>
     <template #content>
       <el-dropdown @command="language.changeLanguage">
-        <el-button type="text">
-          {{ language.configStore.languageName }}</el-button
-        >
+        <SvgIcon name="LanguageOutline"></SvgIcon>
         <template #dropdown>
           <el-dropdown-menu v-for="(value, key) in i18nConfig" :key="key">
             <el-dropdown-item :command="key">{{ value }}</el-dropdown-item>

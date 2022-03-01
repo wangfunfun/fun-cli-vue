@@ -17,11 +17,10 @@ const { t } = useI18n()
 <template>
   <BtnHover showTooltip :tooltip="t('tooltip.message')">
     <template #content>
-      <el-icon :size="props.iconSize">
-        <BellOutlined></BellOutlined>
-      </el-icon>
+      <SvgIcon name="NotificationsOutline"></SvgIcon>
     </template>
   </BtnHover>
 </template>
 
 <style lang="scss" scoped></style>
+ 

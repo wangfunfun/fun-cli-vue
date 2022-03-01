@@ -17,9 +17,7 @@ const { t } = useI18n()
 <template>
   <BtnHover showTooltip :tooltip="t('tooltip.refresh')">
     <template #content>
-      <el-icon :size="props.iconSize">
-        <SyncOutlined></SyncOutlined>
-      </el-icon>
+       <SvgIcon name="Refresh"></SvgIcon>
     </template>
   </BtnHover>
 </template>

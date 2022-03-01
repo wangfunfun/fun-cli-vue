@@ -42,11 +42,12 @@ const exitFullscreen = () => {
   >
     <template #content>
       <el-icon :size="props.iconSize">
-        <FullscreenExitOutlined
+        <SvgIcon
+          name="Contract"
           v-if="isFullscreen"
           @click="exitFullscreen"
-        ></FullscreenExitOutlined>
-        <FullscreenOutlined v-else @click="fullscreen"></FullscreenOutlined>
+        ></SvgIcon>
+        <SvgIcon name="Expand" v-else @click="fullscreen"></SvgIcon>
       </el-icon>
     </template>
   </BtnHover>
