@@ -10,7 +10,7 @@ const { t } = useI18n()
 
 const language = useLanguageHook()
 
-const languageName = ref(language.languageName.value)
+const languageName = ref(language.languageName)
 
 const emit = defineEmits(['changeComponent'])
 

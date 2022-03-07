@@ -40,10 +40,10 @@ onBeforeMount(() => {
   background-color: #fff;
   box-shadow: $box-shadow-base;
   padding: 50px;
-  width: 400px;
+  width: 350px;
 }
 
-@keyframes HUE_SHIFT {
+@keyframes ANIMATION_BG_COLOR {
   0% {
     filter: hue-rotate(0);
   }
@@ -60,7 +60,7 @@ onBeforeMount(() => {
   bottom: 0;
   left: 0;
   z-index: 0;
-  animation: HUE_SHIFT 5s infinite;
+  animation: ANIMATION_BG_COLOR 5s infinite;
   background: linear-gradient(-30deg, #fef280, #ff7496, #ff59f8);
 }
 </style>

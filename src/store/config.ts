@@ -4,7 +4,7 @@ import { APP_DEFAULT_LANGUAGE, APP_PINIA_STORAGE } from '@/common/config'
 import GeneralCache from '@/utils/general-cache'
 import { IObject } from '@/@types/interface'
 
-const language: any = new GeneralCache('languageAlias', 'local').get()
+const languageAlias: any = new GeneralCache('languageAlias', 'local').get()
 
 interface configStateTypes {
   language: string
@@ -24,8 +24,8 @@ export const useConfigStore = defineStore({
     ],
   },
   state: (): configStateTypes => ({
-    language: language || APP_DEFAULT_LANGUAGE,
-    languageName: i18nConfig[language || APP_DEFAULT_LANGUAGE],
+    language: languageAlias || APP_DEFAULT_LANGUAGE,
+    languageName: i18nConfig[languageAlias || APP_DEFAULT_LANGUAGE],
     elementPlusConfig: {
       zIndex: 3000,
     },

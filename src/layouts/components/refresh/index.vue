@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { SyncOutlined } from '@vicons/antd'
 import { useI18n } from 'vue-i18n'
 import BtnHover from '@/components/btn-hover'
 

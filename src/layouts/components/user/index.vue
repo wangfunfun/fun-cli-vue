@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-import { reactive, h } from 'vue'
+import { reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { ElIcon } from 'element-plus'
-import { UserOutlined, LockOutlined, LogoutOutlined } from '@vicons/antd'
 import BtnHover from '@/components/btn-hover'
 
 const { t } = useI18n()
@@ -10,14 +8,6 @@ const { t } = useI18n()
 const userInfo = reactive({
   username: '游客',
 })
-
-const renderIcon = (icon: any) => {
-  return () => {
-    return h(ElIcon, null, {
-      default: () => h(icon),
-    })
-  }
-}
 
 const emit = defineEmits(['openUserInfo'])
 
@@ -43,20 +33,17 @@ const clickMenu = (command: string) => {
         </div>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item
-              command="userInfo"
-              :icon="renderIcon(UserOutlined)"
-            >
-              <span>{{ t('user.userInfo') }}</span>
+            <el-dropdown-item command="userInfo">
+              <SvgIcon width="14px" name="PersonOutline"></SvgIcon>
+              <span class="label">{{ t('user.userInfo') }}</span>
             </el-dropdown-item>
-            <el-dropdown-item command="lock" :icon="renderIcon(LockOutlined)">
-              <span>{{ t('user.lock') }}</span>
+            <el-dropdown-item command="lock">
+              <SvgIcon width="14px" name="LockClosedOutline"></SvgIcon>
+              <span class="label">{{ t('user.lock') }}</span>
             </el-dropdown-item>
-            <el-dropdown-item
-              command="logout"
-              :icon="renderIcon(LogoutOutlined)"
-            >
-              <span>{{ t('user.logout') }}</span>
+            <el-dropdown-item command="logout">
+              <SvgIcon width="14px" name="LogOutOutline"></SvgIcon>
+              <span class="label">{{ t('user.logout') }}</span>
             </el-dropdown-item>
           </el-dropdown-menu>
         </template>
@@ -69,5 +56,9 @@ const clickMenu = (command: string) => {
 .username {
   max-width: 80px;
   font-size: $font-size-base;
+}
+
+.label {
+  padding-left: 6px;
 }
 </style>

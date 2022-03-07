@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import screenfull from 'screenfull'
-import { FullscreenExitOutlined, FullscreenOutlined } from '@vicons/antd'
 import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
 import BtnHover from '@/components/btn-hover'

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { MenuFoldOutlined, MenuUnfoldOutlined } from '@vicons/antd'
 import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
 import BtnHover from '@/components/btn-hover'
@@ -26,16 +25,16 @@ const layoutStore = useLayoutStore()
     "
   >
     <template #content>
-      <el-icon :size="props.iconSize">
-        <MenuUnfoldOutlined
-          v-if="!layoutStore.menuUnfoldStatus"
-          @click="layoutStore.changeMenuUnfoldStatus"
-        ></MenuUnfoldOutlined>
-        <MenuFoldOutlined
-          v-else
-          @click="layoutStore.changeMenuUnfoldStatus"
-        ></MenuFoldOutlined>
-      </el-icon>
+      <SvgIcon
+        name="MenuUnfoldOutlined"
+        v-if="!layoutStore.menuUnfoldStatus"
+        @click="layoutStore.changeMenuUnfoldStatus"
+      ></SvgIcon>
+      <SvgIcon
+        name="MenuFoldOutlined"
+        v-else
+        @click="layoutStore.changeMenuUnfoldStatus"
+      ></SvgIcon>
     </template>
   </BtnHover>
 </template>

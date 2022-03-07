@@ -8,18 +8,22 @@ import { onBeforeMount } from 'vue'
 import { pagesRoutes, viewsRoutes, allRoutes } from '@/router/config'
 import ViewsLayout from '@/layouts/viewsLayout/index.vue'
 import PagesLayout from '@/layouts/pagesLayout/index.vue'
+import GeneralCache from '@/utils/general-cache'
+import { APP_DEFAULT_LANGUAGE } from '@/common/config'
 
 const configStore = useConfigStore()
 
 const routeStore = useRouteStore()
 const route = useRoute()
 
+const languageAlias: any = new GeneralCache('languageAlias', 'local').get()
 const language = useLanguageHook()
 
 onBeforeMount(() => {
   routeStore.setPagesRoutes(pagesRoutes)
   routeStore.setViewsRoutes(viewsRoutes)
   routeStore.setAllRoutes(allRoutes)
+  language.changeLanguage(languageAlias || APP_DEFAULT_LANGUAGE)
 })
 </script>
 

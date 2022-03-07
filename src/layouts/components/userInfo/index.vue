@@ -106,7 +106,7 @@ export default defineComponent({
       ref="formDom"
       :model="dataForm"
       :rules="rules"
-      label-width="100px"
+      label-width="120px"
     >
       <el-form-item :label="t('label.avatar')" prop="avatarUrl">
         <el-avatar size="large" :src="dataForm.avatarUrl"></el-avatar>

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { BellOutlined } from '@vicons/antd'
 import { useI18n } from 'vue-i18n'
 import BtnHover from '@/components/btn-hover'
 
@@ -23,4 +22,3 @@ const { t } = useI18n()
 </template>
 
 <style lang="scss" scoped></style>
- 
