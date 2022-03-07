@@ -63,5 +63,9 @@ t.label.dept = 'Department'
 t.label.role = 'Role'
 t.label.avatar = 'Avatar'
 t.label.sex = 'Sex'
+t.label.email = 'E-mail'
+t.label.password = 'Password'
+t.label.smsCode = 'Code'
+t.label.captcha = 'Captcha'
 
 export default t

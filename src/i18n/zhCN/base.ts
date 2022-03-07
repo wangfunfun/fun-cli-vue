@@ -63,5 +63,9 @@ t.label.dept = '部门'
 t.label.role = '角色'
 t.label.avatar = '头像'
 t.label.sex = '性别'
+t.label.email = '电子邮箱'
+t.label.password = '密码'
+t.label.smsCode = '验证码'
+t.label.captcha = '验证码'
 
 export default t

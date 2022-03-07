@@ -136,14 +136,14 @@ export default defineComponent({
       <el-form-item :label="t('label.dept')" prop="deptId">
         <el-select
           class="crud-el-select"
-          :placeholder="t('crud.placeholder.input', { label: t('label.dept') })"
+          :placeholder="t('crud.placeholder.enter', { label: t('label.dept') })"
           v-model="dataForm.deptId"
         ></el-select>
       </el-form-item>
       <el-form-item :label="t('label.role')" prop="roleId">
         <el-select
           class="crud-el-select"
-          :placeholder="t('crud.placeholder.input', { label: t('label.role') })"
+          :placeholder="t('crud.placeholder.enter', { label: t('label.role') })"
           v-model="dataForm.roleId"
         ></el-select>
       </el-form-item>

@@ -11,45 +11,45 @@ const backLogin = () => {
 }
 
 interface FormState {
-  email: string
-  emailCode: string
+  userName: number | null
+  smsCode: number | null
   password: string
   confirmPassword: string
 }
 
 const registerForm = reactive<FormState>({
-  email: '',
-  emailCode: '',
+  userName: null,
+  smsCode: null,
   password: '',
   confirmPassword: '',
 })
 
 const registerRules = ref({
-  email: [
+  userName: [
     {
       required: true,
-      message: t('login.placeholder.email'),
+      message: t('crud.rule.enter', { label: t('label.userName') }),
       trigger: 'blur',
     },
   ],
-  emailCode: [
+  smsCode: [
     {
       required: true,
-      message: t('login.placeholder.emailCode'),
+      message: t('crud.rule.enter', { label: t('label.smsCode') }),
       trigger: 'blur',
     },
   ],
   password: [
     {
       required: true,
-      message: t('login.placeholder.password'),
+      message: t('crud.rule.enter', { label: t('label.password') }),
       trigger: 'blur',
     },
   ],
   confirmPassword: [
     {
       required: true,
-      message: t('login.placeholder.confirmPassword'),
+      message: t('crud.rule.enterAgain', { label: t('label.password') }),
       trigger: 'blur',
     },
   ],
@@ -63,26 +63,24 @@ const resetPasswordSubmit = () => {}
 <template>
   <div class="slot">
     <div class="title">{{ t('login.info.resetPassword') }}</div>
-    <el-form
-      :model="registerForm"
-      :rules="registerRules"
-      size="large"
-      ref="formRef"
-    >
-      <el-form-item prop="email">
+    <el-form :model="registerForm" :rules="registerRules" ref="formRef">
+      <el-form-item prop="userName">
         <el-input
-          v-model="registerForm.email"
-          :placeholder="t('login.placeholder.email')"
+          v-model="registerForm.userName"
+          :placeholder="
+            t('crud.placeholder.enter', { label: t('label.userName') })
+          "
         />
       </el-form-item>
-      <el-form-item prop="emailCode">
+      <el-form-item prop="smsCode">
         <el-input
           style="width: 60%"
-          v-model="registerForm.emailCode"
-          :placeholder="t('login.placeholder.emailCode')"
+          v-model="registerForm.smsCode"
+          :placeholder="
+            t('crud.placeholder.enter', { label: t('label.smsCode') })
+          "
         />
         <el-button
-          size="large"
           type="primary"
           @click="sendEmailCode"
           style="width: 35%; margin-left: 5%"
@@ -92,13 +90,17 @@ const resetPasswordSubmit = () => {}
       <el-form-item prop="password">
         <el-input
           v-model="registerForm.password"
-          :placeholder="t('login.placeholder.password')"
+          :placeholder="
+            t('crud.placeholder.enter', { label: t('label.password') })
+          "
         />
       </el-form-item>
       <el-form-item prop="confirmPassword">
         <el-input
           v-model="registerForm.confirmPassword"
-          :placeholder="t('login.placeholder.confirmPassword')"
+          :placeholder="
+            t('crud.placeholder.enterAgain', { label: t('label.password') })
+          "
         />
       </el-form-item>
       <el-form-item>
@@ -118,17 +120,4 @@ const resetPasswordSubmit = () => {}
   </div>
 </template>
 
-<style lang="scss" scoped>
-.slot {
-}
-
-.title {
-  font-size: $font-size-xxl;
-  font-weight: 600;
-  padding-bottom: 50px;
-}
-
-.operate {
-  padding-top: 25px;
-}
-</style>
+<style lang="scss" scoped></style>

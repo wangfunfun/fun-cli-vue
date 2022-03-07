@@ -20,7 +20,8 @@ t.crud.info.prompt = 'Prompt'
 t.crud.info.confirm = 'Are you sure to operate {handle}?'
 
 t.crud.placeholder = {}
-t.crud.placeholder.input = 'Please enter the {label}'
+t.crud.placeholder.enter = 'Please enter the {label}'
+t.crud.placeholder.enterAgain = 'Please enter the {label} again'
 
 t.crud.rule = {}
 t.crud.rule.enter = 'Please enter the {label}'

@@ -5,6 +5,7 @@ import { useRouter } from 'vue-router'
 import GeneralCache from '@/utils/general-cache'
 import { useLanguageHook, i18nConfig } from '@/hooks/language'
 import { ADMIN_FIRST_PAGE } from '@/common/admin'
+import Captcha from '@/components/captcha'
 
 const { t } = useI18n()
 
@@ -23,27 +24,36 @@ const signup = () => {
 }
 
 interface FormState {
-  email: string
+  userName: number | null
   password: string
+  captcha: string
 }
 
 const loginForm = reactive<FormState>({
-  email: '',
+  userName: null,
   password: '',
+  captcha: '',
 })
 
 const loginRules = ref({
-  email: [
+  userName: [
     {
       required: true,
-      message: t('login.placeholder.email'),
+      message: t('crud.rule.enter', { label: t('label.userName') }),
       trigger: 'blur',
     },
   ],
   password: [
     {
       required: true,
-      message: t('login.placeholder.password'),
+      message: t('crud.rule.enter', { label: t('label.password') }),
+      trigger: 'blur',
+    },
+  ],
+  captcha: [
+    {
+      required: true,
+      message: t('crud.rule.enter', { label: t('label.captcha') }),
       trigger: 'blur',
     },
   ],
@@ -62,20 +72,8 @@ const loginSubmit = () => {
 <template>
   <div class="slot">
     <div class="title">{{ t('login.info.login') }}</div>
-    <el-form :model="loginForm" :rules="loginRules" ref="formRef" size="large">
-      <el-form-item prop="email">
-        <el-input
-          v-model="loginForm.email"
-          :placeholder="t('login.placeholder.email')"
-        />
-      </el-form-item>
-      <el-form-item prop="password">
-        <el-input
-          v-model="loginForm.password"
-          :placeholder="t('login.placeholder.password')"
-        />
-      </el-form-item>
-      <el-form-item prop="password">
+    <el-form :model="loginForm" :rules="loginRules" ref="formRef">
+      <el-form-item>
         <el-select
           style="width: 100%"
           v-model="languageName"
@@ -89,6 +87,32 @@ const loginSubmit = () => {
           >
           </el-option>
         </el-select>
+      </el-form-item>
+      <el-form-item prop="userName">
+        <el-input
+          v-model="loginForm.userName"
+          :placeholder="
+            t('crud.placeholder.enter', { label: t('label.userName') })
+          "
+        />
+      </el-form-item>
+      <el-form-item prop="password">
+        <el-input
+          v-model="loginForm.password"
+          :placeholder="
+            t('crud.placeholder.enter', { label: t('label.password') })
+          "
+        />
+      </el-form-item>
+      <el-form-item prop="captcha" class="flex-item-center">
+        <el-input
+          style="width: 60%"
+          v-model="loginForm.captcha"
+          :placeholder="
+            t('crud.placeholder.enter', { label: t('label.captcha') })
+          "
+        />
+        <Captcha></Captcha>
       </el-form-item>
       <el-form-item>
         <el-button @click="loginSubmit" type="primary" style="width: 100%">{{
@@ -108,14 +132,4 @@ const loginSubmit = () => {
   </div>
 </template>
 
-<style lang="scss" scoped>
-.title {
-  font-size: $font-size-xxl;
-  font-weight: 600;
-  padding-bottom: 50px;
-}
-
-.operate {
-  padding-top: 25px;
-}
-</style>
+<style lang="scss" scoped></style>

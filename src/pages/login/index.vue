@@ -39,8 +39,19 @@ onBeforeMount(() => {
 .inner {
   background-color: #fff;
   box-shadow: $box-shadow-base;
-  padding: 50px;
-  width: 350px;
+  padding: 35px 40px 30px 40px;
+  width: 320px;
+
+  :deep(.title) {
+    font-size: $font-size-lger;
+    font-weight: 600;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  :deep(.operate) {
+    padding-top: 10px;
+  }
 }
 
 @keyframes ANIMATION_BG_COLOR {

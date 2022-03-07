@@ -15,17 +15,6 @@ t.login.info = {}
 t.login.info.login = '登录'
 t.login.info.signup = '注册新用户'
 t.login.info.resetPassword = '找回密码'
-
-t.login.placeholder = {}
-t.login.placeholder.email = '请输入电子邮箱'
-t.login.placeholder.emailCode = '请输入邮箱验证码'
-t.login.placeholder.password = '请输入密码'
-t.login.placeholder.confirmPassword = '请再次输入密码'
-
-t.login.rules = {}
-t.login.rules.email = '电子邮箱格式不正确'
-t.login.rules.emailCode = '验证码格式不正确'
-t.login.rules.password = '密码格式不正确'
-t.login.rules.confirmPassword = '两次密码不一致'
+t.login.info.captcha = '验证码'
 
 export default t

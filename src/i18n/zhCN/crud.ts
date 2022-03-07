@@ -20,7 +20,8 @@ t.crud.info.prompt = '提示'
 t.crud.info.confirm = '确定进行{handle}操作?'
 
 t.crud.placeholder = {}
-t.crud.placeholder.input = '请输入{label}'
+t.crud.placeholder.enter = '请输入{label}'
+t.crud.placeholder.enterAgain = '请再次输入{label}'
 
 t.crud.rule = {}
 t.crud.rule.enter = '请输入{label}'

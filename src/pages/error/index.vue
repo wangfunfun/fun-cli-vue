@@ -26,21 +26,26 @@ onBeforeMount(() => {
 
 <template>
   <div class="page">
-    <Error401 v-if="currentCode === '401'"></Error401>
-    <Error403 v-if="currentCode === '403'"></Error403>
-    <Error404 v-if="currentCode === '404'"></Error404>
-    <Error500 v-if="currentCode === '500'"></Error500>
-    <Error503 v-if="currentCode === '503'"></Error503>
-    <div class="operate flex-center">
-      <el-button type="text" style="margin-right: 40px" @click="goPrePage()">{{
-        t('error.goPrePage')
-      }}</el-button>
-      <el-button
-        type="primary"
-        style="min-width: 120px"
-        @click="goIndexPage()"
-        >{{ t('error.goHome') }}</el-button
-      >
+    <div class="component">
+      <Error401 v-if="currentCode === '401'"></Error401>
+      <Error403 v-if="currentCode === '403'"></Error403>
+      <Error404 v-if="currentCode === '404'"></Error404>
+      <Error500 v-if="currentCode === '500'"></Error500>
+      <Error503 v-if="currentCode === '503'"></Error503>
+      <div class="operate flex-center">
+        <el-button
+          type="text"
+          style="margin-right: 40px"
+          @click="goPrePage()"
+          >{{ t('error.goPrePage') }}</el-button
+        >
+        <el-button
+          type="primary"
+          style="min-width: 120px"
+          @click="goIndexPage()"
+          >{{ t('error.goHome') }}</el-button
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -53,12 +58,14 @@ onBeforeMount(() => {
   color: #409eff;
 }
 
-:deep(.slot) {
+.component {
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   width: 100%;
+}
+:deep(.slot) {
   align-items: flex-end;
 }
 :deep(.code) {
@@ -73,16 +80,6 @@ onBeforeMount(() => {
 }
 
 .operate {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%);
-}
-
-.wave {
-  position: absolute;
-  bottom: -100px;
-  left: 0;
-  width: 100%;
+  margin-top: 100px;
 }
 </style>
