@@ -19,6 +19,13 @@ t.crud.info.all = 'All'
 t.crud.info.prompt = 'Prompt'
 t.crud.info.confirm = 'Are you sure to operate {handle}?'
 
+t.crud.label = {}
+t.crud.label.operate = 'Operation'
+t.crud.label.createDate = 'Operation date'
+t.crud.label.updateDate = 'Updated date'
+t.crud.label.createTime = 'Operation time'
+t.crud.label.updateTime = 'Updated time'
+
 t.crud.placeholder = {}
 t.crud.placeholder.enter = 'Please enter the {label}'
 t.crud.placeholder.enterAgain = 'Please enter the {label} again'

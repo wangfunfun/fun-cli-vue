@@ -5,7 +5,7 @@ const t: IObject = {}
 t.crud = {}
 
 t.crud.btn = {}
-t.crud.btn.add = '添加'
+t.crud.btn.add = '新增'
 t.crud.btn.delete = '删除'
 t.crud.btn.update = '更新'
 t.crud.btn.confirm = '确认'
@@ -18,6 +18,13 @@ t.crud.info = {}
 t.crud.info.all = '全部'
 t.crud.info.prompt = '提示'
 t.crud.info.confirm = '确定进行{handle}操作?'
+
+t.crud.label = {}
+t.crud.label.operate = '操作'
+t.crud.label.createDate = '操作日期'
+t.crud.label.updateDate = '更新日期'
+t.crud.label.createTime = '操作时间'
+t.crud.label.updateTime = '更新时间'
 
 t.crud.placeholder = {}
 t.crud.placeholder.enter = '请输入{label}'

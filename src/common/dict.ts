@@ -7,6 +7,7 @@ import { IObject } from '@/@types/interface'
 // 类型
 export const logTypeDicts: IObject = {
   dictType: 'log_type',
+  dictTypeName: '日志类型',
   dataList: [
     { dictLabel: '系统', dictValue: 0 },
     { dictLabel: '业务', dictValue: 1 },
@@ -17,6 +18,7 @@ export const logTypeDicts: IObject = {
 // 人员
 export const userTypeDicts: IObject = {
   dictType: 'user_type',
+  dictTypeName: '用户类型',
   dataList: [
     { dictLabel: '游客', dictValue: 0 },
     { dictLabel: '系统管理员', dictValue: 1 },

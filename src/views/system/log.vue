@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
-import { logTypeDicts, userTypeDicts } from '@/common/dict'
+import { logTypeDicts } from '@/common/dict'
 import { useCrudHook } from '@/hooks/crud'
 import { useI18n } from 'vue-i18n'
 
@@ -23,7 +23,6 @@ export default defineComponent({
       ...toRefs(state),
       t,
       logTypeDicts,
-      userTypeDicts,
     }
   },
 })
@@ -36,7 +35,7 @@ export default defineComponent({
         <el-input
           v-model="dataForm.content"
           :placeholder="
-            t('crud.placeholder.input', { label: t('system.log.content') })
+            t('crud.placeholder.enter', { label: t('system.log.content') })
           "
         ></el-input>
       </el-form-item>
@@ -52,23 +51,10 @@ export default defineComponent({
           </el-option>
         </el-select>
       </el-form-item>
-      <el-form-item :label="t('system.log.operator')">
-        <el-select v-model="dataForm.operator" clearable>
-          <el-option :label="t('crud.info.all')" value=""></el-option>
-          <el-option
-            v-for="item in userTypeDicts.dataList"
-            :key="item.dictValue"
-            :label="item.dictLabel"
-            :value="item.dictValue"
-          >
-          </el-option>
-        </el-select>
-      </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="crudSearch">{{
           t('crud.btn.search')
         }}</el-button>
-        <el-button @click="query">{{ t('crud.btn.reset') }}</el-button>
         <el-button @click="crudExport">{{ t('crud.btn.export') }}</el-button>
       </el-form-item>
     </el-form>
@@ -90,7 +76,7 @@ export default defineComponent({
       <el-table-column
         prop="createTime"
         width="200"
-        :label="t('system.log.operateTime')"
+        :label="t('crud.label.createTime')"
       >
         <template #default="scope">
           {{ formatDateTime(scope.row.createTime) }}

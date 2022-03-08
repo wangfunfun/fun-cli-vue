@@ -10,4 +10,11 @@ t.system.log.operator = 'Operator'
 t.system.log.content = 'Content'
 t.system.log.operateTime = 'Operation time'
 
+t.system.menu = {}
+t.system.menu.menuName = 'Menu name'
+t.system.menu.iconName = 'Icon'
+t.system.menu.sort = 'Sort'
+t.system.menu.route = 'Router'
+t.system.menu.role = 'Role'
+
 export default t
