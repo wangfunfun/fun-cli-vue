@@ -10,6 +10,7 @@ interface configStateTypes {
   language: string
   languageName: string
   elementPlusConfig: IObject
+  initStatus: number
 }
 
 export const useConfigStore = defineStore({
@@ -29,6 +30,7 @@ export const useConfigStore = defineStore({
     elementPlusConfig: {
       zIndex: 3000,
     },
+    initStatus: 1,
   }),
   getters: {
     nowLanguage: (state) => {
@@ -43,6 +45,9 @@ export const useConfigStore = defineStore({
       this.language = data.alias
       this.languageName = data.name
       new GeneralCache('languageAlias', 'local').set(data.alias)
+    },
+    changeInitStatus(status: number) {
+      this.initStatus = status
     },
   },
 })

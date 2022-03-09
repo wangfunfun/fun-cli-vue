@@ -10,6 +10,8 @@ t.lightTheme = 'Light'
 t.zhCN = 'Chinese'
 t.enUS = 'English'
 
+t.loading = 'Resource loading...'
+
 t.btn = {}
 t.btn.home = 'Home'
 t.btn.github = 'Github'

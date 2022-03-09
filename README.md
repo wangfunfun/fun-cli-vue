@@ -75,15 +75,15 @@ npm run test
 
 ### Built in Functions
 
-- [ ] HTTP status code page  
-- [ ] Login, registration, password retrieval page
+- [√] HTTP status code page  
+- [√] Login, registration, password retrieval page
 - [ ] Management background system
 - [ ] Echarts sample  page  
 - [ ] Draggable sample page  
-- [ ] Internationalization based on VUE-I18N
-- [ ] Vue-router-based static and dynamic routing
+- [√] Internationalization based on VUE-I18N
+- [√] Vue-router-based static and dynamic routing
 - [ ] Axios-based API modular management  
-- [ ] Pinia state management
+- [√] Pinia state management
 - [ ] Topic configuration based on NaiveUI  
 - [ ] Jest unit tests  
 

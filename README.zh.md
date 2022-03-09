@@ -80,10 +80,10 @@ npm run test
 - [ ] 后台管理系统
 - [ ] Echarts 示例页面
 - [ ] Draggable 示例页面
-- [ ] 基于 Vue-i18n 的国际化
-- [ ] 基于 Vue-router 的静态、动态路由
+- [√] 基于 Vue-i18n 的国际化
+- [√] 基于 Vue-router 的静态、动态路由
 - [ ] 基于 Axios 的 API 模块化管理  
-- [ ] Pinia 状态管理
+- [√] Pinia 状态管理
 - [ ] ElementPlus 的主题配置
 - [ ] Jest 单元测试 
 

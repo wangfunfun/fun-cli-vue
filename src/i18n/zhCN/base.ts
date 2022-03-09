@@ -10,6 +10,8 @@ t.lightTheme = '明亮'
 t.zhCN = '简体中文'
 t.enUS = '英语'
 
+t.loading = '资源加载中...'
+
 t.btn = {}
 t.btn.home = '首页'
 t.btn.github = 'Github'
