@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
-import { ref } from 'vue'
 import BtnHover from '@/components/btn-hover'
 import { useLayoutStore } from '@/store/layout'
 

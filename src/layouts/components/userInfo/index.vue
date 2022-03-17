@@ -114,7 +114,7 @@ export default defineComponent({
       <el-form-item :label="t('label.userName')" prop="userName">
         <el-input
           :placeholder="
-            t('crud.placeholder.input', { label: t('label.userName') })
+            t('crud.placeholder.enter', { label: t('label.userName') })
           "
           v-model="dataForm.userName"
         ></el-input>
@@ -122,7 +122,7 @@ export default defineComponent({
       <el-form-item :label="t('label.phone')" prop="phone">
         <el-input
           :placeholder="
-            t('crud.placeholder.input', { label: t('label.phone') })
+            t('crud.placeholder.enter', { label: t('label.phone') })
           "
           v-model="dataForm.phone"
         ></el-input>

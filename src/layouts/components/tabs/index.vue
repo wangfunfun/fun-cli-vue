@@ -111,6 +111,7 @@ const clickOperationMenu = (command: string | number | object) => {
       tab-position="top"
       @tab-click="tabClick"
       @tab-remove="tabRemove"
+      style="width: 90%"
     >
       <el-tab-pane
         v-for="item in tab.tabList"
