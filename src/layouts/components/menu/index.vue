@@ -22,7 +22,7 @@ const layoutStore = useLayoutStore()
     :text-color="layoutStore.layoutTheme.mentTextColor"
     :active-text-color="layoutStore.layoutTheme.mentActiveColor"
   >
-    <MenuItem :data="routeStore.allViewsRoutes"></MenuItem>
+    <MenuItem :data="routeStore.viewsRoutes"></MenuItem>
   </el-menu>
 </template>
 

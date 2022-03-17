@@ -23,7 +23,7 @@ const tab: any = reactive({
 onBeforeMount(() => {
   tab.homeTab = arrayRecursion(
     'path',
-    routeStore.allViewsRoutes,
+    routeStore.viewsRoutes,
     ADMIN_FIRST_PAGE
   )
   let { isFind, path } = findTab(route.path)

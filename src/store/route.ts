@@ -4,12 +4,10 @@ import router from '@/router'
 import { APP_PINIA_STORAGE } from '@/common/config'
 
 interface routeStateTypes {
-  // 独立页面路由：静态
+  // 独立页面路由
   pagesRoutes: Array<RouteRecordRaw>
-  // 管理系统路由：静态
+  // 管理系统路由
   viewsRoutes: Array<RouteRecordRaw>
-  // 管理系统路由：静态 + 异步
-  allViewsRoutes: Array<RouteRecordRaw>
   // 全部路由
   allRoutes: Array<RouteRecordRaw>
 }
@@ -30,8 +28,6 @@ export const useRouteStore = defineStore({
     pagesRoutes: [],
     // 管理系统路由：静态
     viewsRoutes: [],
-    // 管理系统路由：静态 + 异步
-    allViewsRoutes: [],
     // 全部路由
     allRoutes: [],
   }),
@@ -56,20 +52,20 @@ export const useRouteStore = defineStore({
         // TODO API
         // ...
         const asnycRoutes: any = []
-        this.allViewsRoutes = this.viewsRoutes.concat(asnycRoutes)
-        this.allViewsRoutes.sort((a: any, b: any) => {
+        this.viewsRoutes = this.viewsRoutes.concat(asnycRoutes)
+        this.viewsRoutes.sort((a: any, b: any) => {
           const A: number = a.meta.sort
           const B: number = b.meta.sort
           return A - B
         })
-        this.allViewsRoutes.forEach((item: RouteRecordRaw) => {
+        this.viewsRoutes.forEach((item: RouteRecordRaw) => {
           const routeName: any = item.name
           if (!router.hasRoute(routeName)) {
             router.getRoutes()
             router.addRoute(item)
           }
         })
-        this.setAllRoutes(this.allViewsRoutes.concat(this.pagesRoutes))
+        this.setAllRoutes(this.viewsRoutes.concat(this.pagesRoutes))
         resolve(true)
       })
     },

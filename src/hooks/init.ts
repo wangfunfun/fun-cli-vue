@@ -8,10 +8,14 @@ import { pagesRoutes, viewsRoutes, allRoutes } from '@/router/config'
 import { useLanguageHook } from '@/hooks/language'
 import GeneralCache from '@/utils/general-cache'
 import { APP_DEFAULT_LANGUAGE } from '@/common/config'
+import { useRoute } from 'vue-router'
+import { APP_NAME } from '@/common/constant'
 
 const useInitHook = () => {
   const routeStore = useRouteStore()
   const configStore = useConfigStore()
+
+  const route = useRoute()
 
   const languageAlias: any = new GeneralCache('languageAlias', 'local').get()
   const language = useLanguageHook()
@@ -32,36 +36,20 @@ const useInitHook = () => {
     language.changeLanguage(languageAlias || APP_DEFAULT_LANGUAGE)
   }
 
-  // 初始化 pages layout
-  const initPagesLayout = async () => {
+  // 初始化 layout
+  const initLayout = async () => {
     let isInit = await initLoadingStatus()
     if (!isInit) {
       configStore.changeGlobalLoading(false)
       return
     }
-
     configStore.changeGlobalLoading(true)
-
     await initSystem()
 
-    setTimeout(() => {
-      consoleWelcome()
-      configStore.changeGlobalLoading(false)
-    }, 1000)
-  }
-
-  // 初始化 views layout
-  const initViewsLayout = async () => {
-    let isInit = await initLoadingStatus()
-    if (!isInit) {
-      configStore.changeGlobalLoading(false)
-      return
+    if (route.meta?.layout === 'pages') {
+    } else if (route.meta?.layout === 'views') {
+      await routeStore.getAsyncViewsRoutes()
     }
-
-    configStore.changeGlobalLoading(true)
-
-    await initSystem()
-    await routeStore.getAsyncViewsRoutes()
 
     setTimeout(() => {
       consoleWelcome()
@@ -70,13 +58,20 @@ const useInitHook = () => {
   }
 
   // 输出欢迎语
-  const consoleWelcome = () => {}
+  const consoleWelcome = () => {
+    console.log(
+      `
+      =========================================
+      === welcome to use ${APP_NAME}  ===
+      =========================================
+      `
+    )
+  }
 
   return {
     initLoadingStatus,
     initSystem,
-    initPagesLayout,
-    initViewsLayout,
+    initLayout,
   }
 }
 
