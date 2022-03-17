@@ -45,6 +45,7 @@ const useInitHook = () => {
     await initSystem()
 
     setTimeout(() => {
+      consoleWelcome()
       configStore.changeGlobalLoading(false)
     }, 1000)
   }
@@ -63,9 +64,13 @@ const useInitHook = () => {
     await routeStore.getAsyncViewsRoutes()
 
     setTimeout(() => {
+      consoleWelcome()
       configStore.changeGlobalLoading(false)
     }, 1000)
   }
+
+  // 输出欢迎语
+  const consoleWelcome = () => {}
 
   return {
     initLoadingStatus,

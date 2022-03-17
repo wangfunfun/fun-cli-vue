@@ -77,15 +77,15 @@ npm run test
 
 - [√] HTTP status code page  
 - [√] Login, registration, password retrieval page
-- [ ] Management background system
+- [√] Management background system
+- [√] Jest unit tests  
+- [√] Internationalization based on Vue-i18N
+- [√] Vue-router-based static and dynamic routing
+- [√] Pinia state management
+- [ ] Axios-based API modular management  
+- [ ] CRUD handles hook functions
 - [ ] Echarts sample  page  
 - [ ] Draggable sample page  
-- [√] Internationalization based on VUE-I18N
-- [√] Vue-router-based static and dynamic routing
-- [ ] Axios-based API modular management  
-- [√] Pinia state management
-- [ ] Topic configuration based on NaiveUI  
-- [ ] Jest unit tests  
 
 
 

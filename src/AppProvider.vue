@@ -17,8 +17,8 @@ const route = useRoute()
 
 const language = useLanguageHook()
 
-onBeforeMount(() => {
-  if (route.meta?.layout === 'pages') {
+onBeforeMount(async () => {
+  if (!route.meta?.layout || route.meta?.layout === 'pages') {
     initHook.initPagesLayout()
   } else if (route.meta?.layout === 'views') {
     initHook.initViewsLayout()

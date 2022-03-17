@@ -75,17 +75,17 @@ npm run test
 
 ### 内置功能
 
-- [√] HTTP状态码页面
+- [√] HTTP 状态码页面
 - [√] 登录、注册、找回密码页面
-- [ ] 后台管理系统
-- [ ] Echarts 示例页面
-- [ ] Draggable 示例页面
+- [√] 后台管理系统
+- [√] Jest 单元测试 
 - [√] 基于 Vue-i18n 的国际化
 - [√] 基于 Vue-router 的静态、动态路由
-- [ ] 基于 Axios 的 API 模块化管理  
 - [√] Pinia 状态管理
-- [ ] ElementPlus 的主题配置
-- [ ] Jest 单元测试 
+- [ ] 基于 Axios 的 API 模块化管理  
+- [ ] CRUD 处理钩子函数
+- [ ] Echarts 示例页面
+- [ ] Draggable 示例页面
 
 
 ### 遇到了问题？
