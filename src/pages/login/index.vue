@@ -54,16 +54,6 @@ onBeforeMount(() => {
   }
 }
 
-@keyframes ANIMATION_BG_COLOR {
-  0% {
-    filter: hue-rotate(0);
-  }
-
-  100% {
-    filter: hue-rotate(360deg);
-  }
-}
-
 .bg {
   position: fixed;
   top: 0;

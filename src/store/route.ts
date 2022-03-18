@@ -40,6 +40,11 @@ export const useRouteStore = defineStore({
     // 设置管理系统路由
     setViewsRoutes(data: Array<RouteRecordRaw>) {
       this.viewsRoutes = data
+      this.viewsRoutes.sort((a: any, b: any) => {
+        const A: number = a.meta.sort
+        const B: number = b.meta.sort
+        return A - B
+      })
     },
     // 设置全部路由
     setAllRoutes(data: Array<RouteRecordRaw>) {
