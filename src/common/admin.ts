@@ -14,7 +14,7 @@ export const ADMIN_MENU_IS_ROUTER: boolean = true
 export const ADMIN_MENU_ONLY: boolean = true
 
 // 管理系统首页
-export const ADMIN_FIRST_PAGE: string = '/admin/dashboard/workbench'
+export const ADMIN_FIRST_PAGE: string = '/admin/home/workbench'
 
 // 管理系统 菜单默认展开（仅在 leftMenu 生效）
 export const ADMIN_MENU_UNFOLD: boolean = true

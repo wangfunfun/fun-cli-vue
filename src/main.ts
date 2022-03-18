@@ -13,6 +13,7 @@ import SvgIcon from '@/components/svg-icon'
 import CrudPage from '@/components/crud-page'
 import CrudSearch from '@/components/crud-search'
 import CrudTable from '@/components/crud-table'
+import CrudForm from '@/components/crud-form'
 
 // 注册
 import piniaPluginPersist from 'pinia-plugin-persist'
@@ -34,8 +35,8 @@ app
   .use(CrudPage)
   .use(CrudSearch)
   .use(CrudTable)
+  .use(CrudForm)
   .mount('#app', true)
-
 
 // 【默认关闭】全局挂载 elementPlus的 svg图标库
 // import * as ElIcons from '@element-plus/icons-vue'

@@ -2,8 +2,8 @@ import Router from '@/layouts/router.vue'
 
 export default [
   {
-    path: '/admin/dashboard',
-    name: 'AdminDashboard',
+    path: '/admin/home',
+    name: 'AdminHome',
     component: Router,
     meta: {
       isMenu: true,
@@ -15,9 +15,9 @@ export default [
     },
     children: [
       {
-        path: '/admin/dashboard/workbench',
-        name: 'AdminDashboardWorkbench',
-        component: () => import('@/views/dashboard/workbench.vue'),
+        path: '/admin/home/workbench',
+        name: 'AdminHomeWorkbench',
+        component: () => import('@/views/home/workbench.vue'),
         meta: {
           layout: 'views',
           requiresAuth: true,
@@ -28,9 +28,9 @@ export default [
         },
       },
       {
-        path: '/admin/dashboard/visual',
-        name: 'AdminDashboardVisual',
-        component: () => import('@/views/dashboard/visual.vue'),
+        path: '/admin/home/visual',
+        name: 'AdminHomeVisual',
+        component: () => import('@/views/home/visual.vue'),
         meta: {
           layout: 'views',
           requiresAuth: true,

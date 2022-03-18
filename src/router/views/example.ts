@@ -92,6 +92,32 @@ export default [
           sort: 5,
         },
       },
+      {
+        path: '/admin/example/map',
+        name: 'AdminExampleMap',
+        component: () => import('@/views/example/map.vue'),
+        meta: {
+          layout: 'views',
+          requiresAuth: true,
+          iconType: 'cli',
+          icon: 'EarthOutline',
+          menuName: '地图示例',
+          sort: 6,
+        },
+      },
+      {
+        path: '/admin/example/icon',
+        name: 'AdminExampleIcon',
+        component: () => import('@/views/example/icon.vue'),
+        meta: {
+          layout: 'views',
+          requiresAuth: true,
+          iconType: 'cli',
+          icon: 'FlowerOutline',
+          menuName: '自定义图标',
+          sort: 6,
+        },
+      },
     ],
   },
 ]

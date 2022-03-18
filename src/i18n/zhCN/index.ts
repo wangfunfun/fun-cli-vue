@@ -6,6 +6,7 @@ import login from './pages/login'
 import error from './pages/error'
 
 import system from './views/system'
+import example from './views/example'
 
 export default {
   languageName: '简体中文',
@@ -15,4 +16,5 @@ export default {
   ...login,
   ...error,
   ...system,
+  ...example,
 }

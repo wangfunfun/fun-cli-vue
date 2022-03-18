@@ -14,4 +14,10 @@ export default [
     component: () => import('@/pages/error/index.vue'),
     meta: { requiresAuth: false, layout: 'pages' },
   },
+  {
+    path: '/iframe:id?',
+    name: 'Iframe',
+    component: () => import('@/pages/iframe/index.vue'),
+    meta: { requiresAuth: false, layout: 'pages' },
+  },
 ]

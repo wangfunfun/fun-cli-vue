@@ -2,22 +2,22 @@ import Router from '@/layouts/router.vue'
 
 export default [
   {
-    path: '/admin/external',
-    name: 'AdminExternal',
+    path: '/admin/document',
+    name: 'AdminDocument',
     component: Router,
     meta: {
       isMenu: true,
       requiresAuth: true,
       iconType: 'cli',
       icon: 'CopyOutline',
-      menuName: '外部页面',
+      menuName: '文档',
       sort: 2,
     },
     children: [
       {
-        path: '/admin/external/elementPlus',
-        name: 'AdminExternalElementPlus',
-        component: () => import('@/views/external/elementPlus.vue'),
+        path: '/admin/document/elementPlus',
+        name: 'AdminDocumentElementPlus',
+        component: () => import('@/views/document/elementPlus.vue'),
         meta: {
           layout: 'views',
           requiresAuth: true,
@@ -28,9 +28,9 @@ export default [
         },
       },
       {
-        path: '/admin/external/vite',
-        name: 'AdminExternalVite',
-        component: () => import('@/views/external/vite.vue'),
+        path: '/admin/document/vite',
+        name: 'AdminDocumentVite',
+        component: () => import('@/views/document/vite.vue'),
         meta: {
           layout: 'views',
           requiresAuth: true,
@@ -41,15 +41,28 @@ export default [
         },
       },
       {
-        path: '/admin/external/vue',
-        name: 'AdminExternalVue',
-        component: () => import('@/views/external/vue.vue'),
+        path: '/admin/document/vue',
+        name: 'AdminDocumentVue',
+        component: () => import('@/views/document/vue.vue'),
         meta: {
           layout: 'views',
           requiresAuth: true,
           iconType: 'cli',
           icon: 'LogoVue',
           menuName: 'Vue文档',
+          sort: 2,
+        },
+      },
+      {
+        path: '/admin/document/icon',
+        name: 'AdminDocumentIcon',
+        component: () => import('@/views/document/icon.vue'),
+        meta: {
+          layout: 'views',
+          requiresAuth: true,
+          iconType: 'cli',
+          icon: 'FlowerOutline',
+          menuName: 'XIcons图标',
           sort: 2,
         },
       },

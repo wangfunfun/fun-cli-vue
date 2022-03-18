@@ -10,7 +10,7 @@ export default [
       iconType: 'cli',
       icon: 'InformationCircleOutline',
       menuName: '关于',
-      sort: 5,
+      sort: 6,
     },
   },
 ]
