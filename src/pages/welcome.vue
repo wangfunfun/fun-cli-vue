@@ -2,6 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import { APP_NAME } from '@/common/constant'
 import { useRouter } from 'vue-router'
+import { ADMIN_FIRST_PAGE } from '@/common/admin'
 
 const { t } = useI18n()
 
@@ -31,11 +32,9 @@ const goWebsite = (url: string) => {
           >{{ t('welcome.elementPlus') }}</el-button
         >
         |
-        <el-button
-          type="text"
-          @click="goRoutes('/admin/dashboard/workbench')"
-          >{{ t('welcome.toAdmin') }}</el-button
-        >
+        <el-button type="text" @click="goRoutes(ADMIN_FIRST_PAGE)">{{
+          t('welcome.toAdmin')
+        }}</el-button>
         |
         <el-button
           type="text"

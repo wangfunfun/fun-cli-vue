@@ -1,9 +1,14 @@
 <script lang="ts">
+/**
+ * CRUD通用表单处理组件
+ * @title 标题
+ * @operate 是否显示默认操作按钮
+ */
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
-  name: 'CrudForm',
+  name: 'crud-form',
   props: {
     title: {
       type: String,

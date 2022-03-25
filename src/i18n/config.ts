@@ -1,7 +1,7 @@
 import zhCN from 'element-plus/es/locale/lang/zh-cn'
 import enUS from 'element-plus/es/locale/lang/en'
 import { createI18n } from 'vue-i18n'
-import GeneralCache from '@/utils/general-cache'
+import GeneralCache from '@/utils/cli-general-cache'
 import { APP_DEFAULT_LANGUAGE } from '@/common/config'
 import { IObject } from '@/@types/interface'
 

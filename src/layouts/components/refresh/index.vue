@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
-import BtnHover from '@/components/btn-hover'
 
 interface Props {
   iconSize?: string | number
@@ -14,11 +13,11 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <BtnHover showTooltip :tooltip="t('tooltip.refresh')">
+  <cli-btn-hover showTooltip :tooltip="t('tooltip.refresh')">
     <template #content>
-       <SvgIcon name="Refresh"></SvgIcon>
+       <cli-svg-icon name="Refresh"></cli-svg-icon>
     </template>
-  </BtnHover>
+  </cli-btn-hover>
 </template>
 
 <style lang="scss" scoped></style>

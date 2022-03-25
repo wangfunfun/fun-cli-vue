@@ -2,10 +2,10 @@
 import { ref, reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import GeneralCache from '@/utils/general-cache'
+import GeneralCache from '@/utils/cli-general-cache'
 import { useLanguageHook, i18nConfig } from '@/hooks/language'
 import { ADMIN_FIRST_PAGE } from '@/common/admin'
-import Captcha from '@/components/captcha'
+import CliCaptcha from '@/components/cli-captcha'
 
 const { t } = useI18n()
 
@@ -112,7 +112,7 @@ const loginSubmit = () => {
             t('crud.placeholder.enter', { label: t('label.captcha') })
           "
         />
-        <Captcha></Captcha>
+        <cli-captcha></cli-captcha>
       </el-form-item>
       <el-form-item>
         <el-button @click="loginSubmit" type="primary" style="width: 100%">{{

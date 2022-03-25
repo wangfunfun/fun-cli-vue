@@ -1,15 +1,14 @@
 <script lang="ts" setup>
-import BtnHover from '@/components/btn-hover'
 import { useLanguageHook, i18nConfig } from '@/hooks/language'
 
 const language = useLanguageHook()
 </script>
 
 <template>
-  <BtnHover>
+  <cli-btn-hover>
     <template #content>
       <el-dropdown @command="language.changeLanguage">
-        <SvgIcon name="LanguageOutline"></SvgIcon>
+        <cli-svg-icon name="LanguageOutline"></cli-svg-icon>
         <template #dropdown>
           <el-dropdown-menu v-for="(value, key) in i18nConfig" :key="key">
             <el-dropdown-item :command="key">{{ value }}</el-dropdown-item>
@@ -17,7 +16,7 @@ const language = useLanguageHook()
         </template>
       </el-dropdown>
     </template>
-  </BtnHover>
+  </cli-btn-hover>
 </template>
 
 <style lang="scss" scoped>

@@ -1,7 +1,7 @@
 import { i18nConfig } from '@/i18n'
 import { defineStore } from 'pinia'
 import { APP_DEFAULT_LANGUAGE, APP_PINIA_STORAGE } from '@/common/config'
-import GeneralCache from '@/utils/general-cache'
+import GeneralCache from '@/utils/cli-general-cache'
 import { IObject } from '@/@types/interface'
 
 const languageAlias: any = new GeneralCache('languageAlias', 'local').get()

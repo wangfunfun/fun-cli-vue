@@ -1,7 +1,10 @@
 <script lang="ts">
+/**
+ * CRUD通用查询处理组件
+ */
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'CrudSearch',
+  name: 'crud-search',
 })
 </script>
 

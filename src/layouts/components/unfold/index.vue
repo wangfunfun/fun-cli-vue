@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
-import BtnHover from '@/components/btn-hover'
 import { useLayoutStore } from '@/store/layout'
 
 interface Props {
@@ -17,25 +16,25 @@ const layoutStore = useLayoutStore()
 </script>
 
 <template>
-  <BtnHover
+  <cli-btn-hover
     showTooltip
     :tooltip="
       layoutStore.menuUnfoldStatus ? t('tooltip.unfold') : t('tooltip.fold')
     "
   >
     <template #content>
-      <SvgIcon
+      <cli-svg-icon
         name="MenuUnfoldOutlined"
         v-if="!layoutStore.menuUnfoldStatus"
         @click="layoutStore.changeMenuUnfoldStatus"
-      ></SvgIcon>
-      <SvgIcon
+      ></cli-svg-icon>
+      <cli-svg-icon
         name="MenuFoldOutlined"
         v-else
         @click="layoutStore.changeMenuUnfoldStatus"
-      ></SvgIcon>
+      ></cli-svg-icon>
     </template>
-  </BtnHover>
+  </cli-btn-hover>
 </template>
 
 <style lang="scss" scoped></style>

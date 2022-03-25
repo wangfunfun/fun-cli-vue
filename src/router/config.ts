@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import GeneralCache from '@/utils/general-cache'
+import GeneralCache from '@/utils/cli-general-cache'
 
 // 自动引入路由文件
 

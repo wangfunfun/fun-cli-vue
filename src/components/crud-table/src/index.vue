@@ -1,7 +1,10 @@
 <script lang="ts">
+/**
+ * CRUD通用表格处理组件
+ */
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'CrudTable',
+  name: 'crud-table',
 })
 </script>
 

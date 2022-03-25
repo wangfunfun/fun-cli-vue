@@ -20,6 +20,7 @@ t.crud.info.prompt = '提示'
 t.crud.info.confirm = '确定进行{handle}操作?'
 
 t.crud.label = {}
+t.crud.label.content = '内容'
 t.crud.label.operate = '操作'
 t.crud.label.createDate = '操作日期'
 t.crud.label.updateDate = '更新日期'

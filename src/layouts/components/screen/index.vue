@@ -2,7 +2,6 @@
 import screenfull from 'screenfull'
 import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
-import BtnHover from '@/components/btn-hover'
 import { ElMessage } from 'element-plus'
 
 interface Props {
@@ -33,7 +32,7 @@ const exitFullscreen = () => {
 </script>
 
 <template>
-  <BtnHover
+  <cli-btn-hover
     showTooltip
     :tooltip="
       isFullscreen ? t('tooltip.exitFullscreen') : t('tooltip.fullscreen')
@@ -41,15 +40,15 @@ const exitFullscreen = () => {
   >
     <template #content>
       <el-icon :size="props.iconSize">
-        <SvgIcon
+        <cli-svg-icon
           name="Contract"
           v-if="isFullscreen"
           @click="exitFullscreen"
-        ></SvgIcon>
-        <SvgIcon name="Expand" v-else @click="fullscreen"></SvgIcon>
+        ></cli-svg-icon>
+        <cli-svg-icon name="Expand" v-else @click="fullscreen"></cli-svg-icon>
       </el-icon>
     </template>
-  </BtnHover>
+  </cli-btn-hover>
 </template>
 
 <style lang="scss" scoped></style>

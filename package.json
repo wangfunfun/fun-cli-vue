@@ -1,6 +1,6 @@
 {
   "name": "cli-vue3-vite2-ts",
-  "version": "0.8.16",
+  "version": "0.9.0",
   "updateTime": "2022-03-18",
   "scripts": {
     "init": "npm install",
@@ -13,7 +13,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
     "@element-plus/icons-vue": "^0.2.7",
+    "@wangeditor/editor": "^0.15.15",
+    "@wangeditor/editor-for-vue": "^5.1.8-11",
     "axios": "^0.24.0",
     "echarts": "^5.2.1",
     "element-plus": "^2.0.2",
@@ -24,8 +27,7 @@
     "screenfull": "^6.0.1",
     "vue": "^3.2.25",
     "vue-i18n": "^9.2.0-beta.21",
-    "vue-router": "^4.0.12",
-    "wangeditor": "^4.7.10"
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",

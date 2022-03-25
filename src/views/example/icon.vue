@@ -17,18 +17,18 @@ for (const key in iconFiles) {
 </script>
 
 <template>
-  <CrudForm :title="t('example.icon.title')">
+  <crud-form :title="t('example.icon.title')">
     <div class="flex-around flex-wrap">
       <div
         class="icon flex-start"
         v-for="(icon, index) in iconList"
         :key="index"
       >
-        <SvgIcon width="32px" height="32px" :name="icon.iconName"></SvgIcon>
+        <cli-svg-icon width="32px" height="32px" :name="icon.iconName"></cli-svg-icon>
         <div class="icon-name">{{ icon.iconName }}</div>
       </div>
     </div>
-  </CrudForm>
+  </crud-form>
 </template>
 
 <style lang="scss" scoped>

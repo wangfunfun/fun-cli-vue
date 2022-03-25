@@ -8,7 +8,7 @@ const layoutStore = useLayoutStore()
 <template>
   <div class="logo flex-center">
     <div class="name line-omitted-1" v-if="layoutStore.menuUnfoldStatus">{{ APP_NAME }}</div>
-    <SvgIcon name="Logo" v-else width="30px" height="30px"></SvgIcon>
+    <cli-svg-icon name="Logo" v-else width="30px" height="30px"></cli-svg-icon>
   </div>
 </template>
 

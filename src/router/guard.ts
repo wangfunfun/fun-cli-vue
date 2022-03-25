@@ -1,5 +1,5 @@
 import router from './config'
-import GeneralCache from '@/utils/general-cache'
+import GeneralCache from '@/utils/cli-general-cache'
 
 // 路由前置守卫
 

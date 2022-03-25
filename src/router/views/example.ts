@@ -67,19 +67,6 @@ export default [
         },
       },
       {
-        path: '/admin/example/table',
-        name: 'AdminExampleTable',
-        component: () => import('@/views/example/table.vue'),
-        meta: {
-          layout: 'views',
-          requiresAuth: true,
-          iconType: 'cli',
-          icon: 'BrowsersSharp',
-          menuName: '表格示例',
-          sort: 4,
-        },
-      },
-      {
         path: '/admin/example/upload',
         name: 'AdminExampleUpload',
         component: () => import('@/views/example/upload.vue'),

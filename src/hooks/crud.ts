@@ -4,8 +4,8 @@ import { onActivated, onMounted } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { useI18n } from 'vue-i18n'
 import { useUserStore } from '@/store/user'
-import { getDictLabel } from '@/utils/dict'
-import FormatDateTime from '@/utils/format-dateTime'
+import { getDictLabel } from '@/utils/crud-dict'
+import FormatDateTime from '@/utils/crud-format-dateTime'
 
 /**
  * 通用CRUD增删改查钩子

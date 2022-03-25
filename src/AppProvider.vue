@@ -7,7 +7,7 @@ import { useRoute } from 'vue-router'
 import { onBeforeMount } from 'vue'
 import ViewsLayout from '@/layouts/viewsLayout/index.vue'
 import PagesLayout from '@/layouts/pagesLayout/index.vue'
-import GlobalLoading from '@/components/global-loading'
+import CliGlobalLoading from '@/components/cli-global-loading'
 
 const configStore = useConfigStore()
 
@@ -27,7 +27,7 @@ onBeforeMount(async () => {
     :zIndex="configStore.elementPlusConfig.zIndex"
     :locale="language.messages.value[configStore.language].el"
   >
-    <GlobalLoading v-if="configStore.globalLoading"></GlobalLoading>
+    <cli-global-loading v-if="configStore.globalLoading"></cli-global-loading>
     <template v-else>
       <ViewsLayout v-if="route.meta?.layout === 'views'">
         <template #viewsLayout>

@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import Editor from '@/components/editor'
+import CliEditor from '@/components/cli-editor'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 </script>
 
 <template>
-  <CrudForm operate :title="t('example.editor.title')">
-    <Editor :height="300"></Editor>
-  </CrudForm>
+  <crud-form :title="t('example.editor.title')">
+    <cli-editor></cli-editor>
+  </crud-form>
 </template>
 
 <style lang="scss" scoped></style>

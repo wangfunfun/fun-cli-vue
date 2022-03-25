@@ -6,7 +6,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { IObject } from '@/@types/interface'
 import { useRouteStore } from '@/store/route'
 import { ADMIN_FIRST_PAGE } from '@/common/admin'
-import { arrayRecursion } from '@/utils/data-treating'
+import { arrayRecursion } from '@/utils/cli-data-treating'
 
 const { t } = useI18n()
 

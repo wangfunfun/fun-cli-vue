@@ -18,10 +18,10 @@ const Props = withDefaults(defineProps<Props>(), {
       v-if="route.children && route.children.length > 0"
     >
       <template #title>
-        <svg-icon
+        <cli-svg-icon
           v-if="route.meta?.icon && route.meta?.iconType == 'cli'"
           :name="route.meta.icon"
-        ></svg-icon>
+        ></cli-svg-icon>
         <el-icon v-if="route.meta?.icon && route.meta?.iconType == 'el'">
           <component :is="route.meta?.icon"></component>
         </el-icon>
@@ -38,10 +38,10 @@ const Props = withDefaults(defineProps<Props>(), {
           >{{ route.meta?.menuName }}</a
         >
         <template v-else>
-          <svg-icon
+          <cli-svg-icon
             v-if="route.meta?.icon && route.meta?.iconType == 'cli'"
             :name="route.meta.icon"
-          ></svg-icon>
+          ></cli-svg-icon>
           <el-icon v-if="route.meta?.icon && route.meta?.iconType == 'el'">
             <component :is="route.meta?.icon"></component>
           </el-icon>

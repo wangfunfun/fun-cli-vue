@@ -1,7 +1,10 @@
 <script lang="ts">
+/**
+ * CRUD通用分页处理组件
+ */
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'CrudPage',
+  name: 'crud-page',
 })
 </script>
 

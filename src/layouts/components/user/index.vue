@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
-import BtnHover from '@/components/btn-hover'
 import { useUserHook } from '@/hooks/user'
 
 const { t } = useI18n()
@@ -26,7 +25,7 @@ const clickMenu = (command: string) => {
 </script>
 
 <template>
-  <BtnHover>
+  <cli-btn-hover>
     <template #content>
       <el-dropdown @command="clickMenu">
         <div class="flex-start">
@@ -39,22 +38,22 @@ const clickMenu = (command: string) => {
         <template #dropdown>
           <el-dropdown-menu>
             <el-dropdown-item command="userInfo">
-              <SvgIcon width="14px" name="PersonOutline"></SvgIcon>
+              <cli-svg-icon width="14px" name="PersonOutline"></cli-svg-icon>
               <span class="label">{{ t('user.userInfo') }}</span>
             </el-dropdown-item>
             <el-dropdown-item command="lock">
-              <SvgIcon width="14px" name="LockClosedOutline"></SvgIcon>
+              <cli-svg-icon width="14px" name="LockClosedOutline"></cli-svg-icon>
               <span class="label">{{ t('user.lock') }}</span>
             </el-dropdown-item>
             <el-dropdown-item command="logout">
-              <SvgIcon width="14px" name="LogOutOutline"></SvgIcon>
+              <cli-svg-icon width="14px" name="LogOutOutline"></cli-svg-icon>
               <span class="label">{{ t('user.logout') }}</span>
             </el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
     </template>
-  </BtnHover>
+  </cli-btn-hover>
 </template>
 
 <style lang="scss" scoped>

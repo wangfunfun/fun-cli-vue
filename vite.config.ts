@@ -25,6 +25,7 @@ export default defineConfig({
     // Components({
     //   resolvers: [ElementPlusResolver()],
     // }),
+    // 地图插件
   ],
   // 解析
   resolve: {
