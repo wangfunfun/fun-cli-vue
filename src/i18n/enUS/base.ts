@@ -12,6 +12,9 @@ t.enUS = 'English'
 
 t.loading = 'Resource loading...'
 
+t.loginTimeOut =
+  'The current login status has timed out or you have logged in on another device, please log in again!'
+
 t.btn = {}
 t.btn.home = 'Home'
 t.btn.github = 'Github'

@@ -12,6 +12,8 @@ t.enUS = '英语'
 
 t.loading = '资源加载中...'
 
+t.loginTimeOut = '当前登录状态已超时或已在其他设备登录，请重新登录！'
+
 t.btn = {}
 t.btn.home = '首页'
 t.btn.github = 'Github'

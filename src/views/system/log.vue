@@ -29,7 +29,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <CrudSearch>
+  <crud-search>
     <el-form :inline="true" :model="dataForm">
       <el-form-item :label="t('system.log.content')">
         <el-input
@@ -55,11 +55,12 @@ export default defineComponent({
         <el-button type="primary" @click="crudSearch">{{
           t('crud.btn.search')
         }}</el-button>
+        <el-button @click="query">{{ t('crud.btn.reset') }}</el-button>
         <el-button @click="crudExport">{{ t('crud.btn.export') }}</el-button>
       </el-form-item>
     </el-form>
-  </CrudSearch>
-  <CrudTable>
+  </crud-search>
+  <crud-table>
     <el-table :data="dataList">
       <el-table-column type="index" width="50" />
       <el-table-column prop="logType" :label="t('system.log.type')">
@@ -83,20 +84,15 @@ export default defineComponent({
         </template>
       </el-table-column>
     </el-table>
-  </CrudTable>
-  <CrudPage>
-    <el-pagination
-      small
-      :current-page="page"
-      :page-sizes="[10, 20, 50, 100]"
-      :page-size="limit"
-      :total="total"
-      layout="total, sizes, prev, pager, next, jumper"
-      @size-change="pageSize"
-      @current-change="pageCurrent"
-    >
-    </el-pagination>
-  </CrudPage>
+  </crud-table>
+  <crud-page
+    :page="page"
+    :limit="limit"
+    :total="total"
+    @size-change="pageSize"
+    @current-change="pageCurrent"
+  >
+  </crud-page>
 </template>
 
 <style lang="scss" scoped></style>
