@@ -1,0 +1,1 @@
+import{_ as e}from"./index.de82e329.js";import{l as r,o as t}from"./vendor.de7194bf.js";const o={},s={width:"100%",height:"520px",src:"https://element-plus.gitee.io/",frameborder:"0"};function n(c,a){return t(),r("iframe",s)}var d=e(o,[["render",n]]);export{d as default};
