@@ -1,0 +1,1 @@
+import{_ as e}from"./index.d638adea.js";import{l as r,o}from"./vendor.de7194bf.js";const t={},s={width:"100%",height:"520px",src:"https://v3.cn.vuejs.org/",frameborder:"0"};function c(a,n){return o(),r("iframe",s)}var f=e(t,[["render",c]]);export{f as default};
