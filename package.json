@@ -1,7 +1,7 @@
 {
   "name": "fun-cli-vue",
-  "version": "1.0.1",
-  "updateTime": "2022-03-26",
+  "version": "1.0.0",
+  "updateTime": "2022-04-11",
   "scripts": {
     "init": "npm install",
     "dev": "vite --mode development",
@@ -62,8 +62,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wangqf19/cli-vue3-vite2-ts.git"
+    "url": "https://github.com/wangqf19/fun-cli-vue.git"
   },
-  "author": "wangqf19",
+  "author": "funfunny",
   "license": "MIT"
 }
