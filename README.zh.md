@@ -17,7 +17,7 @@
 
 [中文](/README.zh.md) | [English](/README.md) | [查看演示 »](https://wangqf19.github.io/fun-cli-vue/)
 
-基于Vue3、Vite2、TypeScript、ElementPlus搭建的前端脚手架，集成了集成了Vue-router、Pinia、Axios、Vue-i18n、TailwindCss等插件，引入Echarts、Draggable、wangEditor等功能组件作为业务扩展。
+基于Vue3、Vite2、TypeScript、ElementPlus搭建的前端脚手架，集成了集成了Vue-router、Pinia、Axios、Vue-i18n、TailwindCss等插件，引入Echarts、wangEditor、GaodeMap等功能组件作为业务扩展。
 
 -----------------------------
  
@@ -26,7 +26,7 @@
 1. 下载代码仓库
 
 ```sh
-git clone https://github.com/wangqf19/fun-cli-vue.git
+git clone https://gitee.com/funfunny/fun-cli-vue.git
 ```
 
 2. 安装npm依赖包
@@ -76,9 +76,9 @@ npm run test
 
 ### 遇到了问题？
 
-- [🧩 您可以在Github上提交issues  ](https://github.com/wangqf19/fun-cli-vue/issues)
+- [🧩 您可以在Gitee上提交issues  ](https://gitee.com/funfunny/fun-cli-vue/issues/new)
 
-- <a href="mailto:wangqf19@189.cn">📮 或者联系作者寻求解答</a>
+- <a href="mailto:15376960583@189.cn">📮 或者联系作者寻求解答</a>
 
 ### 许可证
 

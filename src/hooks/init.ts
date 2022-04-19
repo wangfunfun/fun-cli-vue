@@ -2,9 +2,7 @@
  * 系统初始化钩子函数
  */
 
-import { useRouteStore } from '@/store/route'
 import { useConfigStore } from '@/store/config'
-import { pagesRoutes, viewsRoutes, allRoutes } from '@/router/config'
 import { useLanguageHook } from '@/hooks/language'
 import GeneralCache from '@/utils/cli-general-cache'
 import { APP_DEFAULT_LANGUAGE } from '@/common/config'
@@ -12,7 +10,6 @@ import { useRoute } from 'vue-router'
 import { APP_NAME } from '@/common/constant'
 
 const useInitHook = () => {
-  const routeStore = useRouteStore()
   const configStore = useConfigStore()
 
   const route = useRoute()
@@ -23,16 +20,13 @@ const useInitHook = () => {
   // 检查是否需要进行初始化
   const initLoadingStatus = () => {
     return new Promise((resolve, reject) => {
-      // TODO 检查项
+      // 再此写入检查项
       resolve(true)
     })
   }
 
   // 初始化 system
   const initSystem = () => {
-    routeStore.setPagesRoutes(pagesRoutes)
-    routeStore.setViewsRoutes(viewsRoutes)
-    routeStore.setAllRoutes(allRoutes)
     language.changeLanguage(languageAlias || APP_DEFAULT_LANGUAGE)
   }
 
@@ -45,11 +39,6 @@ const useInitHook = () => {
     }
     configStore.changeGlobalLoading(true)
     await initSystem()
-
-    if (route.meta?.layout === 'pages') {
-    } else if (route.meta?.layout === 'views') {
-      await routeStore.getAsyncViewsRoutes()
-    }
 
     setTimeout(() => {
       consoleWelcome()

@@ -1,1 +1,3 @@
-export enum CrudEvents {}
+/**
+ * 枚举
+ */

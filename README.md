@@ -17,7 +17,7 @@
 
 [中文](/README.zh.md) | [English](/README.md) | [View Demo »](https://wangqf19.github.io/fun-cli-vue/)
 
-Vue3, Vite2, TypeScript, ElementPlus front-end scaffolding, integrated with vuE-Router, Pinia, Axios, VUE-I18N, TailwindCss plug-ins,  Introduce Echarts, Draggable, wangEditor and other functional components as business extensions.  
+Vue3, Vite2, TypeScript, ElementPlus front-end scaffolding, integrated with vuE-Router, Pinia, Axios, VUE-I18N, TailwindCss plug-ins,  Introduce Echarts, GaodeMap, wangEditor and other functional components as business extensions.  
 
 -----------
  
@@ -79,7 +79,7 @@ npm run test
 
 - [🧩 You can submit issues on Github](https://github.com/wangqf19/fun-cli-vue/issues)
 
-- <a href="mailto:wangqf19@189.cn">📮 Or contact the author for answers</a>
+- <a href="mailto:15376960583@189.cn">📮 Or contact the author for answers</a>
 
 ### LICENSE
 

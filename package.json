@@ -1,6 +1,6 @@
 {
   "name": "fun-cli-vue",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "updateTime": "2022-04-11",
   "scripts": {
     "init": "npm install",
@@ -20,11 +20,10 @@
     "axios": "^0.24.0",
     "echarts": "^5.2.1",
     "element-plus": "^2.0.2",
-    "lodash": "^4.17.21",
     "mitt": "^3.0.0",
     "pinia": "^2.0.6",
     "pinia-plugin-persist": "0.0.93",
-    "screenfull": "^6.0.1",
+    "tailwindcss": "^3.0.24",
     "vue": "^3.2.25",
     "vue-i18n": "^9.2.0-beta.21",
     "vue-router": "^4.0.12"

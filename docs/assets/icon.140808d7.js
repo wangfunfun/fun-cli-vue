@@ -1,1 +1,0 @@
-import{_ as e}from"./index.d638adea.js";import{l as r,o}from"./vendor.de7194bf.js";const t={},c={width:"100%",height:"520px",src:"https://www.xicons.org/#/",frameborder:"0"};function s(n,a){return o(),r("iframe",c)}var _=e(t,[["render",s]]);export{_ as default};
