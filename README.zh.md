@@ -15,7 +15,7 @@
 </p>
 
 
-[中文](/README.zh.md) | [English](/README.md) | [查看演示 »](https://wangqf19.github.io/fun-cli-vue/)
+[中文](/README.zh.md) | [English](/README.md) | [查看演示 »](https://funfunny.gitee.io/fun-cli-vue)
 
 基于Vue3、Vite2、TypeScript、ElementPlus搭建的前端脚手架，集成了集成了Vue-router、Pinia、Axios、Vue-i18n、TailwindCss等插件，引入Echarts、wangEditor、GaodeMap等功能组件作为业务扩展。
 
