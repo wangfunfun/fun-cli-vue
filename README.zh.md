@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="">
-    <img src="https://img.shields.io/github/license/wangqf19/fun-cli-vue">
+    <img src="https://img.shields.io/github/license/wangfunfun/fun-cli-vue">
   </a>
   <a href="https://www.npmjs.com/package/fun-cli-vue">
     <img src="https://img.shields.io/npm/v/fun-cli-vue">
