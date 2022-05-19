@@ -15,7 +15,7 @@
 </p>
 
 
-[中文](/README.zh.md) | [English](/README.md) | [View Demo »](https://wangqf19.github.io/fun-cli-vue/)
+[中文](/README.zh.md) | [English](/README.md) | [View Demo »](https://wangfunfun.github.io/fun-cli-vue/)
 
 Vue3, Vite2, TypeScript, ElementPlus front-end scaffolding, integrated with vuE-Router, Pinia, Axios, VUE-I18N, TailwindCss plug-ins,  Introduce Echarts, GaodeMap, wangEditor and other functional components as business extensions.  
 
