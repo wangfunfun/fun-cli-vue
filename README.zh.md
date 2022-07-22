@@ -2,22 +2,22 @@
   <img src="docs/logo.png" alt="Logo" width="120" height="auto">
 </p>
 
-<h3 align="center">fun-cli-vue</h3>
+<h3 align="center">builder-vue3-vit2-ts-element-plus</h3>
 
 <p align="center">
   <a href="">
-    <img src="https://img.shields.io/github/license/wangqf19/fun-cli-vue">
+    <img src="https://img.shields.io/github/license/wangqf19/builder-vue3-vit2-ts-element-plus">
   </a>
-  <a href="https://www.npmjs.com/package/fun-cli-vue">
-    <img src="https://img.shields.io/npm/v/fun-cli-vue">
+  <a href="https://www.npmjs.com/package/builder-vue3-vit2-ts-element-plus">
+    <img src="https://img.shields.io/npm/v/builder-vue3-vit2-ts-element-plus">
   </a>
   <br>
 </p>
 
 
-[中文](/README.zh.md) | [English](/README.md) | [查看演示 »](https://funfunny.gitee.io/fun-cli-vue)
+[中文](/README.zh.md) | [English](/README.md)
 
-基于Vue3、Vite2、TypeScript、ElementPlus搭建的前端脚手架，集成了集成了Vue-router、Pinia、Axios、Vue-i18n、TailwindCss等插件，引入Echarts、wangEditor、GaodeMap等功能组件作为业务扩展。
+基于Vue3、Vite2、TypeScript、ElementPlus搭建的前端脚手架，集成了集成了Vue-router、Pinia、Axios、Vue-i18n等插件。
 
 -----------------------------
  
@@ -26,7 +26,7 @@
 1. 下载代码仓库
 
 ```sh
-git clone https://gitee.com/funfunny/fun-cli-vue.git
+git clone https://gitee.com/wangfunfun/builder-vue3-vit2-ts-element-plus.git
 ```
 
 2. 安装npm依赖包
@@ -76,7 +76,7 @@ npm run test
 
 ### 遇到了问题？
 
-- [🧩 您可以在Gitee上提交issues  ](https://gitee.com/funfunny/fun-cli-vue/issues/new)
+- [🧩 您可以在Gitee上提交issues  ](https://gitee.com/wangfunfun/builder-vue3-vit2-ts-element-plus/issues/new)
 
 - <a href="mailto:15376960583@189.cn">📮 或者联系作者寻求解答</a>
 

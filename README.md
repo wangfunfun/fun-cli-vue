@@ -2,35 +2,34 @@
   <img src="docs/logo.png" alt="Logo" width="120" height="auto">
 </p>
 
-<h3 align="center">fun-cli-vue</h3>
+<h3 align="center">builder-vue3-vit2-ts-element-plus</h3>
 
 <p align="center">
   <a href="">
-    <img src="https://img.shields.io/github/license/wangqf19/fun-cli-vue">
+    <img src="https://img.shields.io/github/license/wangfunfun/builder-vue3-vit2-ts-element-plus">
   </a>
-  <a href="https://www.npmjs.com/package/fun-cli-vue">
-    <img src="https://img.shields.io/npm/v/fun-cli-vue">
+  <a href="https://www.npmjs.com/package/builder-vue3-vit2-ts-element-plus">
+    <img src="https://img.shields.io/npm/v/builder-vue3-vit2-ts-element-plus">
   </a>
   <br>
 </p>
 
+[中文](/README.zh.md) | [English](/README.md)
 
-[中文](/README.zh.md) | [English](/README.md) | [View Demo »](https://wangqf19.github.io/fun-cli-vue/)
+Vue3, Vite2, TypeScript, ElementPlus front-end scaffolding, integrated with vuE-Router, Pinia, Axios, VUE-I18N plug-ins.
 
-Vue3, Vite2, TypeScript, ElementPlus front-end scaffolding, integrated with vuE-Router, Pinia, Axios, VUE-I18N, TailwindCss plug-ins,  Introduce Echarts, GaodeMap, wangEditor and other functional components as business extensions.  
+---
 
------------
- 
 ### Usage
 
 1. Clone the repository
 
 ```sh
-git clone https://github.com/wangqf19/fun-cli-vue.git
+git clone https://github.com/wangfunfun/builder-vue3-vit2-ts-element-plus.git
 ```
 
 2. Install npm packages
-   
+
 ```sh
 npm install
 ```
@@ -73,14 +72,12 @@ npm run lint
 npm run test
 ```
 
-
-
 ### Any questions?
 
-- [🧩 You can submit issues on Github](https://github.com/wangqf19/fun-cli-vue/issues)
+- [🧩 You can submit issues on Github](https://github.com/wangfunfun/builder-vue3-vit2-ts-element-plus/issues)
 
 - <a href="mailto:15376960583@189.cn">📮 Or contact the author for answers</a>
 
 ### LICENSE
 
-The copyright notice and license notice must be included with the software and all copies of the software.  
+The copyright notice and license notice must be included with the software and all copies of the software.

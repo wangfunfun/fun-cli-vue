@@ -1,7 +1,3 @@
-/**
- * 切换vue-i18n国际化语言钩子
- */
-
 import { useI18n } from 'vue-i18n'
 import { useConfigStore } from '@/store/config'
 import { i18nConfig } from '@/i18n'
